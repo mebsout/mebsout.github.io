@@ -1,0 +1,134 @@
+;; ------------------------------------------------------------------------
+;; Kind 2 system
+;; ------------------------------------------------------------------------
+
+(define-node main
+  ;; State variables (with an extra scope 'jKind')
+  ((transSys.x_is_init_x Bool)
+   (main.a Real :input :for-inv-gen)
+   (main.b Real :input :for-inv-gen)
+   (main.c Real :for-inv-gen)
+   (main.p1 Bool :for-inv-gen))
+
+  ;; Initial states
+  (init
+   (and
+    transSys.x_is_init_x
+    (= main.c (+ main.a main.b))
+    (= main.p1 (=> (and (> main.a 0.0) (> main.b 0.0)) (> main.c 0.0)))))
+
+  ;; Transition relation
+  (trans
+   (and
+    (not (prime transSys.x_is_init_x))
+    (= (prime main.c) (+ (prime main.a) (prime main.b)))
+    (= (prime main.p1) (=> (and (> (prime main.a) 0.0) (> (prime main.b) 0.0)) (> (prime main.c) 0.0)))))
+
+  ;; Callers (the observer system OBS calls this node)
+  (callers
+   (OBS
+    ((transSys.x_is_init_x transSys.x_is_init_x)
+     (main.a OBS.main.a)
+     (main.b OBS.main.b)
+     (main.c OBS.main.c)
+     (main.p1 OBS.main.p1))
+    (lambda ((X1 Bool)) (X1))))
+
+  ;; Original properties (will be ignored for subsystems)
+  (props ((p1 main.p1 :user :8-5)))
+
+  )
+
+
+;; ------------------------------------------------------------------------
+;; jKind system
+;; ------------------------------------------------------------------------
+
+(define-node jKind
+  ;; State variables (with an extra scope 'jKind')
+  ((jKind.$a$ Real :for-inv-gen)
+   (jKind.$b$ Real :for-inv-gen)
+   (jKind.$c$ Real :for-inv-gen)
+   (jKind.$p1$ Bool :for-inv-gen))
+
+  ;; Initial states
+  (init
+   (and
+    (= jKind.$c$ (+ jKind.$a$ jKind.$b$))
+    (= jKind.$p1$ (=> (and (> jKind.$a$ 0.0) (> jKind.$b$ 0.0)) (> jKind.$c$ 0.0)))))
+
+  ;; Transition relation
+  (trans
+   (and
+    (= (prime jKind.$c$) (+ (prime jKind.$a$) (prime jKind.$b$)))
+    (= (prime jKind.$p1$) (=> (and (> (prime jKind.$a$) 0.0) (> (prime jKind.$b$) 0.0)) (> (prime jKind.$c$) 0.0)))))
+
+  ;; Callers (the observer system OBS calls this node)
+  (callers
+   (OBS
+    ((jKind.$a$ OBS.jKind.$a$)
+     (jKind.$b$ OBS.jKind.$b$)
+     (jKind.$c$ OBS.jKind.$c$)
+     (jKind.$p1$ OBS.jKind.$p1$))
+    (lambda ((X1 Bool)) (X1))))
+
+  )
+
+
+;; ------------------------------------------------------------------------
+;; Observer system (top level system)
+;; ------------------------------------------------------------------------
+
+(define-node OBS
+  ;; State variables (with an extra scope 'OBS')
+  (
+   ;; Kind2's state variables 
+   (transSys.x_is_init_x Bool)
+   (OBS.main.a Real :input :for-inv-gen)
+   (OBS.main.b Real :input :for-inv-gen)
+   (OBS.main.c Real :for-inv-gen)
+   ;; jKind's state variables 
+   (OBS.main.p1 Bool :for-inv-gen)
+   (OBS.jKind.$a$ Real :for-inv-gen)
+   (OBS.jKind.$b$ Real :for-inv-gen)
+   (OBS.jKind.$c$ Real :for-inv-gen)
+   (OBS.jKind.$p1$ Bool :for-inv-gen))
+
+  ;; Initial states
+  (init
+   (and
+    transSys.x_is_init_x
+    ;; inputs are the same for Kind2 and jKind
+    (and (= OBS.main.a OBS.jKind.$a$) (= OBS.main.b OBS.jKind.$b$))
+    ;; initial states of Kind2 system
+    (__node_init_main transSys.x_is_init_x OBS.main.a OBS.main.b OBS.main.c OBS.main.p1)
+    ;; initial states of jKind system
+    (__node_init_jKind OBS.jKind.$a$ OBS.jKind.$b$ OBS.jKind.$c$ OBS.jKind.$p1$)))
+
+  ;; Transition relation
+  (trans
+   (and
+    (not (prime transSys.x_is_init_x))
+    ;; inputs are the same for Kind2 and jKind
+    (and (= (prime OBS.main.a) (prime OBS.jKind.$a$)) (= (prime OBS.main.b) (prime OBS.jKind.$b$)))
+    ;; one step of Kind2 system
+    (__node_trans_main
+     (prime transSys.x_is_init_x) (prime OBS.main.a) (prime OBS.main.b) (prime OBS.main.c) (prime OBS.main.p1)
+     transSys.x_is_init_x OBS.main.a OBS.main.b OBS.main.c OBS.main.p1)
+    ;; one step of jKind system
+    (__node_trans_jKind
+     (prime OBS.jKind.$a$) (prime OBS.jKind.$b$) (prime OBS.jKind.$c$) (prime OBS.jKind.$p1$)
+     OBS.jKind.$a$ OBS.jKind.$b$ OBS.jKind.$c$ OBS.jKind.$p1$)))
+
+  ;; Properties to ensure observational equivalence
+  (props
+   (
+    ;; between variables of original properties
+    (PROPERTY_Observational_Equivalence_1 (= OBS.main.p1 OBS.jKind.$p1$) :generated ())
+    ;; between other variables (as an aid)
+    (OTHER_Observational_Equivalence_2 (= OBS.main.a OBS.jKind.$a$) :generated ())
+    (OTHER_Observational_Equivalence_3 (= OBS.main.b OBS.jKind.$b$) :generated ())
+    (OTHER_Observational_Equivalence_4 (= OBS.main.c OBS.jKind.$c$) :generated ())))
+
+  )
+

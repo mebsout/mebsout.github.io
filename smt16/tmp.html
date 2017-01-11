@@ -1,0 +1,8794 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>tmp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style id="mkstylesheet">
+/* 
+   This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+   Please leave this notice in place, along with any additional credits below.
+   ---------------------------------------------------------------
+   Title: Theme title
+   Author: Your name and optional url
+   Description: Basic description of the theme.
+*/
+body {
+    -webkit-font-smoothing: antialiased;
+    font: normal .8764em/1.5em Arial,Verdana,sans-serif;
+    margin: 0;
+}
+
+html>body {
+    font-size: 13px;
+}
+
+li {
+    font-size: 110%;
+}
+
+li li {
+    font-size: 100%;
+}
+
+li p {
+    font-size: 100%;
+    margin: .5em 0;
+}
+
+h1 {
+    color: #000;
+    font-size: 2.2857em;
+    line-height: .6563em;
+    margin: .6563em 0;
+}
+
+h2 {
+    color: #111;
+    font-size: 1.7143em;
+    line-height: .875em;
+    margin: .875em 0;
+}
+
+h3 {
+    color: #111;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 1em 0;
+}
+
+h4 {
+    color: #111;
+    font-size: 1.2857em;
+    line-height: 1.1667em;
+    margin: 1.1667em 0;
+}
+
+h5 {
+    color: #111;
+    font-size: 1.15em;
+    line-height: 1.3em;
+    margin: 1.3em 0;
+}
+
+h6 {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 1.5em 0;
+}
+
+body,p,td,div {
+    color: #111;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    word-wrap: break-word;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.5em;
+}
+
+a {
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+    color: #0d6ea1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3593d9;
+}
+
+.footnote {
+    color: #0d6ea1;
+    font-size: .8em;
+    vertical-align: super;
+}
+
+#wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+dd {
+    margin-bottom: 1em;
+}
+
+li > p:first-child {
+    margin: 0;
+}
+
+ul ul,ul ol {
+    margin-bottom: .4em;
+}
+
+caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr {
+    border-spacing: 0;
+}
+
+table {
+    border: 1px solid rgba(0,0,0,0.25);
+    border-collapse: collapse;
+    display: table;
+    empty-cells: hide;
+    margin: -1px 0 23px;
+    padding: 0;
+    table-layout: fixed;
+}
+
+caption {
+    display: table-caption;
+    font-weight: 700;
+}
+
+col {
+    display: table-column;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+tbody {
+    display: table-row-group;
+}
+
+tfoot {
+    display: table-footer-group;
+}
+
+thead {
+    display: table-header-group;
+}
+
+td,th {
+    display: table-cell;
+}
+
+tr {
+    display: table-row;
+}
+
+table th,table td {
+    font-size: 1.1em;
+    line-height: 23px;
+    padding: 0 1em;
+}
+
+table thead {
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+table tbody {
+    background: rgba(0,0,0,0.05);
+}
+
+table tfoot {
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+figure {
+    display: inline-block;
+    position: relative;
+    margin: 1em 0 2em;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    background: white;
+    color: #666;
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    width: 98%;
+    padding: 1%;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+figure:hover>figcaption {
+    /* background: rgba(0,0,0,1) */
+}
+
+.poetry pre {
+    display: block;
+    font-family: Georgia, Garamond, serif !important;
+    font-size: 110% !important;
+    font-style: italic;
+    line-height: 1.6em;
+    margin-left: 1em;
+}
+
+.poetry pre code {
+    font-family: Georgia, Garamond, serif !important;
+}
+
+blockquote p {
+    font-size: 110%;
+    font-style: italic;
+    line-height: 1.6em;
+}
+
+sup,sub,a.footnote {
+    font-size: 1.4ex;
+    height: 0;
+    line-height: 1;
+    position: relative;
+    vertical-align: super;
+}
+
+sub {
+    vertical-align: sub;
+    top: -1px;
+}
+
+p,h5 {
+    font-size: 1.1429em;
+    line-height: 1.3125em;
+    margin: 1.3125em 0;
+}
+
+dt,th {
+    font-weight: 700;
+}
+
+table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd) {
+    background: rgba(255,255,255,0.06);
+}
+
+table tr:nth-child(even),table td:nth-child(even) {
+    background: rgba(200,200,200,0.25);
+}
+
+@media print {
+    body {
+        overflow: auto;
+    }
+
+    img,pre,blockquote,table,figure,p {
+        page-break-inside: avoid;
+    }
+
+    #wrapper {
+        background: #fff;
+        color: #303030;
+        font-size: 85%;
+        padding: 10px;
+        position: relative;
+        text-indent: 0;
+    }
+}
+
+@media screen {
+    .inverted #wrapper,.inverted {
+        background: rgba(37, 42, 42, 1);
+    }
+
+    .inverted hr {
+        border-color: rgba(51, 63, 64, 1) !important;
+    }
+
+    .inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted pre,.inverted code,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt {
+        color: #eee !important;
+    }
+
+    .inverted table tr:nth-child(odd),.inverted table th:nth-child(odd),.inverted table td:nth-child(odd) {
+        background: none;
+    }
+
+    .inverted a {
+        color: rgba(172, 209, 213, 1);
+    }
+
+    #wrapper {
+        padding: 20px;
+    }
+
+    ::selection {
+        background: rgba(157, 193, 200,.5);
+    }
+
+    h1::selection {
+        background-color: rgba(45, 156, 208, .3);
+    }
+
+    h2::selection {
+        background-color: rgba(90, 182, 224, .3);
+    }
+
+    h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection {
+        background-color: rgba(133, 201, 232, .3);
+    }
+
+    code::selection {
+        background-color: rgba(0,0,0,.7);
+        color: #eee;
+    }
+
+    code span::selection {
+        background-color: rgba(0,0,0,.7) !important;
+        color: #eee !important;
+    }
+
+    a::selection {
+        background-color: rgba(255, 230, 102,.2);
+    }
+
+    .inverted a::selection {
+        background-color: rgba(255, 230, 102,.6);
+    }
+
+    td::selection,th::selection,caption::selection {
+        background-color: rgba(180, 237, 95, .5);
+    }
+}
+#mkreplaced-toc{list-style-position:inside;padding:0;margin:0 0 0 1rem;list-style-type:none}#mkreplaced-toc li::before{content:''}#mkreplaced-toc li{font-size:1.5rem;line-height:1.5;font-weight:normal}#mkreplaced-toc li ul{font-size:1.3rem;font-weight:300;padding:.5rem 0;margin:0 0 0 1rem}#mkreplaced-toc li.missing{list-style-type:none !important}#mkreplaced-toc.max-1 ul,#mkreplaced-toc.max1 ul{display:none}#mkreplaced-toc.max-2 ul ul,#mkreplaced-toc.max2 ul ul{display:none}#mkreplaced-toc.max-3 ul ul ul,#mkreplaced-toc.max3 ul ul ul{display:none}#mkreplaced-toc.max-4 ul ul ul ul,#mkreplaced-toc.max4 ul ul ul ul{display:none}#mkreplaced-toc.max-5 ul ul ul ul ul,#mkreplaced-toc.max5 ul ul ul ul ul{display:none}.rtl{direction:rtl;text-align:right}@media print{body{background:white;line-height:1.4}html,body,#wrapper{max-width:100%;width:100%;-webkit-text-size-adjust:none;-webkit-perspective:none !important;box-sizing:border-box;width:auto;border:0;margin:0;padding:0;float:none;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important}h1,h2,h3,h4,h5,h6{page-break-after:avoid}p,h2,h3{orphans:3;widows:3}section{page-break-before:avoid}#generated-toc,#firstdiff,#toc-title,#mkdocumentprogress,#mkincludechart,#mkprogressbar1,#mkprogressbar2,.mkscrollmeter,#alllinks,.popup{display:none !important}.suppressprintlinks a{color:inherit !important;text-decoration:none !important;border-bottom:none !important;cursor:default !important}.hrefafterlinktext #wrapper a:link:after,.hrefafterlinktext #wrapper a:visited:after{content:" (" attr(href) ") ";font-size:90%;opacity:0.9}.nocodebreak pre{page-break-inside:avoid}img,table,figure{page-break-inside:avoid}.breakfootnotes .footnotes{page-break-before:always}.breakfootnotes .footnotes hr{display:none}#mktoctitle{display:block}#print-title{display:block;border-bottom:solid 1px #666}#wrapper pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}#wrapper #generated-toc-clone,#wrapper #mkreplaced-toc{display:block}}
+#wrapper #generated-toc-clone, #wrapper #mkreplaced-toc, #wrapper #generated-toc-clone ul, #wrapper #mkreplaced-toc ul {
+    list-style-position: inside;
+}
+#wrapper #generated-toc-clone li.missing, #wrapper #mkreplaced-toc li.missing {
+    list-style-type: none!important;
+}
+#wrapper #generated-toc-clone, #wrapper #mkreplaced-toc {
+    list-style-type: upper-roman;
+}
+#wrapper #generated-toc-clone>li>ul, #wrapper #mkreplaced-toc>li>ul  {
+    list-style-type: decimal;
+}
+#wrapper #generated-toc-clone>li>ul>li>ul, #wrapper #mkreplaced-toc>li>ul>li>ul {
+    list-style-type: decimal-leading-zero;
+}
+#wrapper #generated-toc-clone>li>ul>li>ul>li>ul, #wrapper #mkreplaced-toc>li>ul>li>ul>li>ul {
+    list-style-type: lower-greek;
+}
+#wrapper #generated-toc-clone>li>ul>li>ul>li>ul>li>ul, #wrapper #mkreplaced-toc>li>ul>li>ul>li>ul>li>ul {
+    list-style-type: disc;
+}
+#wrapper #generated-toc-clone>li>ul>li>ul>li>ul>li>ul>li>ul, #wrapper #mkreplaced-toc>li>ul>li>ul>li>ul>li>ul>li>ul {
+    list-style-type: square;
+}
+#wrapper #generated-toc-clone,#wrapper #mkreplaced-toc{list-style-position:outside!important;margin-left:2rem;}
+</style>
+
+<style id="mkprintstyles">@media print{#wrapper #generated-toc-clone,#generated-toc{display:none!important;}
+html,body,#wrapper{font-size:10pt!important;}
+}
+</style>
+
+
+</head>
+<body class="normal">
+  <div id="wrapper">
+      <table>
+<thead>
+<tr>
+<th>Benchmark </th>
+<th> Kind 2 check </th>
+<th> min </th>
+<th> k min </th>
+<th> size  </th>
+<th> z3 </th>
+<th> cvc4 </th>
+<th> Obs gen </th>
+<th> Obs size </th>
+<th> Obs check </th>
+<th> k </th>
+<th> Obs min </th>
+<th> k min </th>
+<th> size min </th>
+<th> z3 </th>
+<th>cvc4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_6counters_e8_371_e2_80.lus</code> </td>
+<td> 0.057 </td>
+<td> 0.040 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.012 </td>
+<td> 0.834 </td>
+<td> 17 </td>
+<td> 0.085 </td>
+<td> 1 </td>
+<td> 0.039 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.004 </td>
+<td> 0.020</td>
+</tr>
+<tr>
+<td><code>speed_e7_492.lus</code> </td>
+<td> 0.065 </td>
+<td> 0.038 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.020 </td>
+<td> 0.919 </td>
+<td> 33 </td>
+<td> 0.102 </td>
+<td> 1 </td>
+<td> 0.058 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.036</td>
+</tr>
+<tr>
+<td><code>speed_e8_649_e7_709.lus</code> </td>
+<td> 0.065 </td>
+<td> 0.031 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 0.859 </td>
+<td> 33 </td>
+<td> 0.104 </td>
+<td> 1 </td>
+<td> 0.059 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.040</td>
+</tr>
+<tr>
+<td><code>speed_e7_207.lus</code> </td>
+<td> 0.067 </td>
+<td> 0.036 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.020 </td>
+<td> 0.852 </td>
+<td> 33 </td>
+<td> 0.109 </td>
+<td> 1 </td>
+<td> 0.058 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.004 </td>
+<td> 0.036</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_2_e8_656.lus</code> </td>
+<td> 0.072 </td>
+<td> 0.048 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.068 </td>
+<td> 0.855 </td>
+<td> 55 </td>
+<td> 0.149 </td>
+<td> 2 </td>
+<td> 0.101 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.184</td>
+</tr>
+<tr>
+<td><code>hysteresis_1.lus</code> </td>
+<td> 0.072 </td>
+<td> 0.038 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.020 </td>
+<td> 0.931 </td>
+<td> 33 </td>
+<td> 0.203 </td>
+<td> 1 </td>
+<td> 0.061 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.036</td>
+</tr>
+<tr>
+<td><code>durationThm_3_e2_148.lus</code> </td>
+<td> 0.073 </td>
+<td> 0.044 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.020 </td>
+<td> 0.935 </td>
+<td> 27 </td>
+<td> 0.177 </td>
+<td> 1 </td>
+<td> 0.071 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.008 </td>
+<td> 0.032</td>
+</tr>
+<tr>
+<td><code>PRODUCER_CONSUMER_3.lus</code> </td>
+<td> 0.074 </td>
+<td> 0.047 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.036 </td>
+<td> 0.838 </td>
+<td> 57 </td>
+<td> 0.151 </td>
+<td> 1 </td>
+<td> 0.134 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.016 </td>
+<td> 0.060</td>
+</tr>
+<tr>
+<td><code>car_3_e2_777.lus</code> </td>
+<td> 0.074 </td>
+<td> 0.037 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.004 </td>
+<td> 0.024 </td>
+<td> 0.845 </td>
+<td> 41 </td>
+<td> 0.147 </td>
+<td> 2 </td>
+<td> 0.086 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>car_3_e8_33_e2_1010.lus</code> </td>
+<td> 0.074 </td>
+<td> 0.039 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.850 </td>
+<td> 41 </td>
+<td> 0.152 </td>
+<td> 2 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>stalmark_e7_27_e7_31.lus</code> </td>
+<td> 0.074 </td>
+<td> 0.057 </td>
+<td> 2 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.008 </td>
+<td> 0.833 </td>
+<td> 7 </td>
+<td> 0.085 </td>
+<td> 1 </td>
+<td> 0.035 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.012 </td>
+<td> 0.016</td>
+</tr>
+<tr>
+<td><code>MESI_1_e2_162_e7_1545.lus</code> </td>
+<td> 0.075 </td>
+<td> 0.044 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.867 </td>
+<td> 57 </td>
+<td> 0.128 </td>
+<td> 1 </td>
+<td> 0.115 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.132</td>
+</tr>
+<tr>
+<td><code>car_4_e3_57_e4_1047.lus</code> </td>
+<td> 0.077 </td>
+<td> 0.039 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 1.175 </td>
+<td> 41 </td>
+<td> 0.145 </td>
+<td> 2 </td>
+<td> 0.110 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.168</td>
+</tr>
+<tr>
+<td><code>MESI_4.lus</code> </td>
+<td> 0.078 </td>
+<td> 0.049 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.048 </td>
+<td> 0.834 </td>
+<td> 59 </td>
+<td> 0.150 </td>
+<td> 1 </td>
+<td> 0.119 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.120</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e1_1753.lus</code> </td>
+<td> 0.078 </td>
+<td> 0.049 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.060 </td>
+<td> 0.850 </td>
+<td> 73 </td>
+<td> 0.203 </td>
+<td> 2 </td>
+<td> 0.165 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.308</td>
+</tr>
+<tr>
+<td><code>car_4.lus</code> </td>
+<td> 0.078 </td>
+<td> 0.039 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 0.843 </td>
+<td> 41 </td>
+<td> 0.209 </td>
+<td> 2 </td>
+<td> 0.102 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.076</td>
+</tr>
+<tr>
+<td><code>car_4_e3_57_e6_784.lus</code> </td>
+<td> 0.078 </td>
+<td> 0.042 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.064 </td>
+<td> 0.946 </td>
+<td> 41 </td>
+<td> 0.179 </td>
+<td> 2 </td>
+<td> 0.124 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.048 </td>
+<td> 0.216</td>
+</tr>
+<tr>
+<td><code>durationThm_3_e3_442_e5_260.lus</code> </td>
+<td> 0.078 </td>
+<td> 0.051 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.016 </td>
+<td> 0.850 </td>
+<td> 27 </td>
+<td> 0.112 </td>
+<td> 1 </td>
+<td> 0.071 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.016 </td>
+<td> 0.036</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_2_e8_1118_e8_1177.lus</code> </td>
+<td> 0.082 </td>
+<td> 0.044 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.882 </td>
+<td> 55 </td>
+<td> 0.130 </td>
+<td> 2 </td>
+<td> 0.104 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.184</td>
+</tr>
+<tr>
+<td><code>controlLaw.lus</code> </td>
+<td> 0.082 </td>
+<td> 0.039 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.863 </td>
+<td> 19 </td>
+<td> 0.089 </td>
+<td> 1 </td>
+<td> 0.049 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.032</td>
+</tr>
+<tr>
+<td><code>durationThm_2_e3_329_e4_1.lus</code> </td>
+<td> 0.082 </td>
+<td> 0.050 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.028 </td>
+<td> 0.842 </td>
+<td> 31 </td>
+<td> 0.385 </td>
+<td> 1 </td>
+<td> 0.079 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.028</td>
+</tr>
+<tr>
+<td><code>ex3_e8_381.lus</code> </td>
+<td> 0.082 </td>
+<td> 0.043 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.028 </td>
+<td> 0.900 </td>
+<td> 33 </td>
+<td> 0.106 </td>
+<td> 1 </td>
+<td> 0.073 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.044</td>
+</tr>
+<tr>
+<td><code>durationThm_1_e2_3.lus</code> </td>
+<td> 0.083 </td>
+<td> 0.046 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.020 </td>
+<td> 0.857 </td>
+<td> 29 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 0.076 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.012 </td>
+<td> 0.040</td>
+</tr>
+<tr>
+<td><code>durationThm_1_e3_389.lus</code> </td>
+<td> 0.084 </td>
+<td> 0.059 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.865 </td>
+<td> 29 </td>
+<td> 0.108 </td>
+<td> 1 </td>
+<td> 0.074 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.012 </td>
+<td> 0.044</td>
+</tr>
+<tr>
+<td><code>durationThm_2_e2_63.lus</code> </td>
+<td> 0.085 </td>
+<td> 0.058 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.857 </td>
+<td> 31 </td>
+<td> 0.331 </td>
+<td> 7 </td>
+<td> 0.207 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.016 </td>
+<td> 0.032</td>
+</tr>
+<tr>
+<td><code>metros_1_e8_725_e1_919.lus</code> </td>
+<td> 0.085 </td>
+<td> 0.055 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.032 </td>
+<td> 0.899 </td>
+<td> 99 </td>
+<td> 0.210 </td>
+<td> 1 </td>
+<td> 0.231 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.036 </td>
+<td> 0.140</td>
+</tr>
+<tr>
+<td><code>PRODUCER_CONSUMER_2.lus</code> </td>
+<td> 0.086 </td>
+<td> 0.041 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.028 </td>
+<td> 0.837 </td>
+<td> 33 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.016 </td>
+<td> 0.036</td>
+</tr>
+<tr>
+<td><code>stalmark.lus</code> </td>
+<td> 0.086 </td>
+<td> 0.059 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.004 </td>
+<td> 0.012 </td>
+<td> 0.848 </td>
+<td> 7 </td>
+<td> 0.072 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.016</td>
+</tr>
+<tr>
+<td><code>durationThm_1_e3_389_e5_5.lus</code> </td>
+<td> 0.087 </td>
+<td> 0.059 </td>
+<td> 2 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.862 </td>
+<td> 29 </td>
+<td> 0.113 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.016 </td>
+<td> 0.044</td>
+</tr>
+<tr>
+<td><code>ex3_e8_381_e8_477.lus</code> </td>
+<td> 0.087 </td>
+<td> 0.051 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.044 </td>
+<td> 0.865 </td>
+<td> 33 </td>
+<td> 0.130 </td>
+<td> 1 </td>
+<td> 0.079 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.016 </td>
+<td> 0.040</td>
+</tr>
+<tr>
+<td><code>stalmark_e7_27.lus</code> </td>
+<td> 0.087 </td>
+<td> 0.062 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.008 </td>
+<td> 0.891 </td>
+<td> 7 </td>
+<td> 0.075 </td>
+<td> 1 </td>
+<td> 0.034 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.004 </td>
+<td> 0.016</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_1.lus</code> </td>
+<td> 0.088 </td>
+<td> 0.046 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.084 </td>
+<td> 0.977 </td>
+<td> 51 </td>
+<td> 0.139 </td>
+<td> 1 </td>
+<td> 0.136 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.080</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e8_926_e2_349.lus</code> </td>
+<td> 0.089 </td>
+<td> 0.042 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.072 </td>
+<td> 0.834 </td>
+<td> 73 </td>
+<td> 0.203 </td>
+<td> 2 </td>
+<td> 0.131 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.388</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_4_e8_420_e7_572.lus</code> </td>
+<td> 0.089 </td>
+<td> 0.039 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.032 </td>
+<td> 0.968 </td>
+<td> 53 </td>
+<td> 0.148 </td>
+<td> 1 </td>
+<td> 0.095 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.092</td>
+</tr>
+<tr>
+<td><code>car_1.lus</code> </td>
+<td> 0.089 </td>
+<td> 0.039 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.877 </td>
+<td> 41 </td>
+<td> 0.132 </td>
+<td> 2 </td>
+<td> 0.122 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.024 </td>
+<td> 0.072</td>
+</tr>
+<tr>
+<td><code>car_3_e8_33_e7_220.lus</code> </td>
+<td> 0.089 </td>
+<td> 0.041 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.020 </td>
+<td> 0.863 </td>
+<td> 41 </td>
+<td> 0.135 </td>
+<td> 2 </td>
+<td> 0.109 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.068</td>
+</tr>
+<tr>
+<td><code>durationThm_2_e3_99.lus</code> </td>
+<td> 0.089 </td>
+<td> 0.051 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.895 </td>
+<td> 31 </td>
+<td> 0.422 </td>
+<td> 11 </td>
+<td> 0.302 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>speed2_e8_449_e7_353.lus</code> </td>
+<td> 0.089 </td>
+<td> 0.044 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.032 </td>
+<td> 0.887 </td>
+<td> 33 </td>
+<td> 0.123 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e8_926_e8_2138.lus</code> </td>
+<td> 0.090 </td>
+<td> 0.045 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.072 </td>
+<td> 0.838 </td>
+<td> 73 </td>
+<td> 0.203 </td>
+<td> 2 </td>
+<td> 0.147 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.244</td>
+</tr>
+<tr>
+<td><code>durationThm_2_e3_329_e5_124.lus</code> </td>
+<td> 0.090 </td>
+<td> 0.047 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.904 </td>
+<td> 31 </td>
+<td> 0.380 </td>
+<td> 11 </td>
+<td> 0.204 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.032</td>
+</tr>
+<tr>
+<td><code>speed2_e7_223_e7_213.lus</code> </td>
+<td> 0.090 </td>
+<td> 0.049 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.869 </td>
+<td> 33 </td>
+<td> 0.109 </td>
+<td> 1 </td>
+<td> 0.069 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>MOESI_1_e2_982_e7_492.lus</code> </td>
+<td> 0.091 </td>
+<td> 0.044 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.032 </td>
+<td> 0.870 </td>
+<td> 65 </td>
+<td> 0.185 </td>
+<td> 1 </td>
+<td> 0.135 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.152</td>
+</tr>
+<tr>
+<td><code>MOESI_1_e3_1884_e7_1875.lus</code> </td>
+<td> 0.091 </td>
+<td> 0.043 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.844 </td>
+<td> 65 </td>
+<td> 0.149 </td>
+<td> 1 </td>
+<td> 0.135 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.164</td>
+</tr>
+<tr>
+<td><code>MOESI_2.lus</code> </td>
+<td> 0.091 </td>
+<td> 0.045 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.060 </td>
+<td> 0.856 </td>
+<td> 73 </td>
+<td> 0.167 </td>
+<td> 2 </td>
+<td> 0.138 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.312</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e2_1599_e8_1334.lus</code> </td>
+<td> 0.091 </td>
+<td> 0.057 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.100 </td>
+<td> 0.888 </td>
+<td> 73 </td>
+<td> 0.209 </td>
+<td> 2 </td>
+<td> 0.143 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.396</td>
+</tr>
+<tr>
+<td><code>MESI_2.lus</code> </td>
+<td> 0.092 </td>
+<td> 0.041 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.889 </td>
+<td> 57 </td>
+<td> 0.149 </td>
+<td> 1 </td>
+<td> 0.099 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.020 </td>
+<td> 0.124</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e2_155.lus</code> </td>
+<td> 0.092 </td>
+<td> 0.073 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.060 </td>
+<td> 0.877 </td>
+<td> 73 </td>
+<td> 0.182 </td>
+<td> 2 </td>
+<td> 0.162 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.296</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e3_1523.lus</code> </td>
+<td> 0.092 </td>
+<td> 0.053 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.100 </td>
+<td> 0.977 </td>
+<td> 73 </td>
+<td> 0.263 </td>
+<td> 1 </td>
+<td> 0.127 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.024 </td>
+<td> 0.176</td>
+</tr>
+<tr>
+<td><code>car_3.lus</code> </td>
+<td> 0.092 </td>
+<td> 0.036 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.020 </td>
+<td> 0.857 </td>
+<td> 41 </td>
+<td> 0.208 </td>
+<td> 2 </td>
+<td> 0.075 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>durationThm_3_e3_207.lus</code> </td>
+<td> 0.092 </td>
+<td> 0.080 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.052 </td>
+<td> 1.252 </td>
+<td> 27 </td>
+<td> 0.158 </td>
+<td> 1 </td>
+<td> 0.138 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.016 </td>
+<td> 0.032</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e3_929_e4_578.lus</code> </td>
+<td> 0.093 </td>
+<td> 0.052 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.116 </td>
+<td> 0.840 </td>
+<td> 73 </td>
+<td> 0.301 </td>
+<td> 2 </td>
+<td> 0.167 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.380</td>
+</tr>
+<tr>
+<td><code>car_3_e2_695.lus</code> </td>
+<td> 0.093 </td>
+<td> 0.039 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 0.846 </td>
+<td> 41 </td>
+<td> 0.140 </td>
+<td> 2 </td>
+<td> 0.080 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>ex3_e7_590_e7_590.lus</code> </td>
+<td> 0.093 </td>
+<td> 0.044 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.897 </td>
+<td> 33 </td>
+<td> 0.125 </td>
+<td> 1 </td>
+<td> 0.063 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.056</td>
+</tr>
+<tr>
+<td><code>MESI_4_e7_1140_e7_433.lus</code> </td>
+<td> 0.094 </td>
+<td> 0.042 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.036 </td>
+<td> 0.987 </td>
+<td> 59 </td>
+<td> 0.127 </td>
+<td> 1 </td>
+<td> 0.115 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.024 </td>
+<td> 0.148</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e3_929_e5_1826.lus</code> </td>
+<td> 0.094 </td>
+<td> 0.049 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.092 </td>
+<td> 0.844 </td>
+<td> 73 </td>
+<td> 0.277 </td>
+<td> 2 </td>
+<td> 0.162 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.320</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_2_e8_1118_e7_1043.lus</code> </td>
+<td> 0.094 </td>
+<td> 0.048 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.064 </td>
+<td> 1.143 </td>
+<td> 55 </td>
+<td> 0.141 </td>
+<td> 2 </td>
+<td> 0.106 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.176</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_3_e8_1329_e7_1062.lus</code> </td>
+<td> 0.094 </td>
+<td> 0.044 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.052 </td>
+<td> 0.939 </td>
+<td> 59 </td>
+<td> 0.115 </td>
+<td> 1 </td>
+<td> 0.122 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.024 </td>
+<td> 0.180</td>
+</tr>
+<tr>
+<td><code>car_3_e7_626.lus</code> </td>
+<td> 0.094 </td>
+<td> 0.041 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.020 </td>
+<td> 0.858 </td>
+<td> 41 </td>
+<td> 0.248 </td>
+<td> 2 </td>
+<td> 0.068 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>speed2.lus</code> </td>
+<td> 0.094 </td>
+<td> 0.041 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.032 </td>
+<td> 0.873 </td>
+<td> 33 </td>
+<td> 0.113 </td>
+<td> 1 </td>
+<td> 0.066 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.016 </td>
+<td> 0.044</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_all_e8_251.lus</code> </td>
+<td> 0.095 </td>
+<td> 0.053 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.096 </td>
+<td> 0.899 </td>
+<td> 59 </td>
+<td> 0.183 </td>
+<td> 2 </td>
+<td> 0.187 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.524</td>
+</tr>
+<tr>
+<td><code>ex3_e7_655.lus</code> </td>
+<td> 0.095 </td>
+<td> 0.049 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.032 </td>
+<td> 0.865 </td>
+<td> 33 </td>
+<td> 0.183 </td>
+<td> 1 </td>
+<td> 0.075 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>car_1_e7_184_e3_299.lus</code> </td>
+<td> 0.096 </td>
+<td> 0.043 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.020 </td>
+<td> 0.853 </td>
+<td> 41 </td>
+<td> 0.129 </td>
+<td> 2 </td>
+<td> 0.125 </td>
+<td> 2 </td>
+<td> 9 </td>
+<td> 0.020 </td>
+<td> 0.084</td>
+</tr>
+<tr>
+<td><code>metros_1_e8_725_e2_1144.lus</code> </td>
+<td> 0.097 </td>
+<td> 0.063 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.873 </td>
+<td> 99 </td>
+<td> 0.134 </td>
+<td> 1 </td>
+<td> 0.258 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.028 </td>
+<td> 0.156</td>
+</tr>
+<tr>
+<td><code>durationThm_3_e3_442.lus</code> </td>
+<td> 0.098 </td>
+<td> 0.044 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.020 </td>
+<td> 0.867 </td>
+<td> 27 </td>
+<td> 0.119 </td>
+<td> 1 </td>
+<td> 0.072 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.008 </td>
+<td> 0.044</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e3_929_e6_2707.lus</code> </td>
+<td> 0.099 </td>
+<td> 0.053 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.092 </td>
+<td> 0.856 </td>
+<td> 73 </td>
+<td> 0.205 </td>
+<td> 2 </td>
+<td> 0.135 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.296</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_3.lus</code> </td>
+<td> 0.099 </td>
+<td> 0.045 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.048 </td>
+<td> 0.932 </td>
+<td> 59 </td>
+<td> 0.120 </td>
+<td> 1 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.024 </td>
+<td> 0.132</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e8_926_e3_1758.lus</code> </td>
+<td> 0.100 </td>
+<td> 0.049 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.084 </td>
+<td> 0.856 </td>
+<td> 73 </td>
+<td> 0.174 </td>
+<td> 2 </td>
+<td> 0.139 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.332</td>
+</tr>
+<tr>
+<td><code>rtp_8.lus</code> </td>
+<td> 0.100 </td>
+<td> 0.065 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.056 </td>
+<td> 0.933 </td>
+<td> 143 </td>
+<td> 0.239 </td>
+<td> 1 </td>
+<td> 0.364 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.056 </td>
+<td> 0.256</td>
+</tr>
+<tr>
+<td><code>MOESI_1.lus</code> </td>
+<td> 0.101 </td>
+<td> 0.050 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.044 </td>
+<td> 0.852 </td>
+<td> 65 </td>
+<td> 0.125 </td>
+<td> 1 </td>
+<td> 0.139 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.128</td>
+</tr>
+<tr>
+<td><code>speed2_e8_449.lus</code> </td>
+<td> 0.101 </td>
+<td> 0.043 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.032 </td>
+<td> 0.889 </td>
+<td> 33 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 0.071 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_3.lus</code> </td>
+<td> 0.102 </td>
+<td> 0.069 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.116 </td>
+<td> 0.917 </td>
+<td> 113 </td>
+<td> 0.324 </td>
+<td> 1 </td>
+<td> 0.229 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.052 </td>
+<td> 0.492</td>
+</tr>
+<tr>
+<td><code>durationThm_3_e2_63.lus</code> </td>
+<td> 0.102 </td>
+<td> 0.068 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 1.127 </td>
+<td> 27 </td>
+<td> 0.110 </td>
+<td> 1 </td>
+<td> 0.071 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.028 </td>
+<td> 0.084</td>
+</tr>
+<tr>
+<td><code>peterson_1.lus</code> </td>
+<td> 0.102 </td>
+<td> 0.073 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.100 </td>
+<td> 0.974 </td>
+<td> 163 </td>
+<td> 0.256 </td>
+<td> 1 </td>
+<td> 0.460 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.072 </td>
+<td> 0.424</td>
+</tr>
+<tr>
+<td><code>FIREFLY_5_e2_2884_e2_1492.lus</code> </td>
+<td> 0.103 </td>
+<td> 0.068 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.068 </td>
+<td> 0.925 </td>
+<td> 97 </td>
+<td> 0.178 </td>
+<td> 1 </td>
+<td> 0.223 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.224</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e3_929_e8_1167.lus</code> </td>
+<td> 0.103 </td>
+<td> 0.058 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.108 </td>
+<td> 0.897 </td>
+<td> 73 </td>
+<td> 0.192 </td>
+<td> 2 </td>
+<td> 0.144 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.332</td>
+</tr>
+<tr>
+<td><code>PRODUCER_CONSUMER_1.lus</code> </td>
+<td> 0.103 </td>
+<td> 0.043 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.020 </td>
+<td> 0.855 </td>
+<td> 51 </td>
+<td> 0.145 </td>
+<td> 1 </td>
+<td> 0.100 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.016 </td>
+<td> 0.068</td>
+</tr>
+<tr>
+<td><code>car_all_e8_856.lus</code> </td>
+<td> 0.103 </td>
+<td> 0.076 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 1.660 </td>
+<td> 43 </td>
+<td> 0.139 </td>
+<td> 2 </td>
+<td> 0.114 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.120</td>
+</tr>
+<tr>
+<td><code>FIREFLY_1.lus</code> </td>
+<td> 0.104 </td>
+<td> 0.059 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.076 </td>
+<td> 0.909 </td>
+<td> 103 </td>
+<td> 0.276 </td>
+<td> 2 </td>
+<td> 0.224 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.392</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e2_1599.lus</code> </td>
+<td> 0.104 </td>
+<td> 0.045 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.056 </td>
+<td> 0.851 </td>
+<td> 73 </td>
+<td> 0.192 </td>
+<td> 2 </td>
+<td> 0.160 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.296</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_4_e8_420_e8_1525.lus</code> </td>
+<td> 0.104 </td>
+<td> 0.044 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.044 </td>
+<td> 0.867 </td>
+<td> 53 </td>
+<td> 0.126 </td>
+<td> 1 </td>
+<td> 0.102 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.020 </td>
+<td> 0.084</td>
+</tr>
+<tr>
+<td><code>car_2.lus</code> </td>
+<td> 0.104 </td>
+<td> 0.048 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 0.823 </td>
+<td> 41 </td>
+<td> 0.121 </td>
+<td> 2 </td>
+<td> 0.092 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>car_4_e7_592.lus</code> </td>
+<td> 0.104 </td>
+<td> 0.039 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.028 </td>
+<td> 0.052 </td>
+<td> 1.710 </td>
+<td> 41 </td>
+<td> 0.253 </td>
+<td> 2 </td>
+<td> 0.229 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.020 </td>
+<td> 0.076</td>
+</tr>
+<tr>
+<td><code>durationThm_1_e3_389_e4_294.lus</code> </td>
+<td> 0.104 </td>
+<td> 0.053 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.885 </td>
+<td> 29 </td>
+<td> 0.113 </td>
+<td> 1 </td>
+<td> 0.072 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.012 </td>
+<td> 0.032</td>
+</tr>
+<tr>
+<td><code>durationThm_1_e7_217_e2_352.lus</code> </td>
+<td> 0.104 </td>
+<td> 0.061 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.862 </td>
+<td> 29 </td>
+<td> 0.113 </td>
+<td> 1 </td>
+<td> 0.080 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.008 </td>
+<td> 0.040</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e8_926.lus</code> </td>
+<td> 0.105 </td>
+<td> 0.052 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.100 </td>
+<td> 0.875 </td>
+<td> 73 </td>
+<td> 0.207 </td>
+<td> 2 </td>
+<td> 0.146 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.304</td>
+</tr>
+<tr>
+<td><code>durationThm_3_e7_334_e2_62.lus</code> </td>
+<td> 0.105 </td>
+<td> 0.059 </td>
+<td> 2 </td>
+<td> 3 </td>
+<td> 0.004 </td>
+<td> 0.024 </td>
+<td> 0.906 </td>
+<td> 27 </td>
+<td> 0.101 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.012 </td>
+<td> 0.036</td>
+</tr>
+<tr>
+<td><code>rtp_6.lus</code> </td>
+<td> 0.105 </td>
+<td> 0.066 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.901 </td>
+<td> 143 </td>
+<td> 0.204 </td>
+<td> 1 </td>
+<td> 0.327 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.048 </td>
+<td> 0.264</td>
+</tr>
+<tr>
+<td><code>rtp_all.lus</code> </td>
+<td> 0.105 </td>
+<td> 0.111 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.208 </td>
+<td> 0.984 </td>
+<td> 163 </td>
+<td> 0.241 </td>
+<td> 1 </td>
+<td> 0.312 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.064 </td>
+<td> 0.456</td>
+</tr>
+<tr>
+<td><code>ex3_e8_381_e7_224.lus</code> </td>
+<td> 0.106 </td>
+<td> 0.047 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.032 </td>
+<td> 0.870 </td>
+<td> 33 </td>
+<td> 0.124 </td>
+<td> 1 </td>
+<td> 0.061 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>FIREFLY_10.lus</code> </td>
+<td> 0.107 </td>
+<td> 0.054 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.044 </td>
+<td> 0.928 </td>
+<td> 97 </td>
+<td> 0.174 </td>
+<td> 1 </td>
+<td> 0.207 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.248</td>
+</tr>
+<tr>
+<td><code>FIREFLY_8.lus</code> </td>
+<td> 0.107 </td>
+<td> 0.059 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.044 </td>
+<td> 1.203 </td>
+<td> 97 </td>
+<td> 0.282 </td>
+<td> 1 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.236</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_3_e7_1444_e7_638.lus</code> </td>
+<td> 0.107 </td>
+<td> 0.045 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.044 </td>
+<td> 0.884 </td>
+<td> 59 </td>
+<td> 0.117 </td>
+<td> 1 </td>
+<td> 0.132 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.172</td>
+</tr>
+<tr>
+<td><code>car_3_e8_33.lus</code> </td>
+<td> 0.107 </td>
+<td> 0.043 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.020 </td>
+<td> 0.876 </td>
+<td> 41 </td>
+<td> 0.108 </td>
+<td> 2 </td>
+<td> 0.067 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.040</td>
+</tr>
+<tr>
+<td><code>hysteresis_3.lus</code> </td>
+<td> 0.107 </td>
+<td> 0.043 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.036 </td>
+<td> 0.868 </td>
+<td> 33 </td>
+<td> 0.119 </td>
+<td> 1 </td>
+<td> 0.072 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.068</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_1.lus</code> </td>
+<td> 0.109 </td>
+<td> 0.065 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.052 </td>
+<td> 1.151 </td>
+<td> 103 </td>
+<td> 0.201 </td>
+<td> 1 </td>
+<td> 0.219 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.064 </td>
+<td> 0.568</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_2_e1_834_e2_3395.lus</code> </td>
+<td> 0.109 </td>
+<td> 0.063 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.024 </td>
+<td> 0.080 </td>
+<td> 0.930 </td>
+<td> 109 </td>
+<td> 0.267 </td>
+<td> 2 </td>
+<td> 0.262 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.056 </td>
+<td> 0.524</td>
+</tr>
+<tr>
+<td><code>MESI_all.lus</code> </td>
+<td> 0.109 </td>
+<td> 0.051 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.012 </td>
+<td> 0.048 </td>
+<td> 1.070 </td>
+<td> 61 </td>
+<td> 0.148 </td>
+<td> 1 </td>
+<td> 0.115 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.024 </td>
+<td> 0.128</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e3_929.lus</code> </td>
+<td> 0.109 </td>
+<td> 0.046 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.056 </td>
+<td> 0.846 </td>
+<td> 73 </td>
+<td> 0.166 </td>
+<td> 2 </td>
+<td> 0.155 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.344</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e8_101.lus</code> </td>
+<td> 0.109 </td>
+<td> 0.057 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.096 </td>
+<td> 0.867 </td>
+<td> 73 </td>
+<td> 0.184 </td>
+<td> 2 </td>
+<td> 0.154 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.300</td>
+</tr>
+<tr>
+<td><code>ex3.lus</code> </td>
+<td> 0.109 </td>
+<td> 0.042 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.004 </td>
+<td> 0.024 </td>
+<td> 0.854 </td>
+<td> 33 </td>
+<td> 0.128 </td>
+<td> 1 </td>
+<td> 0.070 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.056</td>
+</tr>
+<tr>
+<td><code>hysteresis_2.lus</code> </td>
+<td> 0.109 </td>
+<td> 0.045 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.931 </td>
+<td> 33 </td>
+<td> 0.122 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.072</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e1_4022_e2_267.lus</code> </td>
+<td> 0.110 </td>
+<td> 0.093 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.336 </td>
+<td> 0.964 </td>
+<td> 149 </td>
+<td> 0.425 </td>
+<td> 2 </td>
+<td> 0.598 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.140 </td>
+<td> 3.132</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1b.lus</code> </td>
+<td> 0.110 </td>
+<td> 0.066 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.076 </td>
+<td> 0.954 </td>
+<td> 103 </td>
+<td> 0.256 </td>
+<td> 2 </td>
+<td> 0.209 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.416</td>
+</tr>
+<tr>
+<td><code>speed2_e8_750.lus</code> </td>
+<td> 0.110 </td>
+<td> 0.044 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 0.877 </td>
+<td> 33 </td>
+<td> 0.101 </td>
+<td> 1 </td>
+<td> 0.080 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.016 </td>
+<td> 0.044</td>
+</tr>
+<tr>
+<td><code>FIREFLY_8_e2_1711_e1_1489.lus</code> </td>
+<td> 0.111 </td>
+<td> 0.062 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.076 </td>
+<td> 0.999 </td>
+<td> 97 </td>
+<td> 0.281 </td>
+<td> 1 </td>
+<td> 0.239 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.100 </td>
+<td> 0.532</td>
+</tr>
+<tr>
+<td><code>durationThm_2_e7_145_e2_169.lus</code> </td>
+<td> 0.111 </td>
+<td> 0.064 </td>
+<td> 2 </td>
+<td> 4 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.877 </td>
+<td> 31 </td>
+<td> 0.339 </td>
+<td> 1 </td>
+<td> 0.306 </td>
+<td> 1 </td>
+<td> 15 </td>
+<td> 0.012 </td>
+<td> 0.036</td>
+</tr>
+<tr>
+<td><code>metros_4_e2_968_e2_1166.lus</code> </td>
+<td> 0.111 </td>
+<td> 0.075 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.056 </td>
+<td> 0.978 </td>
+<td> 81 </td>
+<td> 0.183 </td>
+<td> 1 </td>
+<td> 0.191 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.024 </td>
+<td> 0.080</td>
+</tr>
+<tr>
+<td><code>two_counters.lus</code> </td>
+<td> 0.111 </td>
+<td> 0.054 </td>
+<td> 4 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.036 </td>
+<td> 0.856 </td>
+<td> 15 </td>
+<td> 0.087 </td>
+<td> 1 </td>
+<td> 0.055 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.004 </td>
+<td> 0.024</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e3_4821_e5_1536.lus</code> </td>
+<td> 0.112 </td>
+<td> 0.095 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.440 </td>
+<td> 0.952 </td>
+<td> 149 </td>
+<td> 0.453 </td>
+<td> 2 </td>
+<td> 0.547 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.128 </td>
+<td> 2.928</td>
+</tr>
+<tr>
+<td><code>FIREFLY_5_e2_2884_e1_2678.lus</code> </td>
+<td> 0.112 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.052 </td>
+<td> 0.948 </td>
+<td> 97 </td>
+<td> 0.175 </td>
+<td> 1 </td>
+<td> 0.241 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.248</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_rt.lus</code> </td>
+<td> 0.112 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.056 </td>
+<td> 0.068 </td>
+<td> 1.363 </td>
+<td> 107 </td>
+<td> 0.578 </td>
+<td> 1 </td>
+<td> 0.243 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.044 </td>
+<td> 0.292</td>
+</tr>
+<tr>
+<td><code>DRAGON_1_e1_5070.lus</code> </td>
+<td> 0.113 </td>
+<td> 0.070 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.096 </td>
+<td> 1.006 </td>
+<td> 133 </td>
+<td> 0.266 </td>
+<td> 1 </td>
+<td> 0.267 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.084 </td>
+<td> 0.444</td>
+</tr>
+<tr>
+<td><code>FIREFLY_3_e2_2236.lus</code> </td>
+<td> 0.113 </td>
+<td> 0.051 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.048 </td>
+<td> 0.927 </td>
+<td> 97 </td>
+<td> 0.176 </td>
+<td> 1 </td>
+<td> 0.214 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.240</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1b_e2_3049_e1_946.lus</code> </td>
+<td> 0.113 </td>
+<td> 0.065 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.072 </td>
+<td> 0.902 </td>
+<td> 103 </td>
+<td> 0.259 </td>
+<td> 2 </td>
+<td> 0.226 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.408</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_all.lus</code> </td>
+<td> 0.113 </td>
+<td> 0.052 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.104 </td>
+<td> 0.887 </td>
+<td> 59 </td>
+<td> 0.176 </td>
+<td> 2 </td>
+<td> 0.187 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.032 </td>
+<td> 0.372</td>
+</tr>
+<tr>
+<td><code>metros_1.lus</code> </td>
+<td> 0.113 </td>
+<td> 0.068 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.100 </td>
+<td> 0.910 </td>
+<td> 99 </td>
+<td> 0.168 </td>
+<td> 1 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.036 </td>
+<td> 0.128</td>
+</tr>
+<tr>
+<td><code>metros_3_e3_1275_e2_454.lus</code> </td>
+<td> 0.113 </td>
+<td> 0.068 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.064 </td>
+<td> 0.975 </td>
+<td> 81 </td>
+<td> 0.182 </td>
+<td> 1 </td>
+<td> 0.139 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.076</td>
+</tr>
+<tr>
+<td><code>metros_4_e3_1091_e3_522.lus</code> </td>
+<td> 0.113 </td>
+<td> 0.059 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.068 </td>
+<td> 1.017 </td>
+<td> 81 </td>
+<td> 0.232 </td>
+<td> 1 </td>
+<td> 0.174 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.020 </td>
+<td> 0.088</td>
+</tr>
+<tr>
+<td><code>DRAGON_10_e2_402.lus</code> </td>
+<td> 0.114 </td>
+<td> 0.074 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.096 </td>
+<td> 1.040 </td>
+<td> 133 </td>
+<td> 0.282 </td>
+<td> 1 </td>
+<td> 0.282 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.608</td>
+</tr>
+<tr>
+<td><code>FIREFLY_5_e2_2884.lus</code> </td>
+<td> 0.114 </td>
+<td> 0.061 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.048 </td>
+<td> 0.960 </td>
+<td> 97 </td>
+<td> 0.191 </td>
+<td> 1 </td>
+<td> 0.211 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.268</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_4_e7_2651_e7_2847.lus</code> </td>
+<td> 0.114 </td>
+<td> 0.057 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.052 </td>
+<td> 0.911 </td>
+<td> 103 </td>
+<td> 0.193 </td>
+<td> 1 </td>
+<td> 0.216 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.324</td>
+</tr>
+<tr>
+<td><code>MESI_3_e3_2669.lus</code> </td>
+<td> 0.114 </td>
+<td> 0.100 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.472 </td>
+<td> 0.881 </td>
+<td> 79 </td>
+<td> 0.151 </td>
+<td> 1 </td>
+<td> 0.138 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.596</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_3_e7_425.lus</code> </td>
+<td> 0.114 </td>
+<td> 0.047 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.056 </td>
+<td> 0.909 </td>
+<td> 59 </td>
+<td> 0.134 </td>
+<td> 1 </td>
+<td> 0.124 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.012 </td>
+<td> 0.136</td>
+</tr>
+<tr>
+<td><code>ticket3i_3.lus</code> </td>
+<td> 0.114 </td>
+<td> 0.070 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.052 </td>
+<td> 0.959 </td>
+<td> 123 </td>
+<td> 0.235 </td>
+<td> 1 </td>
+<td> 0.333 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.036 </td>
+<td> 0.176</td>
+</tr>
+<tr>
+<td><code>FIREFLY_4.lus</code> </td>
+<td> 0.115 </td>
+<td> 0.064 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.108 </td>
+<td> 0.988 </td>
+<td> 109 </td>
+<td> 0.208 </td>
+<td> 1 </td>
+<td> 0.219 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.056 </td>
+<td> 0.316</td>
+</tr>
+<tr>
+<td><code>FIREFLY_all.lus</code> </td>
+<td> 0.115 </td>
+<td> 0.078 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.176 </td>
+<td> 0.940 </td>
+<td> 109 </td>
+<td> 0.305 </td>
+<td> 2 </td>
+<td> 0.356 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.096 </td>
+<td> 1.908</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1b_e1_1139_e2_2893.lus</code> </td>
+<td> 0.115 </td>
+<td> 0.057 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.080 </td>
+<td> 0.951 </td>
+<td> 103 </td>
+<td> 0.269 </td>
+<td> 2 </td>
+<td> 0.230 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.424</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1b_e7_3191_e8_2830.lus</code> </td>
+<td> 0.115 </td>
+<td> 0.068 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.056 </td>
+<td> 0.316 </td>
+<td> 0.926 </td>
+<td> 103 </td>
+<td> 0.504 </td>
+<td> 2 </td>
+<td> 0.341 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.788</td>
+</tr>
+<tr>
+<td><code>metros_1_e8_725.lus</code> </td>
+<td> 0.115 </td>
+<td> 0.060 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.028 </td>
+<td> 0.882 </td>
+<td> 99 </td>
+<td> 0.163 </td>
+<td> 1 </td>
+<td> 0.244 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.028 </td>
+<td> 0.140</td>
+</tr>
+<tr>
+<td><code>readwrit.lus</code> </td>
+<td> 0.115 </td>
+<td> 0.059 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.923 </td>
+<td> 109 </td>
+<td> 0.252 </td>
+<td> 1 </td>
+<td> 0.305 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.052 </td>
+<td> 0.444</td>
+</tr>
+<tr>
+<td><code>FIREFLY_3.lus</code> </td>
+<td> 0.116 </td>
+<td> 0.054 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.044 </td>
+<td> 0.954 </td>
+<td> 97 </td>
+<td> 0.190 </td>
+<td> 1 </td>
+<td> 0.194 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.032 </td>
+<td> 0.260</td>
+</tr>
+<tr>
+<td><code>metros_1_e8_725_e3_556.lus</code> </td>
+<td> 0.116 </td>
+<td> 0.056 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.896 </td>
+<td> 99 </td>
+<td> 0.258 </td>
+<td> 1 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.032 </td>
+<td> 0.136</td>
+</tr>
+<tr>
+<td><code>DRAGON_10_e3_144_e5_2046.lus</code> </td>
+<td> 0.117 </td>
+<td> 0.072 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.100 </td>
+<td> 1.037 </td>
+<td> 133 </td>
+<td> 0.257 </td>
+<td> 1 </td>
+<td> 0.292 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.072 </td>
+<td> 0.664</td>
+</tr>
+<tr>
+<td><code>FIREFLY_5.lus</code> </td>
+<td> 0.117 </td>
+<td> 0.058 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.048 </td>
+<td> 0.923 </td>
+<td> 97 </td>
+<td> 0.174 </td>
+<td> 1 </td>
+<td> 0.219 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.256</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_5.lus</code> </td>
+<td> 0.117 </td>
+<td> 0.061 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.044 </td>
+<td> 0.906 </td>
+<td> 103 </td>
+<td> 0.212 </td>
+<td> 1 </td>
+<td> 0.224 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.244</td>
+</tr>
+<tr>
+<td><code>durationThm_3_e7_334_e3_42.lus</code> </td>
+<td> 0.117 </td>
+<td> 0.054 </td>
+<td> 2 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.912 </td>
+<td> 27 </td>
+<td> 0.081 </td>
+<td> 1 </td>
+<td> 0.075 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.012 </td>
+<td> 0.044</td>
+</tr>
+<tr>
+<td><code>DRAGON_10_e1_998.lus</code> </td>
+<td> 0.118 </td>
+<td> 0.070 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.104 </td>
+<td> 0.983 </td>
+<td> 133 </td>
+<td> 0.267 </td>
+<td> 1 </td>
+<td> 0.271 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.072 </td>
+<td> 0.552</td>
+</tr>
+<tr>
+<td><code>FIREFLY_8_e2_1711.lus</code> </td>
+<td> 0.118 </td>
+<td> 0.061 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.080 </td>
+<td> 0.968 </td>
+<td> 97 </td>
+<td> 0.184 </td>
+<td> 1 </td>
+<td> 0.202 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.260</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_5_e7_692_e7_2865.lus</code> </td>
+<td> 0.118 </td>
+<td> 0.055 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.040 </td>
+<td> 0.950 </td>
+<td> 103 </td>
+<td> 0.196 </td>
+<td> 1 </td>
+<td> 0.194 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.340</td>
+</tr>
+<tr>
+<td><code>car_all_e8_856_e2_585.lus</code> </td>
+<td> 0.118 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.036 </td>
+<td> 1.284 </td>
+<td> 43 </td>
+<td> 0.160 </td>
+<td> 2 </td>
+<td> 0.111 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.024 </td>
+<td> 0.108</td>
+</tr>
+<tr>
+<td><code>hysteresis_all.lus</code> </td>
+<td> 0.118 </td>
+<td> 0.052 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.888 </td>
+<td> 33 </td>
+<td> 0.132 </td>
+<td> 1 </td>
+<td> 0.085 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.080</td>
+</tr>
+<tr>
+<td><code>FIREFLY_all_e2_2924_e1_768.lus</code> </td>
+<td> 0.119 </td>
+<td> 0.075 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.176 </td>
+<td> 0.981 </td>
+<td> 109 </td>
+<td> 0.318 </td>
+<td> 2 </td>
+<td> 0.356 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.092 </td>
+<td> 1.516</td>
+</tr>
+<tr>
+<td><code>durationThm_1_e7_217_e3_132.lus</code> </td>
+<td> 0.119 </td>
+<td> 0.061 </td>
+<td> 2 </td>
+<td> 4 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.849 </td>
+<td> 29 </td>
+<td> 0.109 </td>
+<td> 1 </td>
+<td> 0.080 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.016 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>fast_1.lus</code> </td>
+<td> 0.119 </td>
+<td> 0.079 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.056 </td>
+<td> 0.995 </td>
+<td> 161 </td>
+<td> 0.675 </td>
+<td> 2 </td>
+<td> 0.281 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.104</td>
+</tr>
+<tr>
+<td><code>metros_4_e3_1091_e2_1317.lus</code> </td>
+<td> 0.119 </td>
+<td> 0.061 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.068 </td>
+<td> 1.301 </td>
+<td> 81 </td>
+<td> 0.220 </td>
+<td> 1 </td>
+<td> 0.156 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.040 </td>
+<td> 0.076</td>
+</tr>
+<tr>
+<td><code>rtp_2.lus</code> </td>
+<td> 0.119 </td>
+<td> 0.065 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.080 </td>
+<td> 0.974 </td>
+<td> 67 </td>
+<td> 0.152 </td>
+<td> 1 </td>
+<td> 0.112 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.100</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_all.lus</code> </td>
+<td> 0.120 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.220 </td>
+<td> 0.933 </td>
+<td> 113 </td>
+<td> 0.343 </td>
+<td> 2 </td>
+<td> 0.390 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.092 </td>
+<td> 1.764</td>
+</tr>
+<tr>
+<td><code>rtp_9.lus</code> </td>
+<td> 0.120 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.052 </td>
+<td> 0.932 </td>
+<td> 143 </td>
+<td> 0.228 </td>
+<td> 1 </td>
+<td> 0.448 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.044 </td>
+<td> 0.260</td>
+</tr>
+<tr>
+<td><code>speed2_e8_449_e8_517.lus</code> </td>
+<td> 0.120 </td>
+<td> 0.051 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.036 </td>
+<td> 0.895 </td>
+<td> 33 </td>
+<td> 0.112 </td>
+<td> 1 </td>
+<td> 0.071 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>ticket3i_1.lus</code> </td>
+<td> 0.120 </td>
+<td> 0.070 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.092 </td>
+<td> 1.095 </td>
+<td> 123 </td>
+<td> 0.179 </td>
+<td> 1 </td>
+<td> 0.247 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.044 </td>
+<td> 0.212</td>
+</tr>
+<tr>
+<td><code>speed2_e7_223_e8_329.lus</code> </td>
+<td> 0.121 </td>
+<td> 0.044 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.880 </td>
+<td> 33 </td>
+<td> 0.130 </td>
+<td> 1 </td>
+<td> 0.076 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>DRAGON_10_e2_2785_e3_1744.lus</code> </td>
+<td> 0.122 </td>
+<td> 0.069 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.088 </td>
+<td> 0.930 </td>
+<td> 133 </td>
+<td> 0.264 </td>
+<td> 1 </td>
+<td> 0.320 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.080 </td>
+<td> 0.508</td>
+</tr>
+<tr>
+<td><code>DRAGON_2_e2_3183_e3_5972.lus</code> </td>
+<td> 0.122 </td>
+<td> 0.082 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.024 </td>
+<td> 0.104 </td>
+<td> 0.981 </td>
+<td> 141 </td>
+<td> 0.414 </td>
+<td> 2 </td>
+<td> 0.400 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 0.668</td>
+</tr>
+<tr>
+<td><code>peterson_3.lus</code> </td>
+<td> 0.122 </td>
+<td> 0.074 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.068 </td>
+<td> 0.926 </td>
+<td> 163 </td>
+<td> 0.266 </td>
+<td> 1 </td>
+<td> 0.450 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.060 </td>
+<td> 0.476</td>
+</tr>
+<tr>
+<td><code>FIREFLY_10_e7_919_e2_3192.lus</code> </td>
+<td> 0.123 </td>
+<td> 0.051 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.052 </td>
+<td> 0.940 </td>
+<td> 97 </td>
+<td> 0.175 </td>
+<td> 1 </td>
+<td> 0.212 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.264</td>
+</tr>
+<tr>
+<td><code>FIREFLY_5_e2_2229.lus</code> </td>
+<td> 0.123 </td>
+<td> 0.059 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.052 </td>
+<td> 0.911 </td>
+<td> 97 </td>
+<td> 0.209 </td>
+<td> 1 </td>
+<td> 0.233 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.248</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_123_e8_953_e8_941.lus</code> </td>
+<td> 0.123 </td>
+<td> 0.057 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.016 </td>
+<td> 0.084 </td>
+<td> 0.974 </td>
+<td> 65 </td>
+<td> 0.204 </td>
+<td> 2 </td>
+<td> 0.177 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.880</td>
+</tr>
+<tr>
+<td><code>DRAGON_6.lus</code> </td>
+<td> 0.124 </td>
+<td> 0.076 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.068 </td>
+<td> 1.068 </td>
+<td> 133 </td>
+<td> 0.595 </td>
+<td> 1 </td>
+<td> 0.318 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.440</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_2_e2_2367_e1_3182.lus</code> </td>
+<td> 0.124 </td>
+<td> 0.069 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.080 </td>
+<td> 0.927 </td>
+<td> 109 </td>
+<td> 0.293 </td>
+<td> 2 </td>
+<td> 0.253 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.052 </td>
+<td> 0.520</td>
+</tr>
+<tr>
+<td><code>car_2_e8_491_e7_826.lus</code> </td>
+<td> 0.125 </td>
+<td> 0.040 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.020 </td>
+<td> 0.853 </td>
+<td> 41 </td>
+<td> 0.128 </td>
+<td> 2 </td>
+<td> 0.132 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.084</td>
+</tr>
+<tr>
+<td><code>DRAGON_10.lus</code> </td>
+<td> 0.126 </td>
+<td> 0.070 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.104 </td>
+<td> 1.324 </td>
+<td> 133 </td>
+<td> 0.272 </td>
+<td> 1 </td>
+<td> 0.370 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.080 </td>
+<td> 0.484</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e1_4022_e1_1759.lus</code> </td>
+<td> 0.126 </td>
+<td> 0.097 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.396 </td>
+<td> 0.928 </td>
+<td> 149 </td>
+<td> 0.432 </td>
+<td> 2 </td>
+<td> 0.676 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.176 </td>
+<td> 3.104</td>
+</tr>
+<tr>
+<td><code>FIREFLY_5_e2_2884_e3_1882.lus</code> </td>
+<td> 0.126 </td>
+<td> 0.061 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.931 </td>
+<td> 97 </td>
+<td> 0.201 </td>
+<td> 1 </td>
+<td> 0.236 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.252</td>
+</tr>
+<tr>
+<td><code>MESI_3_e2_819_e6_1459.lus</code> </td>
+<td> 0.126 </td>
+<td> 0.097 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.520 </td>
+<td> 0.868 </td>
+<td> 79 </td>
+<td> 0.152 </td>
+<td> 1 </td>
+<td> 0.173 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.892</td>
+</tr>
+<tr>
+<td><code>metros_2_e1_1116_e2_617.lus</code> </td>
+<td> 0.126 </td>
+<td> 0.068 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.088 </td>
+<td> 0.939 </td>
+<td> 87 </td>
+<td> 0.304 </td>
+<td> 1 </td>
+<td> 0.234 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.024 </td>
+<td> 0.100</td>
+</tr>
+<tr>
+<td><code>metros_3_e3_1275_e3_640.lus</code> </td>
+<td> 0.126 </td>
+<td> 0.114 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.172 </td>
+<td> 0.967 </td>
+<td> 81 </td>
+<td> 0.247 </td>
+<td> 1 </td>
+<td> 0.142 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.052 </td>
+<td> 0.112</td>
+</tr>
+<tr>
+<td><code>FIREFLY_a3_e1_3233_e3_2970.lus</code> </td>
+<td> 0.127 </td>
+<td> 0.073 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.148 </td>
+<td> 0.930 </td>
+<td> 117 </td>
+<td> 0.221 </td>
+<td> 1 </td>
+<td> 0.437 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.040 </td>
+<td> 0.356</td>
+</tr>
+<tr>
+<td><code>rtp_4.lus</code> </td>
+<td> 0.127 </td>
+<td> 0.066 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.056 </td>
+<td> 0.904 </td>
+<td> 143 </td>
+<td> 0.231 </td>
+<td> 1 </td>
+<td> 0.280 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.056 </td>
+<td> 0.252</td>
+</tr>
+<tr>
+<td><code>cd.lus</code> </td>
+<td> 0.128 </td>
+<td> 0.084 </td>
+<td> 10 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.176 </td>
+<td> 0.861 </td>
+<td> 39 </td>
+<td> 0.105 </td>
+<td> 1 </td>
+<td> 0.076 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.056</td>
+</tr>
+<tr>
+<td><code>DRAGON_2_e7_25_e8_3171.lus</code> </td>
+<td> 0.129 </td>
+<td> 0.082 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.172 </td>
+<td> 0.973 </td>
+<td> 141 </td>
+<td> 0.420 </td>
+<td> 2 </td>
+<td> 0.365 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.064 </td>
+<td> 0.584</td>
+</tr>
+<tr>
+<td><code>FIREFLY_5_e2_2884_e7_3594.lus</code> </td>
+<td> 0.129 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.052 </td>
+<td> 0.967 </td>
+<td> 97 </td>
+<td> 0.190 </td>
+<td> 1 </td>
+<td> 0.200 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.276</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e2_6104_e3_2607.lus</code> </td>
+<td> 0.130 </td>
+<td> 0.088 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.280 </td>
+<td> 0.957 </td>
+<td> 149 </td>
+<td> 0.495 </td>
+<td> 2 </td>
+<td> 0.609 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.144 </td>
+<td> 3.716</td>
+</tr>
+<tr>
+<td><code>FIREFLY_1_e1_1092_e2_1853.lus</code> </td>
+<td> 0.130 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.148 </td>
+<td> 1.231 </td>
+<td> 103 </td>
+<td> 0.259 </td>
+<td> 2 </td>
+<td> 0.216 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.480</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_rt_e1_913_e2_3353.lus</code> </td>
+<td> 0.130 </td>
+<td> 0.064 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.024 </td>
+<td> 0.080 </td>
+<td> 1.323 </td>
+<td> 107 </td>
+<td> 0.196 </td>
+<td> 1 </td>
+<td> 0.250 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.044 </td>
+<td> 0.304</td>
+</tr>
+<tr>
+<td><code>MESI_3_e2_819_e4_1595.lus</code> </td>
+<td> 0.130 </td>
+<td> 0.104 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.444 </td>
+<td> 0.859 </td>
+<td> 79 </td>
+<td> 0.149 </td>
+<td> 1 </td>
+<td> 0.153 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.968</td>
+</tr>
+<tr>
+<td><code>fast_1_e8_747_e8_1041.lus</code> </td>
+<td> 0.130 </td>
+<td> 0.089 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.060 </td>
+<td> 1.049 </td>
+<td> 161 </td>
+<td> 0.460 </td>
+<td> 2 </td>
+<td> 0.193 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.116</td>
+</tr>
+<tr>
+<td><code>peterson_4.lus</code> </td>
+<td> 0.130 </td>
+<td> 0.072 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.068 </td>
+<td> 0.919 </td>
+<td> 163 </td>
+<td> 0.294 </td>
+<td> 1 </td>
+<td> 0.411 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.064 </td>
+<td> 0.460</td>
+</tr>
+<tr>
+<td><code>ticket3i_2.lus</code> </td>
+<td> 0.130 </td>
+<td> 0.063 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.080 </td>
+<td> 0.927 </td>
+<td> 123 </td>
+<td> 0.256 </td>
+<td> 1 </td>
+<td> 0.314 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.024 </td>
+<td> 0.236</td>
+</tr>
+<tr>
+<td><code>DRAGON_7_e2_2872_e3_2640.lus</code> </td>
+<td> 0.131 </td>
+<td> 0.090 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.124 </td>
+<td> 0.941 </td>
+<td> 135 </td>
+<td> 0.318 </td>
+<td> 1 </td>
+<td> 0.325 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.064 </td>
+<td> 0.552</td>
+</tr>
+<tr>
+<td><code>FIREFLY_5_e1_2552_e7_1169.lus</code> </td>
+<td> 0.131 </td>
+<td> 0.063 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.052 </td>
+<td> 0.955 </td>
+<td> 97 </td>
+<td> 0.190 </td>
+<td> 1 </td>
+<td> 0.242 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.032 </td>
+<td> 0.248</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e8_926_e1_1065.lus</code> </td>
+<td> 0.131 </td>
+<td> 0.050 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.072 </td>
+<td> 0.868 </td>
+<td> 73 </td>
+<td> 0.188 </td>
+<td> 2 </td>
+<td> 0.123 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.476</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_123.lus</code> </td>
+<td> 0.131 </td>
+<td> 0.100 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.008 </td>
+<td> 0.080 </td>
+<td> 1.011 </td>
+<td> 65 </td>
+<td> 0.203 </td>
+<td> 2 </td>
+<td> 0.217 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.408</td>
+</tr>
+<tr>
+<td><code>ticket3i_3_e8_1703.lus</code> </td>
+<td> 0.131 </td>
+<td> 0.069 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.076 </td>
+<td> 0.938 </td>
+<td> 123 </td>
+<td> 0.219 </td>
+<td> 1 </td>
+<td> 0.338 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.032 </td>
+<td> 0.216</td>
+</tr>
+<tr>
+<td><code>DRAGON_3_e3_5422_e1_2288.lus</code> </td>
+<td> 0.132 </td>
+<td> 0.098 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.276 </td>
+<td> 0.935 </td>
+<td> 145 </td>
+<td> 0.316 </td>
+<td> 1 </td>
+<td> 0.395 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.064 </td>
+<td> 1.096</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_rt_e2_3460_e1_1455.lus</code> </td>
+<td> 0.132 </td>
+<td> 0.060 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.084 </td>
+<td> 0.963 </td>
+<td> 107 </td>
+<td> 0.207 </td>
+<td> 1 </td>
+<td> 0.234 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.036 </td>
+<td> 0.296</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_123_e8_953.lus</code> </td>
+<td> 0.132 </td>
+<td> 0.058 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.020 </td>
+<td> 0.068 </td>
+<td> 0.919 </td>
+<td> 65 </td>
+<td> 0.196 </td>
+<td> 2 </td>
+<td> 0.175 </td>
+<td> 2 </td>
+<td> 5 </td>
+<td> 0.032 </td>
+<td> 0.700</td>
+</tr>
+<tr>
+<td><code>channel.lus</code> </td>
+<td> 0.132 </td>
+<td> 0.111 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.044 </td>
+<td> 0.524 </td>
+<td> 1.053 </td>
+<td> 234 </td>
+<td> 0.394 </td>
+<td> 1 </td>
+<td> 0.910 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.216 </td>
+<td> 2.304</td>
+</tr>
+<tr>
+<td><code>fast_1_e8_751.lus</code> </td>
+<td> 0.132 </td>
+<td> 0.077 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.056 </td>
+<td> 1.482 </td>
+<td> 161 </td>
+<td> 0.659 </td>
+<td> 2 </td>
+<td> 0.239 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.116</td>
+</tr>
+<tr>
+<td><code>metros_1_e1_846_e2_1394.lus</code> </td>
+<td> 0.132 </td>
+<td> 0.067 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.072 </td>
+<td> 0.873 </td>
+<td> 99 </td>
+<td> 0.253 </td>
+<td> 1 </td>
+<td> 0.262 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.024 </td>
+<td> 0.108</td>
+</tr>
+<tr>
+<td><code>rtp_1.lus</code> </td>
+<td> 0.132 </td>
+<td> 0.060 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.056 </td>
+<td> 0.896 </td>
+<td> 67 </td>
+<td> 0.147 </td>
+<td> 1 </td>
+<td> 0.111 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.024 </td>
+<td> 0.092</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e3_4821_e2_1089.lus</code> </td>
+<td> 0.133 </td>
+<td> 0.090 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.424 </td>
+<td> 0.973 </td>
+<td> 149 </td>
+<td> 0.432 </td>
+<td> 2 </td>
+<td> 0.630 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.160 </td>
+<td> 3.944</td>
+</tr>
+<tr>
+<td><code>FIREFLY_3_e2_2236_e7_3681.lus</code> </td>
+<td> 0.133 </td>
+<td> 0.058 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.052 </td>
+<td> 0.933 </td>
+<td> 97 </td>
+<td> 0.189 </td>
+<td> 1 </td>
+<td> 0.201 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.260</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_4.lus</code> </td>
+<td> 0.133 </td>
+<td> 0.044 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.943 </td>
+<td> 53 </td>
+<td> 0.136 </td>
+<td> 1 </td>
+<td> 0.102 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.020 </td>
+<td> 0.088</td>
+</tr>
+<tr>
+<td><code>car_4_e8_118_e7_178.lus</code> </td>
+<td> 0.133 </td>
+<td> 0.043 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.024 </td>
+<td> 0.024 </td>
+<td> 2.154 </td>
+<td> 41 </td>
+<td> 0.198 </td>
+<td> 2 </td>
+<td> 0.136 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.208</td>
+</tr>
+<tr>
+<td><code>metros_1_e2_1102_e2_943.lus</code> </td>
+<td> 0.133 </td>
+<td> 0.063 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.084 </td>
+<td> 0.853 </td>
+<td> 99 </td>
+<td> 0.167 </td>
+<td> 1 </td>
+<td> 0.282 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.028 </td>
+<td> 0.124</td>
+</tr>
+<tr>
+<td><code>speed_e7_207_e7_538.lus</code> </td>
+<td> 0.133 </td>
+<td> 0.040 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.020 </td>
+<td> 0.876 </td>
+<td> 33 </td>
+<td> 0.099 </td>
+<td> 1 </td>
+<td> 0.053 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.000 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>DRAGON_3_e1_4783_e3_511.lus</code> </td>
+<td> 0.134 </td>
+<td> 0.098 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.240 </td>
+<td> 0.964 </td>
+<td> 145 </td>
+<td> 0.296 </td>
+<td> 1 </td>
+<td> 0.314 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.072 </td>
+<td> 0.968</td>
+</tr>
+<tr>
+<td><code>DRAGON_9.lus</code> </td>
+<td> 0.134 </td>
+<td> 0.078 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.100 </td>
+<td> 0.955 </td>
+<td> 133 </td>
+<td> 0.296 </td>
+<td> 1 </td>
+<td> 0.300 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.060 </td>
+<td> 0.652</td>
+</tr>
+<tr>
+<td><code>FIREFLY_a3_e2_2086_e1_3235.lus</code> </td>
+<td> 0.134 </td>
+<td> 0.073 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.132 </td>
+<td> 0.927 </td>
+<td> 117 </td>
+<td> 0.241 </td>
+<td> 1 </td>
+<td> 0.259 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.052 </td>
+<td> 0.324</td>
+</tr>
+<tr>
+<td><code>rtp_10.lus</code> </td>
+<td> 0.134 </td>
+<td> 0.057 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.048 </td>
+<td> 0.906 </td>
+<td> 143 </td>
+<td> 0.228 </td>
+<td> 1 </td>
+<td> 0.270 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.040 </td>
+<td> 0.248</td>
+</tr>
+<tr>
+<td><code>rtp_7.lus</code> </td>
+<td> 0.134 </td>
+<td> 0.063 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.056 </td>
+<td> 0.905 </td>
+<td> 143 </td>
+<td> 0.242 </td>
+<td> 1 </td>
+<td> 0.321 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.048 </td>
+<td> 0.260</td>
+</tr>
+<tr>
+<td><code>DRAGON_2_e2_3183_e2_3580.lus</code> </td>
+<td> 0.135 </td>
+<td> 0.078 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.028 </td>
+<td> 0.112 </td>
+<td> 0.955 </td>
+<td> 141 </td>
+<td> 0.565 </td>
+<td> 2 </td>
+<td> 0.399 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 0.548</td>
+</tr>
+<tr>
+<td><code>FIREFLY_3_e2_2236_e2_1058.lus</code> </td>
+<td> 0.135 </td>
+<td> 0.052 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.044 </td>
+<td> 0.933 </td>
+<td> 97 </td>
+<td> 0.171 </td>
+<td> 1 </td>
+<td> 0.198 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.216</td>
+</tr>
+<tr>
+<td><code>_6counters_e8_371_e3_224.lus</code> </td>
+<td> 0.135 </td>
+<td> 0.113 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.000 </td>
+<td> 0.016 </td>
+<td> 0.816 </td>
+<td> 17 </td>
+<td> 0.080 </td>
+<td> 1 </td>
+<td> 0.042 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.020</td>
+</tr>
+<tr>
+<td><code>metros_1_e1_846_e1_1317.lus</code> </td>
+<td> 0.135 </td>
+<td> 0.074 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.076 </td>
+<td> 0.869 </td>
+<td> 99 </td>
+<td> 0.217 </td>
+<td> 1 </td>
+<td> 0.282 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.032 </td>
+<td> 0.124</td>
+</tr>
+<tr>
+<td><code>metros_1_e1_846_e3_1060.lus</code> </td>
+<td> 0.135 </td>
+<td> 0.064 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.088 </td>
+<td> 0.857 </td>
+<td> 99 </td>
+<td> 0.167 </td>
+<td> 1 </td>
+<td> 0.283 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.032 </td>
+<td> 0.128</td>
+</tr>
+<tr>
+<td><code>metros_1_e1_846_e7_397.lus</code> </td>
+<td> 0.135 </td>
+<td> 0.073 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.080 </td>
+<td> 0.911 </td>
+<td> 99 </td>
+<td> 0.171 </td>
+<td> 1 </td>
+<td> 0.282 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.024 </td>
+<td> 0.132</td>
+</tr>
+<tr>
+<td><code>ticket3i_all.lus</code> </td>
+<td> 0.135 </td>
+<td> 0.072 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.136 </td>
+<td> 0.980 </td>
+<td> 131 </td>
+<td> 0.264 </td>
+<td> 1 </td>
+<td> 0.389 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.044 </td>
+<td> 0.384</td>
+</tr>
+<tr>
+<td><code>tramway_e7_1834.lus</code> </td>
+<td> 0.135 </td>
+<td> 0.077 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.052 </td>
+<td> 0.954 </td>
+<td> 147 </td>
+<td> 0.215 </td>
+<td> 1 </td>
+<td> 0.320 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.028 </td>
+<td> 0.096</td>
+</tr>
+<tr>
+<td><code>DRAGON_2_e1_2316.lus</code> </td>
+<td> 0.136 </td>
+<td> 0.073 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.104 </td>
+<td> 0.927 </td>
+<td> 141 </td>
+<td> 0.375 </td>
+<td> 2 </td>
+<td> 0.378 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.072 </td>
+<td> 0.664</td>
+</tr>
+<tr>
+<td><code>FIREFLY_a3_e2_2952.lus</code> </td>
+<td> 0.136 </td>
+<td> 0.073 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.132 </td>
+<td> 0.962 </td>
+<td> 117 </td>
+<td> 0.238 </td>
+<td> 1 </td>
+<td> 0.410 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.048 </td>
+<td> 0.356</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_6.lus</code> </td>
+<td> 0.136 </td>
+<td> 0.047 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.016 </td>
+<td> 0.060 </td>
+<td> 0.976 </td>
+<td> 55 </td>
+<td> 0.132 </td>
+<td> 1 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.112</td>
+</tr>
+<tr>
+<td><code>ticket3i_3_e8_1788.lus</code> </td>
+<td> 0.136 </td>
+<td> 0.070 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.927 </td>
+<td> 123 </td>
+<td> 0.251 </td>
+<td> 1 </td>
+<td> 0.617 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.036 </td>
+<td> 0.212</td>
+</tr>
+<tr>
+<td><code>ticket3i_4.lus</code> </td>
+<td> 0.136 </td>
+<td> 0.070 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.068 </td>
+<td> 0.963 </td>
+<td> 123 </td>
+<td> 0.228 </td>
+<td> 1 </td>
+<td> 0.311 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.040 </td>
+<td> 0.212</td>
+</tr>
+<tr>
+<td><code>peterson_2.lus</code> </td>
+<td> 0.137 </td>
+<td> 0.070 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.068 </td>
+<td> 0.915 </td>
+<td> 163 </td>
+<td> 0.305 </td>
+<td> 1 </td>
+<td> 0.505 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.064 </td>
+<td> 0.476</td>
+</tr>
+<tr>
+<td><code>DRAGON_7.lus</code> </td>
+<td> 0.138 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.120 </td>
+<td> 0.998 </td>
+<td> 135 </td>
+<td> 0.272 </td>
+<td> 1 </td>
+<td> 0.286 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.592</td>
+</tr>
+<tr>
+<td><code>DRAGON_9_e7_1843_e7_2225.lus</code> </td>
+<td> 0.138 </td>
+<td> 0.066 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.064 </td>
+<td> 0.934 </td>
+<td> 133 </td>
+<td> 0.267 </td>
+<td> 1 </td>
+<td> 0.285 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.656</td>
+</tr>
+<tr>
+<td><code>FIREFLY_9.lus</code> </td>
+<td> 0.138 </td>
+<td> 0.064 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.060 </td>
+<td> 1.032 </td>
+<td> 103 </td>
+<td> 0.313 </td>
+<td> 1 </td>
+<td> 0.228 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.040 </td>
+<td> 0.228</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_3_e8_1708.lus</code> </td>
+<td> 0.138 </td>
+<td> 0.055 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.032 </td>
+<td> 0.156 </td>
+<td> 0.924 </td>
+<td> 59 </td>
+<td> 0.234 </td>
+<td> 1 </td>
+<td> 0.107 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.012 </td>
+<td> 0.132</td>
+</tr>
+<tr>
+<td><code>metros_1_e2_1102_e3_961.lus</code> </td>
+<td> 0.138 </td>
+<td> 0.068 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.076 </td>
+<td> 0.886 </td>
+<td> 99 </td>
+<td> 0.228 </td>
+<td> 1 </td>
+<td> 0.264 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.024 </td>
+<td> 0.116</td>
+</tr>
+<tr>
+<td><code>DRAGON_7_e2_2872_e2_5844.lus</code> </td>
+<td> 0.139 </td>
+<td> 0.083 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.132 </td>
+<td> 0.988 </td>
+<td> 135 </td>
+<td> 0.300 </td>
+<td> 1 </td>
+<td> 0.392 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.060 </td>
+<td> 0.456</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e1_4022_e3_3628.lus</code> </td>
+<td> 0.139 </td>
+<td> 0.091 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.268 </td>
+<td> 0.945 </td>
+<td> 149 </td>
+<td> 0.418 </td>
+<td> 2 </td>
+<td> 0.611 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.136 </td>
+<td> 3.012</td>
+</tr>
+<tr>
+<td><code>MOESI_2_e7_2910_e8_2590.lus</code> </td>
+<td> 0.139 </td>
+<td> 0.049 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.060 </td>
+<td> 0.860 </td>
+<td> 73 </td>
+<td> 0.198 </td>
+<td> 2 </td>
+<td> 0.141 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.304</td>
+</tr>
+<tr>
+<td><code>PRODUCER_CONSUMER_all.lus</code> </td>
+<td> 0.139 </td>
+<td> 0.044 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.032 </td>
+<td> 0.857 </td>
+<td> 59 </td>
+<td> 0.137 </td>
+<td> 1 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.020 </td>
+<td> 0.068</td>
+</tr>
+<tr>
+<td><code>channel_bounds.lus</code> </td>
+<td> 0.139 </td>
+<td> 0.120 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.048 </td>
+<td> 0.532 </td>
+<td> 1.074 </td>
+<td> 234 </td>
+<td> 0.400 </td>
+<td> 1 </td>
+<td> 1.004 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.220 </td>
+<td> 1.276</td>
+</tr>
+<tr>
+<td><code>metros_1_e2_1102_e7_1163.lus</code> </td>
+<td> 0.139 </td>
+<td> 0.076 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.060 </td>
+<td> 0.892 </td>
+<td> 99 </td>
+<td> 0.238 </td>
+<td> 1 </td>
+<td> 0.261 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.028 </td>
+<td> 0.104</td>
+</tr>
+<tr>
+<td><code>metros_1_e7_606.lus</code> </td>
+<td> 0.139 </td>
+<td> 0.062 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.084 </td>
+<td> 0.873 </td>
+<td> 99 </td>
+<td> 0.146 </td>
+<td> 1 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.032 </td>
+<td> 0.136</td>
+</tr>
+<tr>
+<td><code>DRAGON_3_e1_4783_e2_158.lus</code> </td>
+<td> 0.140 </td>
+<td> 0.090 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.288 </td>
+<td> 0.968 </td>
+<td> 145 </td>
+<td> 0.315 </td>
+<td> 1 </td>
+<td> 0.340 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.076 </td>
+<td> 0.812</td>
+</tr>
+<tr>
+<td><code>MESI_3_e2_819_e1_1145.lus</code> </td>
+<td> 0.140 </td>
+<td> 0.108 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.436 </td>
+<td> 0.865 </td>
+<td> 79 </td>
+<td> 0.150 </td>
+<td> 1 </td>
+<td> 0.155 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.988</td>
+</tr>
+<tr>
+<td><code>production_cell_e8_6.lus</code> </td>
+<td> 0.140 </td>
+<td> 0.056 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 0.848 </td>
+<td> 57 </td>
+<td> 0.202 </td>
+<td> 2 </td>
+<td> 0.096 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>production_cell_e8_792.lus</code> </td>
+<td> 0.140 </td>
+<td> 0.060 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.028 </td>
+<td> 0.832 </td>
+<td> 57 </td>
+<td> 0.198 </td>
+<td> 2 </td>
+<td> 0.096 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>speed_e7_207_e8_507.lus</code> </td>
+<td> 0.140 </td>
+<td> 0.057 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.052 </td>
+<td> 0.923 </td>
+<td> 33 </td>
+<td> 0.165 </td>
+<td> 1 </td>
+<td> 0.092 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.004 </td>
+<td> 0.036</td>
+</tr>
+<tr>
+<td><code>DRAGON_6_e7_5046_e7_3623.lus</code> </td>
+<td> 0.141 </td>
+<td> 0.066 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.064 </td>
+<td> 0.975 </td>
+<td> 133 </td>
+<td> 0.278 </td>
+<td> 1 </td>
+<td> 0.315 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.060 </td>
+<td> 0.608</td>
+</tr>
+<tr>
+<td><code>metros_4_e2_968_e3_931.lus</code> </td>
+<td> 0.141 </td>
+<td> 0.072 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.012 </td>
+<td> 0.072 </td>
+<td> 1.017 </td>
+<td> 81 </td>
+<td> 0.158 </td>
+<td> 1 </td>
+<td> 0.262 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.020 </td>
+<td> 0.076</td>
+</tr>
+<tr>
+<td><code>DRAGON_2_e2_4481.lus</code> </td>
+<td> 0.142 </td>
+<td> 0.079 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.100 </td>
+<td> 0.974 </td>
+<td> 141 </td>
+<td> 0.421 </td>
+<td> 2 </td>
+<td> 0.437 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 0.536</td>
+</tr>
+<tr>
+<td><code>DRAGON_3_e3_5422_e2_3135.lus</code> </td>
+<td> 0.142 </td>
+<td> 0.095 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.296 </td>
+<td> 1.034 </td>
+<td> 145 </td>
+<td> 0.342 </td>
+<td> 1 </td>
+<td> 0.629 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.084 </td>
+<td> 1.088</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e2_6104_e1_6205.lus</code> </td>
+<td> 0.142 </td>
+<td> 0.090 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.348 </td>
+<td> 0.978 </td>
+<td> 149 </td>
+<td> 0.575 </td>
+<td> 2 </td>
+<td> 0.540 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.140 </td>
+<td> 3.008</td>
+</tr>
+<tr>
+<td><code>rtp_5.lus</code> </td>
+<td> 0.142 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.052 </td>
+<td> 0.938 </td>
+<td> 143 </td>
+<td> 0.235 </td>
+<td> 1 </td>
+<td> 0.339 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.052 </td>
+<td> 0.252</td>
+</tr>
+<tr>
+<td><code>FIREFLY_all_e1_1207_e2_3220.lus</code> </td>
+<td> 0.143 </td>
+<td> 0.077 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.184 </td>
+<td> 0.925 </td>
+<td> 109 </td>
+<td> 0.317 </td>
+<td> 2 </td>
+<td> 0.361 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.092 </td>
+<td> 1.352</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_123_e8_953_e7_1465.lus</code> </td>
+<td> 0.143 </td>
+<td> 0.058 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.016 </td>
+<td> 0.068 </td>
+<td> 0.902 </td>
+<td> 65 </td>
+<td> 0.184 </td>
+<td> 2 </td>
+<td> 0.199 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.472</td>
+</tr>
+<tr>
+<td><code>metros_1_e2_1102_e1_317.lus</code> </td>
+<td> 0.143 </td>
+<td> 0.067 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.080 </td>
+<td> 0.854 </td>
+<td> 99 </td>
+<td> 0.157 </td>
+<td> 1 </td>
+<td> 0.277 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.028 </td>
+<td> 0.124</td>
+</tr>
+<tr>
+<td><code>ticket3i_3_e7_1312_e8_1916.lus</code> </td>
+<td> 0.143 </td>
+<td> 0.076 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.052 </td>
+<td> 0.949 </td>
+<td> 123 </td>
+<td> 0.239 </td>
+<td> 1 </td>
+<td> 0.324 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.044 </td>
+<td> 0.172</td>
+</tr>
+<tr>
+<td><code>DRAGON_3_e2_5343_e1_988.lus</code> </td>
+<td> 0.144 </td>
+<td> 0.076 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.028 </td>
+<td> 0.156 </td>
+<td> 0.960 </td>
+<td> 145 </td>
+<td> 0.321 </td>
+<td> 1 </td>
+<td> 0.870 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.072 </td>
+<td> 0.728</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e3_4821_e1_1318.lus</code> </td>
+<td> 0.144 </td>
+<td> 0.089 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.472 </td>
+<td> 0.949 </td>
+<td> 149 </td>
+<td> 0.469 </td>
+<td> 2 </td>
+<td> 0.641 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.152 </td>
+<td> 3.000</td>
+</tr>
+<tr>
+<td><code>car_all.lus</code> </td>
+<td> 0.144 </td>
+<td> 0.049 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.100 </td>
+<td> 0.907 </td>
+<td> 43 </td>
+<td> 0.210 </td>
+<td> 2 </td>
+<td> 0.131 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.028 </td>
+<td> 0.152</td>
+</tr>
+<tr>
+<td><code>tramway_e7_3304.lus</code> </td>
+<td> 0.144 </td>
+<td> 0.065 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.999 </td>
+<td> 147 </td>
+<td> 0.303 </td>
+<td> 1 </td>
+<td> 0.301 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.020 </td>
+<td> 0.088</td>
+</tr>
+<tr>
+<td><code>DRAGON_3_e3_3846.lus</code> </td>
+<td> 0.145 </td>
+<td> 0.086 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.028 </td>
+<td> 0.124 </td>
+<td> 1.019 </td>
+<td> 145 </td>
+<td> 0.286 </td>
+<td> 1 </td>
+<td> 0.914 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.080 </td>
+<td> 1.136</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e3_5957.lus</code> </td>
+<td> 0.145 </td>
+<td> 0.097 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.760 </td>
+<td> 1.347 </td>
+<td> 149 </td>
+<td> 0.401 </td>
+<td> 2 </td>
+<td> 0.632 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.196 </td>
+<td> 3.100</td>
+</tr>
+<tr>
+<td><code>FIREFLY_8_e2_1711_e2_2673.lus</code> </td>
+<td> 0.145 </td>
+<td> 0.057 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.036 </td>
+<td> 0.982 </td>
+<td> 97 </td>
+<td> 0.201 </td>
+<td> 1 </td>
+<td> 0.226 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.260</td>
+</tr>
+<tr>
+<td><code>_6counters_e3_140_e8_149.lus</code> </td>
+<td> 0.145 </td>
+<td> 0.109 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.004 </td>
+<td> 0.016 </td>
+<td> 0.821 </td>
+<td> 17 </td>
+<td> 0.064 </td>
+<td> 1 </td>
+<td> 0.047 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.004 </td>
+<td> 0.024</td>
+</tr>
+<tr>
+<td><code>MESI_all_e4_1147_e7_497.lus</code> </td>
+<td> 0.146 </td>
+<td> 0.050 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.012 </td>
+<td> 0.064 </td>
+<td> 0.864 </td>
+<td> 61 </td>
+<td> 0.136 </td>
+<td> 1 </td>
+<td> 0.104 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.024 </td>
+<td> 0.212</td>
+</tr>
+<tr>
+<td><code>tramway_e7_1834_e7_2363.lus</code> </td>
+<td> 0.146 </td>
+<td> 0.074 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.973 </td>
+<td> 147 </td>
+<td> 0.220 </td>
+<td> 1 </td>
+<td> 0.369 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.028 </td>
+<td> 0.096</td>
+</tr>
+<tr>
+<td><code>MESI_3.lus</code> </td>
+<td> 0.147 </td>
+<td> 0.109 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.428 </td>
+<td> 0.854 </td>
+<td> 79 </td>
+<td> 0.139 </td>
+<td> 1 </td>
+<td> 0.148 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.944</td>
+</tr>
+<tr>
+<td><code>car_4_e7_592_e7_265.lus</code> </td>
+<td> 0.147 </td>
+<td> 0.069 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 1.550 </td>
+<td> 41 </td>
+<td> 0.191 </td>
+<td> 2 </td>
+<td> 0.117 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.052 </td>
+<td> 0.212</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_123_e7_856.lus</code> </td>
+<td> 0.148 </td>
+<td> 0.057 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.008 </td>
+<td> 0.084 </td>
+<td> 0.908 </td>
+<td> 65 </td>
+<td> 0.289 </td>
+<td> 2 </td>
+<td> 0.170 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.560</td>
+</tr>
+<tr>
+<td><code>metros_2_e2_704_e2_13.lus</code> </td>
+<td> 0.148 </td>
+<td> 0.072 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.072 </td>
+<td> 1.004 </td>
+<td> 87 </td>
+<td> 0.137 </td>
+<td> 1 </td>
+<td> 0.243 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.028 </td>
+<td> 0.096</td>
+</tr>
+<tr>
+<td><code>DRAGON_1_e2_1997_e7_3613_e2_3409.lus</code> </td>
+<td> 0.149 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.064 </td>
+<td> 0.961 </td>
+<td> 133 </td>
+<td> 0.453 </td>
+<td> 1 </td>
+<td> 0.297 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.056 </td>
+<td> 0.880</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_2.lus</code> </td>
+<td> 0.149 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.260 </td>
+<td> 1.075 </td>
+<td> 109 </td>
+<td> 0.346 </td>
+<td> 2 </td>
+<td> 0.364 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.476</td>
+</tr>
+<tr>
+<td><code>microwave04.lus</code> </td>
+<td> 0.149 </td>
+<td> 0.067 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.140 </td>
+<td> 1.102 </td>
+<td> 161 </td>
+<td> 0.385 </td>
+<td> 1 </td>
+<td> 0.314 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.052 </td>
+<td> 0.316</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_2.lus</code> </td>
+<td> 0.150 </td>
+<td> 0.052 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.064 </td>
+<td> 0.883 </td>
+<td> 55 </td>
+<td> 0.163 </td>
+<td> 2 </td>
+<td> 0.112 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.184</td>
+</tr>
+<tr>
+<td><code>rtp_10_e7_106_e7_2564.lus</code> </td>
+<td> 0.150 </td>
+<td> 0.060 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.056 </td>
+<td> 0.875 </td>
+<td> 143 </td>
+<td> 0.231 </td>
+<td> 1 </td>
+<td> 0.571 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.044 </td>
+<td> 0.284</td>
+</tr>
+<tr>
+<td><code>DRAGON_1.lus</code> </td>
+<td> 0.151 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.092 </td>
+<td> 1.230 </td>
+<td> 133 </td>
+<td> 0.267 </td>
+<td> 1 </td>
+<td> 0.402 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.172 </td>
+<td> 0.500</td>
+</tr>
+<tr>
+<td><code>FIREFLY_a3_e2_2086_e2_2689.lus</code> </td>
+<td> 0.151 </td>
+<td> 0.068 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.132 </td>
+<td> 0.926 </td>
+<td> 117 </td>
+<td> 0.227 </td>
+<td> 1 </td>
+<td> 0.285 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.052 </td>
+<td> 0.300</td>
+</tr>
+<tr>
+<td><code>cruise_controller_05.lus</code> </td>
+<td> 0.152 </td>
+<td> 0.093 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.056 </td>
+<td> 0.208 </td>
+<td> 1.627 </td>
+<td> 153 </td>
+<td> 0.421 </td>
+<td> 1 </td>
+<td> 0.269 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.236</td>
+</tr>
+<tr>
+<td><code>DRAGON_all.lus</code> </td>
+<td> 0.153 </td>
+<td> 0.084 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.848 </td>
+<td> 1.138 </td>
+<td> 149 </td>
+<td> 0.400 </td>
+<td> 2 </td>
+<td> 1.035 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.212 </td>
+<td> 3.512</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e1_4037.lus</code> </td>
+<td> 0.153 </td>
+<td> 0.090 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.472 </td>
+<td> 0.961 </td>
+<td> 149 </td>
+<td> 0.429 </td>
+<td> 2 </td>
+<td> 0.571 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.144 </td>
+<td> 3.276</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e2_6104_e2_3308.lus</code> </td>
+<td> 0.153 </td>
+<td> 0.099 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.288 </td>
+<td> 1.067 </td>
+<td> 149 </td>
+<td> 0.442 </td>
+<td> 2 </td>
+<td> 0.586 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.152 </td>
+<td> 3.208</td>
+</tr>
+<tr>
+<td><code>MOESI_all.lus</code> </td>
+<td> 0.154 </td>
+<td> 0.052 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.084 </td>
+<td> 0.852 </td>
+<td> 77 </td>
+<td> 0.213 </td>
+<td> 2 </td>
+<td> 0.236 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.036 </td>
+<td> 0.664</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_3_e8_1329_e8_320.lus</code> </td>
+<td> 0.154 </td>
+<td> 0.048 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.052 </td>
+<td> 0.965 </td>
+<td> 59 </td>
+<td> 0.238 </td>
+<td> 1 </td>
+<td> 0.190 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.152</td>
+</tr>
+<tr>
+<td><code>car_2_e7_1027_e7_359.lus</code> </td>
+<td> 0.154 </td>
+<td> 0.043 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.000 </td>
+<td> 0.024 </td>
+<td> 0.845 </td>
+<td> 41 </td>
+<td> 0.134 </td>
+<td> 2 </td>
+<td> 0.098 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.076</td>
+</tr>
+<tr>
+<td><code>microwave02.lus</code> </td>
+<td> 0.154 </td>
+<td> 0.130 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.120 </td>
+<td> 1.418 </td>
+<td> 159 </td>
+<td> 0.590 </td>
+<td> 1 </td>
+<td> 0.837 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.228</td>
+</tr>
+<tr>
+<td><code>ticket3i_5.lus</code> </td>
+<td> 0.154 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.104 </td>
+<td> 0.929 </td>
+<td> 123 </td>
+<td> 0.215 </td>
+<td> 1 </td>
+<td> 0.265 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.032 </td>
+<td> 0.188</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e2_6104.lus</code> </td>
+<td> 0.155 </td>
+<td> 0.090 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.304 </td>
+<td> 0.948 </td>
+<td> 149 </td>
+<td> 0.413 </td>
+<td> 2 </td>
+<td> 0.560 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.128 </td>
+<td> 3.696</td>
+</tr>
+<tr>
+<td><code>DRAGON_all_e3_4821_e4_1791.lus</code> </td>
+<td> 0.155 </td>
+<td> 0.089 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.480 </td>
+<td> 0.980 </td>
+<td> 149 </td>
+<td> 0.417 </td>
+<td> 2 </td>
+<td> 0.566 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.148 </td>
+<td> 3.032</td>
+</tr>
+<tr>
+<td><code>MESI_3_e1_2517_e8_2163.lus</code> </td>
+<td> 0.155 </td>
+<td> 0.094 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.624 </td>
+<td> 0.880 </td>
+<td> 79 </td>
+<td> 0.153 </td>
+<td> 1 </td>
+<td> 0.152 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.056 </td>
+<td> 1.188</td>
+</tr>
+<tr>
+<td><code>DRAGON_1_e1_3184_e7_1888.lus</code> </td>
+<td> 0.157 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.064 </td>
+<td> 0.945 </td>
+<td> 133 </td>
+<td> 0.281 </td>
+<td> 1 </td>
+<td> 0.361 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.072 </td>
+<td> 0.492</td>
+</tr>
+<tr>
+<td><code>DRAGON_1_e1_14612_e2_2653_e7_4370.lus</code> </td>
+<td> 0.158 </td>
+<td> 0.064 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.064 </td>
+<td> 0.941 </td>
+<td> 133 </td>
+<td> 0.277 </td>
+<td> 1 </td>
+<td> 0.313 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.072 </td>
+<td> 0.652</td>
+</tr>
+<tr>
+<td><code>ums.lus</code> </td>
+<td> 0.159 </td>
+<td> 0.094 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.056 </td>
+<td> 0.969 </td>
+<td> 277 </td>
+<td> 10.261 </td>
+<td> 10 </td>
+<td> 1.013 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.036 </td>
+<td> 0.156</td>
+</tr>
+<tr>
+<td><code>DRAGON_9_e7_1843.lus</code> </td>
+<td> 0.161 </td>
+<td> 0.072 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.068 </td>
+<td> 0.977 </td>
+<td> 133 </td>
+<td> 0.267 </td>
+<td> 1 </td>
+<td> 0.281 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.064 </td>
+<td> 0.496</td>
+</tr>
+<tr>
+<td><code>FIREFLY_9_e7_170_e3_3647.lus</code> </td>
+<td> 0.161 </td>
+<td> 0.060 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.056 </td>
+<td> 0.927 </td>
+<td> 103 </td>
+<td> 0.182 </td>
+<td> 1 </td>
+<td> 0.235 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.044 </td>
+<td> 0.248</td>
+</tr>
+<tr>
+<td><code>durationThm_3_e3_442_e4_165.lus</code> </td>
+<td> 0.161 </td>
+<td> 0.040 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.871 </td>
+<td> 27 </td>
+<td> 0.098 </td>
+<td> 1 </td>
+<td> 0.074 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.008 </td>
+<td> 0.040</td>
+</tr>
+<tr>
+<td><code>microwave03.lus</code> </td>
+<td> 0.161 </td>
+<td> 0.077 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.152 </td>
+<td> 1.205 </td>
+<td> 161 </td>
+<td> 0.431 </td>
+<td> 1 </td>
+<td> 0.297 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.056 </td>
+<td> 0.296</td>
+</tr>
+<tr>
+<td><code>microwave15.lus</code> </td>
+<td> 0.161 </td>
+<td> 0.064 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.076 </td>
+<td> 1.064 </td>
+<td> 159 </td>
+<td> 0.492 </td>
+<td> 1 </td>
+<td> 0.514 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.044 </td>
+<td> 0.180</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_6_e8_1147_e2_1326.lus</code> </td>
+<td> 0.162 </td>
+<td> 0.048 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.888 </td>
+<td> 55 </td>
+<td> 0.120 </td>
+<td> 1 </td>
+<td> 0.107 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.012 </td>
+<td> 0.088</td>
+</tr>
+<tr>
+<td><code>metros_1_e7_1255_e7_12.lus</code> </td>
+<td> 0.162 </td>
+<td> 0.070 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.080 </td>
+<td> 0.883 </td>
+<td> 99 </td>
+<td> 0.157 </td>
+<td> 1 </td>
+<td> 0.257 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.028 </td>
+<td> 0.132</td>
+</tr>
+<tr>
+<td><code>microwave16.lus</code> </td>
+<td> 0.162 </td>
+<td> 0.073 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.092 </td>
+<td> 1.099 </td>
+<td> 159 </td>
+<td> 0.547 </td>
+<td> 1 </td>
+<td> 0.401 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.316</td>
+</tr>
+<tr>
+<td><code>car_all_e2_142.lus</code> </td>
+<td> 0.163 </td>
+<td> 0.042 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.036 </td>
+<td> 0.946 </td>
+<td> 43 </td>
+<td> 0.239 </td>
+<td> 2 </td>
+<td> 0.117 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.024 </td>
+<td> 0.120</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_4.lus</code> </td>
+<td> 0.167 </td>
+<td> 0.063 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.068 </td>
+<td> 0.952 </td>
+<td> 103 </td>
+<td> 0.221 </td>
+<td> 1 </td>
+<td> 0.227 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.052 </td>
+<td> 0.292</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_6_e7_938_e2_1012.lus</code> </td>
+<td> 0.168 </td>
+<td> 0.051 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.012 </td>
+<td> 0.040 </td>
+<td> 0.958 </td>
+<td> 55 </td>
+<td> 0.112 </td>
+<td> 1 </td>
+<td> 0.102 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.116</td>
+</tr>
+<tr>
+<td><code>peterson_1_e7_4234.lus</code> </td>
+<td> 0.169 </td>
+<td> 0.075 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.064 </td>
+<td> 0.908 </td>
+<td> 163 </td>
+<td> 0.305 </td>
+<td> 1 </td>
+<td> 0.461 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.072 </td>
+<td> 0.504</td>
+</tr>
+<tr>
+<td><code>speed2_e7_496.lus</code> </td>
+<td> 0.174 </td>
+<td> 0.050 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.882 </td>
+<td> 33 </td>
+<td> 0.113 </td>
+<td> 1 </td>
+<td> 0.069 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.052</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_all_e7_907_e7_1363.lus</code> </td>
+<td> 0.177 </td>
+<td> 0.061 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.016 </td>
+<td> 0.084 </td>
+<td> 0.937 </td>
+<td> 59 </td>
+<td> 0.161 </td>
+<td> 2 </td>
+<td> 0.177 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.036 </td>
+<td> 0.436</td>
+</tr>
+<tr>
+<td><code>car_4_e8_118.lus</code> </td>
+<td> 0.177 </td>
+<td> 0.063 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.028 </td>
+<td> 0.052 </td>
+<td> 0.958 </td>
+<td> 41 </td>
+<td> 0.234 </td>
+<td> 2 </td>
+<td> 0.201 </td>
+<td> 2 </td>
+<td> 5 </td>
+<td> 0.020 </td>
+<td> 0.080</td>
+</tr>
+<tr>
+<td><code>car_all_e3_1068_e4_275.lus</code> </td>
+<td> 0.177 </td>
+<td> 0.044 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.008 </td>
+<td> 0.036 </td>
+<td> 1.065 </td>
+<td> 43 </td>
+<td> 0.148 </td>
+<td> 2 </td>
+<td> 0.117 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.008 </td>
+<td> 0.112</td>
+</tr>
+<tr>
+<td><code>rtp_3.lus</code> </td>
+<td> 0.177 </td>
+<td> 0.074 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.080 </td>
+<td> 0.875 </td>
+<td> 143 </td>
+<td> 0.357 </td>
+<td> 1 </td>
+<td> 0.278 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.044 </td>
+<td> 0.280</td>
+</tr>
+<tr>
+<td><code>DRAGON_10_e3_3429.lus</code> </td>
+<td> 0.178 </td>
+<td> 0.076 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.092 </td>
+<td> 0.980 </td>
+<td> 133 </td>
+<td> 0.286 </td>
+<td> 1 </td>
+<td> 0.451 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.076 </td>
+<td> 0.416</td>
+</tr>
+<tr>
+<td><code>durationThm_2_e7_145_e3_222.lus</code> </td>
+<td> 0.180 </td>
+<td> 0.056 </td>
+<td> 2 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.032 </td>
+<td> 0.849 </td>
+<td> 31 </td>
+<td> 0.418 </td>
+<td> 1 </td>
+<td> 0.398 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.016 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>steam_boiler_no_arr2.lus</code> </td>
+<td> 0.182 </td>
+<td> 0.123 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.124 </td>
+<td> 1.107 </td>
+<td> 257 </td>
+<td> 0.330 </td>
+<td> 1 </td>
+<td> 0.309 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.040 </td>
+<td> 0.232</td>
+</tr>
+<tr>
+<td><code>steam_boiler_no_arr2_e1_17214_e5_18600.lus</code> </td>
+<td> 0.183 </td>
+<td> 0.152 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.136 </td>
+<td> 1.082 </td>
+<td> 257 </td>
+<td> 0.327 </td>
+<td> 1 </td>
+<td> 3.306 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.036 </td>
+<td> 0.224</td>
+</tr>
+<tr>
+<td><code>FIREFLY_8_e2_1711_e3_1753.lus</code> </td>
+<td> 0.184 </td>
+<td> 0.055 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.044 </td>
+<td> 1.007 </td>
+<td> 97 </td>
+<td> 0.203 </td>
+<td> 1 </td>
+<td> 0.242 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.264</td>
+</tr>
+<tr>
+<td><code>production_cell_e7_207_e8_241.lus</code> </td>
+<td> 0.184 </td>
+<td> 0.061 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.028 </td>
+<td> 0.857 </td>
+<td> 57 </td>
+<td> 0.227 </td>
+<td> 2 </td>
+<td> 0.115 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.056</td>
+</tr>
+<tr>
+<td><code>steam_boiler_no_arr2_e6_3003_e4_15091.lus</code> </td>
+<td> 0.186 </td>
+<td> 0.111 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.084 </td>
+<td> 1.011 </td>
+<td> 257 </td>
+<td> 0.283 </td>
+<td> 1 </td>
+<td> 0.262 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.040 </td>
+<td> 0.224</td>
+</tr>
+<tr>
+<td><code>ticket3i_6_e7_1096_e7_2688.lus</code> </td>
+<td> 0.186 </td>
+<td> 0.068 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.068 </td>
+<td> 0.942 </td>
+<td> 123 </td>
+<td> 0.208 </td>
+<td> 1 </td>
+<td> 0.298 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.028 </td>
+<td> 0.176</td>
+</tr>
+<tr>
+<td><code>FIREFLY_a3.lus</code> </td>
+<td> 0.187 </td>
+<td> 0.073 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.120 </td>
+<td> 0.948 </td>
+<td> 117 </td>
+<td> 0.248 </td>
+<td> 1 </td>
+<td> 0.284 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.052 </td>
+<td> 0.324</td>
+</tr>
+<tr>
+<td><code>car_2_e7_1027_e1_1047.lus</code> </td>
+<td> 0.187 </td>
+<td> 0.047 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.008 </td>
+<td> 0.024 </td>
+<td> 0.835 </td>
+<td> 41 </td>
+<td> 0.129 </td>
+<td> 2 </td>
+<td> 0.103 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.072</td>
+</tr>
+<tr>
+<td><code>production_cell.lus</code> </td>
+<td> 0.187 </td>
+<td> 0.060 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.032 </td>
+<td> 0.849 </td>
+<td> 57 </td>
+<td> 0.198 </td>
+<td> 2 </td>
+<td> 0.132 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.024 </td>
+<td> 0.060</td>
+</tr>
+<tr>
+<td><code>steam_boiler_no_arr2_e7_12307.lus</code> </td>
+<td> 0.187 </td>
+<td> 0.111 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.096 </td>
+<td> 1.063 </td>
+<td> 257 </td>
+<td> 0.332 </td>
+<td> 1 </td>
+<td> 0.319 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.044 </td>
+<td> 0.228</td>
+</tr>
+<tr>
+<td><code>MESI_i3_e1_447_e3_1180.lus</code> </td>
+<td> 0.188 </td>
+<td> 0.046 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.048 </td>
+<td> 0.866 </td>
+<td> 57 </td>
+<td> 0.102 </td>
+<td> 1 </td>
+<td> 0.115 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.024 </td>
+<td> 0.124</td>
+</tr>
+<tr>
+<td><code>peterson_all.lus</code> </td>
+<td> 0.189 </td>
+<td> 0.082 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.140 </td>
+<td> 0.933 </td>
+<td> 169 </td>
+<td> 0.304 </td>
+<td> 1 </td>
+<td> 0.438 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.076 </td>
+<td> 0.532</td>
+</tr>
+<tr>
+<td><code>traffic.lus</code> </td>
+<td> 0.189 </td>
+<td> 0.042 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.028 </td>
+<td> 0.876 </td>
+<td> 15 </td>
+<td> 0.078 </td>
+<td> 1 </td>
+<td> 0.050 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.016 </td>
+<td> 0.044</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_4_e8_974.lus</code> </td>
+<td> 0.190 </td>
+<td> 0.041 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.032 </td>
+<td> 0.911 </td>
+<td> 53 </td>
+<td> 0.217 </td>
+<td> 1 </td>
+<td> 0.100 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.020 </td>
+<td> 0.076</td>
+</tr>
+<tr>
+<td><code>cruise_controller_13.lus</code> </td>
+<td> 0.190 </td>
+<td> 0.109 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.048 </td>
+<td> 0.172 </td>
+<td> 1.052 </td>
+<td> 205 </td>
+<td> 1.300 </td>
+<td> 1 </td>
+<td> 1.224 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.172 </td>
+<td> 0.872</td>
+</tr>
+<tr>
+<td><code>DRAGON_1_e1_14612_e1_268_e7_501.lus</code> </td>
+<td> 0.191 </td>
+<td> 0.063 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.060 </td>
+<td> 0.960 </td>
+<td> 133 </td>
+<td> 0.268 </td>
+<td> 1 </td>
+<td> 0.278 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.544</td>
+</tr>
+<tr>
+<td><code>DRAGON_3_e1_4783_e1_3755.lus</code> </td>
+<td> 0.191 </td>
+<td> 0.087 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.032 </td>
+<td> 0.140 </td>
+<td> 0.945 </td>
+<td> 145 </td>
+<td> 0.357 </td>
+<td> 1 </td>
+<td> 0.346 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.080 </td>
+<td> 0.576</td>
+</tr>
+<tr>
+<td><code>fast_2_e8_460_e8_1920.lus</code> </td>
+<td> 0.191 </td>
+<td> 0.104 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.084 </td>
+<td> 0.926 </td>
+<td> 211 </td>
+<td> 0.932 </td>
+<td> 2 </td>
+<td> 0.635 </td>
+<td> 2 </td>
+<td> 15 </td>
+<td> 0.048 </td>
+<td> 0.224</td>
+</tr>
+<tr>
+<td><code>metros_1_e2_627.lus</code> </td>
+<td> 0.192 </td>
+<td> 0.074 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.016 </td>
+<td> 0.068 </td>
+<td> 0.862 </td>
+<td> 99 </td>
+<td> 0.227 </td>
+<td> 1 </td>
+<td> 0.271 </td>
+<td> 1 </td>
+<td> 18 </td>
+<td> 0.024 </td>
+<td> 0.124</td>
+</tr>
+<tr>
+<td><code>microwave01.lus</code> </td>
+<td> 0.193 </td>
+<td> 0.132 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.392 </td>
+<td> 1.173 </td>
+<td> 159 </td>
+<td> 0.534 </td>
+<td> 1 </td>
+<td> 1.106 </td>
+<td> 1 </td>
+<td> 24 </td>
+<td> 0.108 </td>
+<td> 1.688</td>
+</tr>
+<tr>
+<td><code>ticket3i_4_e7_1775_e7_3320.lus</code> </td>
+<td> 0.193 </td>
+<td> 0.070 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.064 </td>
+<td> 0.955 </td>
+<td> 123 </td>
+<td> 0.256 </td>
+<td> 1 </td>
+<td> 0.436 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.032 </td>
+<td> 0.204</td>
+</tr>
+<tr>
+<td><code>cruise_controller_07.lus</code> </td>
+<td> 0.194 </td>
+<td> 0.086 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.212 </td>
+<td> 1.044 </td>
+<td> 207 </td>
+<td> 0.712 </td>
+<td> 1 </td>
+<td> 0.486 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.080 </td>
+<td> 0.516</td>
+</tr>
+<tr>
+<td><code>cruise_controller_01.lus</code> </td>
+<td> 0.195 </td>
+<td> 0.113 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.064 </td>
+<td> 0.516 </td>
+<td> 0.975 </td>
+<td> 153 </td>
+<td> 0.335 </td>
+<td> 1 </td>
+<td> 0.440 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.120 </td>
+<td> 0.788</td>
+</tr>
+<tr>
+<td><code>ticket3i_5_e7_3307.lus</code> </td>
+<td> 0.195 </td>
+<td> 0.074 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.068 </td>
+<td> 0.925 </td>
+<td> 123 </td>
+<td> 0.242 </td>
+<td> 1 </td>
+<td> 0.268 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.036 </td>
+<td> 0.180</td>
+</tr>
+<tr>
+<td><code>FIREFLY_3_e2_2236_e1_2305.lus</code> </td>
+<td> 0.196 </td>
+<td> 0.052 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.044 </td>
+<td> 0.926 </td>
+<td> 97 </td>
+<td> 0.180 </td>
+<td> 1 </td>
+<td> 0.218 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.284</td>
+</tr>
+<tr>
+<td><code>FIREFLY_a3_e3_314_e2_2812.lus</code> </td>
+<td> 0.196 </td>
+<td> 0.070 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.144 </td>
+<td> 0.922 </td>
+<td> 117 </td>
+<td> 0.233 </td>
+<td> 1 </td>
+<td> 0.249 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.048 </td>
+<td> 0.368</td>
+</tr>
+<tr>
+<td><code>cruise_controller_02.lus</code> </td>
+<td> 0.197 </td>
+<td> 0.113 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.080 </td>
+<td> 0.364 </td>
+<td> 1.014 </td>
+<td> 153 </td>
+<td> 0.378 </td>
+<td> 1 </td>
+<td> 1.190 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.112 </td>
+<td> 0.804</td>
+</tr>
+<tr>
+<td><code>ums_e8_1032.lus</code> </td>
+<td> 0.199 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.072 </td>
+<td> 1.147 </td>
+<td> 277 </td>
+<td> <strong>FAILED</strong> </td>
+<td> <em>TO</em> </td>
+<td> <em>TO</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>DRAGON_9_e7_1843_e2_1145.lus</code> </td>
+<td> 0.200 </td>
+<td> 0.069 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.068 </td>
+<td> 0.995 </td>
+<td> 133 </td>
+<td> 0.289 </td>
+<td> 1 </td>
+<td> 0.603 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.460</td>
+</tr>
+<tr>
+<td><code>ticket3i_1_e7_1669.lus</code> </td>
+<td> 0.200 </td>
+<td> 0.069 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.016 </td>
+<td> 0.064 </td>
+<td> 0.934 </td>
+<td> 123 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 0.313 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.024 </td>
+<td> 0.200</td>
+</tr>
+<tr>
+<td><code>DRAGON_2.lus</code> </td>
+<td> 0.201 </td>
+<td> 0.088 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.032 </td>
+<td> 0.116 </td>
+<td> 1.109 </td>
+<td> 141 </td>
+<td> 0.405 </td>
+<td> 2 </td>
+<td> 0.399 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 0.656</td>
+</tr>
+<tr>
+<td><code>cruise_controller_04.lus</code> </td>
+<td> 0.201 </td>
+<td> 0.116 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.052 </td>
+<td> 0.360 </td>
+<td> 1.039 </td>
+<td> 153 </td>
+<td> 0.927 </td>
+<td> 1 </td>
+<td> 0.624 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.132 </td>
+<td> 0.756</td>
+</tr>
+<tr>
+<td><code>DRAGON_9_e7_1843_e1_5434.lus</code> </td>
+<td> 0.202 </td>
+<td> 0.067 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.072 </td>
+<td> 0.907 </td>
+<td> 133 </td>
+<td> 0.267 </td>
+<td> 1 </td>
+<td> 0.360 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.516</td>
+</tr>
+<tr>
+<td><code>FIREFLY_2.lus</code> </td>
+<td> 0.202 </td>
+<td> 0.086 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.120 </td>
+<td> 0.932 </td>
+<td> 107 </td>
+<td> 0.194 </td>
+<td> 1 </td>
+<td> 0.222 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.048 </td>
+<td> 0.316</td>
+</tr>
+<tr>
+<td><code>cruise_controller_03.lus</code> </td>
+<td> 0.203 </td>
+<td> 0.123 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.052 </td>
+<td> 0.376 </td>
+<td> 1.001 </td>
+<td> 153 </td>
+<td> 0.335 </td>
+<td> 1 </td>
+<td> 0.420 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.104 </td>
+<td> 0.724</td>
+</tr>
+<tr>
+<td><code>MESI_1.lus</code> </td>
+<td> 0.204 </td>
+<td> 0.045 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.036 </td>
+<td> 0.861 </td>
+<td> 57 </td>
+<td> 0.136 </td>
+<td> 1 </td>
+<td> 0.111 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.108</td>
+</tr>
+<tr>
+<td><code>FIREFLY_a3_e1_3233_e2_2392.lus</code> </td>
+<td> 0.206 </td>
+<td> 0.074 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.120 </td>
+<td> 0.915 </td>
+<td> 117 </td>
+<td> 0.353 </td>
+<td> 1 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.048 </td>
+<td> 0.348</td>
+</tr>
+<tr>
+<td><code>steam_boiler_no_arr2_e8_21449_e5_18210.lus</code> </td>
+<td> 0.207 </td>
+<td> 0.134 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.124 </td>
+<td> 1.153 </td>
+<td> 257 </td>
+<td> 0.327 </td>
+<td> 1 </td>
+<td> 0.296 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.040 </td>
+<td> 0.236</td>
+</tr>
+<tr>
+<td><code>fast_2.lus</code> </td>
+<td> 0.209 </td>
+<td> 0.097 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.096 </td>
+<td> 1.051 </td>
+<td> 211 </td>
+<td> 0.932 </td>
+<td> 2 </td>
+<td> 0.500 </td>
+<td> 2 </td>
+<td> 10 </td>
+<td> 0.044 </td>
+<td> 0.168</td>
+</tr>
+<tr>
+<td><code>DRAGON_9_e7_1843_e3_5316.lus</code> </td>
+<td> 0.212 </td>
+<td> 0.073 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.072 </td>
+<td> 0.976 </td>
+<td> 133 </td>
+<td> 0.263 </td>
+<td> 1 </td>
+<td> 0.351 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.688</td>
+</tr>
+<tr>
+<td><code>DRAGON_2_e2_3183_e1_2644.lus</code> </td>
+<td> 0.219 </td>
+<td> 0.084 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.040 </td>
+<td> 0.152 </td>
+<td> 0.966 </td>
+<td> 141 </td>
+<td> 0.415 </td>
+<td> 2 </td>
+<td> 0.329 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.056 </td>
+<td> 0.596</td>
+</tr>
+<tr>
+<td><code>_6counters_e8_371_e1_448.lus</code> </td>
+<td> 0.219 </td>
+<td> 0.102 </td>
+<td> 4 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.032 </td>
+<td> 0.828 </td>
+<td> 17 </td>
+<td> 0.064 </td>
+<td> 1 </td>
+<td> 0.047 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.008 </td>
+<td> 0.020</td>
+</tr>
+<tr>
+<td><code>DRAGON_10_e1_3587_e3_2749.lus</code> </td>
+<td> 0.221 </td>
+<td> 0.072 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.108 </td>
+<td> 0.965 </td>
+<td> 133 </td>
+<td> 0.317 </td>
+<td> 1 </td>
+<td> 0.371 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.076 </td>
+<td> 0.612</td>
+</tr>
+<tr>
+<td><code>steam_boiler_no_arr2_e3_514_e4_11150.lus</code> </td>
+<td> 0.223 </td>
+<td> 0.129 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.024 </td>
+<td> 0.100 </td>
+<td> 1.086 </td>
+<td> 257 </td>
+<td> 0.358 </td>
+<td> 1 </td>
+<td> 0.697 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.044 </td>
+<td> 0.232</td>
+</tr>
+<tr>
+<td><code>ticket3i_3_e8_1703_e8_2560.lus</code> </td>
+<td> 0.225 </td>
+<td> 0.060 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.052 </td>
+<td> 1.284 </td>
+<td> 123 </td>
+<td> 0.223 </td>
+<td> 1 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.040 </td>
+<td> 0.204</td>
+</tr>
+<tr>
+<td><code>FIREFLY_a3_e2_2086_e3_2542.lus</code> </td>
+<td> 0.227 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.028 </td>
+<td> 0.132 </td>
+<td> 0.938 </td>
+<td> 117 </td>
+<td> 0.210 </td>
+<td> 1 </td>
+<td> 0.245 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.044 </td>
+<td> 0.220</td>
+</tr>
+<tr>
+<td><code>DRAGON_1_e2_1997.lus</code> </td>
+<td> 0.228 </td>
+<td> 0.065 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.064 </td>
+<td> 0.971 </td>
+<td> 133 </td>
+<td> 0.254 </td>
+<td> 1 </td>
+<td> 0.281 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.056 </td>
+<td> 0.520</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_all_e7_907.lus</code> </td>
+<td> 0.234 </td>
+<td> 0.056 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.068 </td>
+<td> 0.928 </td>
+<td> 59 </td>
+<td> 0.150 </td>
+<td> 2 </td>
+<td> 0.177 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.484</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_6_e3_1666_e5_1558.lus</code> </td>
+<td> 0.235 </td>
+<td> 0.056 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.012 </td>
+<td> 0.052 </td>
+<td> 0.964 </td>
+<td> 55 </td>
+<td> 0.138 </td>
+<td> 1 </td>
+<td> 0.110 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.012 </td>
+<td> 0.092</td>
+</tr>
+<tr>
+<td><code>ticket3i_7.lus</code> </td>
+<td> 0.238 </td>
+<td> 0.071 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.020 </td>
+<td> 0.160 </td>
+<td> 0.977 </td>
+<td> 127 </td>
+<td> 0.214 </td>
+<td> 1 </td>
+<td> 0.285 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.032 </td>
+<td> 0.264</td>
+</tr>
+<tr>
+<td><code>ticket3i_6.lus</code> </td>
+<td> 0.240 </td>
+<td> 0.069 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.112 </td>
+<td> 0.971 </td>
+<td> 123 </td>
+<td> 0.219 </td>
+<td> 1 </td>
+<td> 0.279 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.040 </td>
+<td> 0.212</td>
+</tr>
+<tr>
+<td><code>DRAGON_7_e7_3157_e2_2082.lus</code> </td>
+<td> 0.245 </td>
+<td> 0.074 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.112 </td>
+<td> 1.003 </td>
+<td> 135 </td>
+<td> 0.334 </td>
+<td> 1 </td>
+<td> 0.379 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.688</td>
+</tr>
+<tr>
+<td><code>DRAGON_3_e1_4783.lus</code> </td>
+<td> 0.263 </td>
+<td> 0.090 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.024 </td>
+<td> 0.156 </td>
+<td> 0.960 </td>
+<td> 145 </td>
+<td> 0.340 </td>
+<td> 1 </td>
+<td> 0.523 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.192 </td>
+<td> 1.004</td>
+</tr>
+<tr>
+<td><code>fast_2_e8_976.lus</code> </td>
+<td> 0.269 </td>
+<td> 0.110 </td>
+<td> 3 </td>
+<td> 1 </td>
+<td> 0.024 </td>
+<td> 0.096 </td>
+<td> 0.959 </td>
+<td> 211 </td>
+<td> 0.926 </td>
+<td> 2 </td>
+<td> 0.663 </td>
+<td> 2 </td>
+<td> 13 </td>
+<td> 0.040 </td>
+<td> 0.184</td>
+</tr>
+<tr>
+<td><code>DRAGON_3.lus</code> </td>
+<td> 0.281 </td>
+<td> 0.080 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.024 </td>
+<td> 0.152 </td>
+<td> 0.966 </td>
+<td> 145 </td>
+<td> 0.463 </td>
+<td> 1 </td>
+<td> 0.761 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.072 </td>
+<td> 0.700</td>
+</tr>
+<tr>
+<td><code>cruise_controller_11.lus</code> </td>
+<td> 0.286 </td>
+<td> 0.117 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.036 </td>
+<td> 0.160 </td>
+<td> 1.330 </td>
+<td> 209 </td>
+<td> 1.276 </td>
+<td> 1 </td>
+<td> 2.012 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.068 </td>
+<td> 0.376</td>
+</tr>
+<tr>
+<td><code>FIREFLY_4_e3_3511.lus</code> </td>
+<td> 0.291 </td>
+<td> 0.074 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.024 </td>
+<td> 0.092 </td>
+<td> 0.918 </td>
+<td> 109 </td>
+<td> 0.235 </td>
+<td> 1 </td>
+<td> 0.224 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.044 </td>
+<td> 0.232</td>
+</tr>
+<tr>
+<td><code>car_all_e8_856_e7_578.lus</code> </td>
+<td> 0.296 </td>
+<td> 0.161 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.012 </td>
+<td> 0.052 </td>
+<td> 0.870 </td>
+<td> 43 </td>
+<td> 0.148 </td>
+<td> 2 </td>
+<td> 0.143 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.060 </td>
+<td> 0.348</td>
+</tr>
+<tr>
+<td><code>ticket3i_all_e3_557_e7_3464.lus</code> </td>
+<td> 0.298 </td>
+<td> 0.085 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.024 </td>
+<td> 0.088 </td>
+<td> 0.972 </td>
+<td> 131 </td>
+<td> 0.259 </td>
+<td> 1 </td>
+<td> 0.421 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.036 </td>
+<td> 0.308</td>
+</tr>
+<tr>
+<td><code>triplexVoter_str.lus</code> </td>
+<td> 0.305 </td>
+<td> 0.270 </td>
+<td> 2 </td>
+<td> 3 </td>
+<td> 0.272 </td>
+<td> 4.652 </td>
+<td> 0.936 </td>
+<td> 53 </td>
+<td> 0.156 </td>
+<td> 1 </td>
+<td> 0.162 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.060 </td>
+<td> 0.452</td>
+</tr>
+<tr>
+<td><code>ticket3i_7_e3_59_e7_2122.lus</code> </td>
+<td> 0.309 </td>
+<td> 0.090 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.112 </td>
+<td> 0.968 </td>
+<td> 127 </td>
+<td> 0.284 </td>
+<td> 1 </td>
+<td> 0.362 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.044 </td>
+<td> 0.272</td>
+</tr>
+<tr>
+<td><code>DRAGON_1_e3_11891_e7_4569_e4_4881.lus</code> </td>
+<td> 0.311 </td>
+<td> 0.075 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.044 </td>
+<td> 0.088 </td>
+<td> 1.087 </td>
+<td> 133 </td>
+<td> 0.275 </td>
+<td> 1 </td>
+<td> 0.276 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.076 </td>
+<td> 0.712</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1b_e3_671_e6_1974.lus</code> </td>
+<td> 0.320 </td>
+<td> 0.058 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.020 </td>
+<td> 0.076 </td>
+<td> 0.916 </td>
+<td> 103 </td>
+<td> 0.274 </td>
+<td> 2 </td>
+<td> 0.476 </td>
+<td> 2 </td>
+<td> 1 </td>
+<td> 0.116 </td>
+<td> 0.396</td>
+</tr>
+<tr>
+<td><code>cruise_controller_06.lus</code> </td>
+<td> 0.322 </td>
+<td> 0.100 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.032 </td>
+<td> 0.196 </td>
+<td> 1.106 </td>
+<td> 209 </td>
+<td> 0.963 </td>
+<td> 1 </td>
+<td> 0.761 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.084 </td>
+<td> 0.708</td>
+</tr>
+<tr>
+<td><code>MESI_i3_e1_447_e6_2281.lus</code> </td>
+<td> 0.323 </td>
+<td> 0.061 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.060 </td>
+<td> 0.826 </td>
+<td> 57 </td>
+<td> 0.169 </td>
+<td> 1 </td>
+<td> 0.128 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.132</td>
+</tr>
+<tr>
+<td><code>car_all_e2_142_e7_209.lus</code> </td>
+<td> 0.349 </td>
+<td> 0.121 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.012 </td>
+<td> 0.048 </td>
+<td> 1.201 </td>
+<td> 43 </td>
+<td> 0.151 </td>
+<td> 2 </td>
+<td> 0.106 </td>
+<td> 2 </td>
+<td> 5 </td>
+<td> 0.020 </td>
+<td> 0.112</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_6_e2_1439_e1_954.lus</code> </td>
+<td> 0.354 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.056 </td>
+<td> 0.929 </td>
+<td> 55 </td>
+<td> 0.190 </td>
+<td> 1 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.104</td>
+</tr>
+<tr>
+<td><code>ticket3i_all_e1_2706_e7_1776.lus</code> </td>
+<td> 0.366 </td>
+<td> 0.103 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.012 </td>
+<td> 0.104 </td>
+<td> 0.921 </td>
+<td> 131 </td>
+<td> 0.425 </td>
+<td> 1 </td>
+<td> 0.344 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.040 </td>
+<td> 0.276</td>
+</tr>
+<tr>
+<td><code>MESI_i3_e1_447_e1_1292.lus</code> </td>
+<td> 0.375 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.064 </td>
+<td> 0.879 </td>
+<td> 57 </td>
+<td> 0.129 </td>
+<td> 1 </td>
+<td> 0.117 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.136</td>
+</tr>
+<tr>
+<td><code>SYNAPSE_123_e7_837_e7_1262.lus</code> </td>
+<td> 0.417 </td>
+<td> 0.062 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.012 </td>
+<td> 0.072 </td>
+<td> 0.916 </td>
+<td> 65 </td>
+<td> 0.179 </td>
+<td> 2 </td>
+<td> 0.192 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.032 </td>
+<td> 0.408</td>
+</tr>
+<tr>
+<td><code>rtp_5_e7_3972.lus</code> </td>
+<td> 0.417 </td>
+<td> 0.245 </td>
+<td> 1 </td>
+<td> 2 </td>
+<td> 0.016 </td>
+<td> 0.060 </td>
+<td> 0.912 </td>
+<td> 143 </td>
+<td> 0.247 </td>
+<td> 1 </td>
+<td> 0.316 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.048 </td>
+<td> 0.240</td>
+</tr>
+<tr>
+<td><code>ticket3i_7_e2_2724_e7_524.lus</code> </td>
+<td> 0.423 </td>
+<td> 0.101 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.104 </td>
+<td> 0.996 </td>
+<td> 127 </td>
+<td> 0.218 </td>
+<td> 1 </td>
+<td> 0.303 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.036 </td>
+<td> 0.276</td>
+</tr>
+<tr>
+<td><code>ticket3i_7_e7_3176.lus</code> </td>
+<td> 0.427 </td>
+<td> 0.086 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.092 </td>
+<td> 1.004 </td>
+<td> 127 </td>
+<td> 0.204 </td>
+<td> 1 </td>
+<td> 0.268 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.040 </td>
+<td> 0.296</td>
+</tr>
+<tr>
+<td><code>FIREFLY_4_e3_3511_e3_422.lus</code> </td>
+<td> 0.430 </td>
+<td> 0.084 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.060 </td>
+<td> 0.208 </td>
+<td> 0.912 </td>
+<td> 109 </td>
+<td> 0.380 </td>
+<td> 1 </td>
+<td> 0.297 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.100 </td>
+<td> 0.820</td>
+</tr>
+<tr>
+<td><code>ticket3i_all_e7_591.lus</code> </td>
+<td> 0.440 </td>
+<td> 0.089 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.092 </td>
+<td> 1.019 </td>
+<td> 131 </td>
+<td> 0.246 </td>
+<td> 1 </td>
+<td> 0.310 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.040 </td>
+<td> 0.280</td>
+</tr>
+<tr>
+<td><code>FIREFLY_4_e3_3511_e2_1923.lus</code> </td>
+<td> 0.443 </td>
+<td> 0.075 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.004 </td>
+<td> 0.096 </td>
+<td> 1.050 </td>
+<td> 109 </td>
+<td> 0.204 </td>
+<td> 1 </td>
+<td> 0.221 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.052 </td>
+<td> 0.372</td>
+</tr>
+<tr>
+<td><code>FIREFLY_4_e3_3511_e5_3248.lus</code> </td>
+<td> 0.452 </td>
+<td> 0.076 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.092 </td>
+<td> 1.212 </td>
+<td> 109 </td>
+<td> 0.194 </td>
+<td> 1 </td>
+<td> 0.208 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.128 </td>
+<td> 0.472</td>
+</tr>
+<tr>
+<td><code>ticket3i_all_e2_1117_e7_553.lus</code> </td>
+<td> 0.460 </td>
+<td> 0.096 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.092 </td>
+<td> 1.014 </td>
+<td> 131 </td>
+<td> 0.281 </td>
+<td> 1 </td>
+<td> 0.314 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.036 </td>
+<td> 0.268</td>
+</tr>
+<tr>
+<td><code>ticket3i_all_e7_1837.lus</code> </td>
+<td> 0.478 </td>
+<td> 0.088 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.092 </td>
+<td> 1.030 </td>
+<td> 131 </td>
+<td> 0.231 </td>
+<td> 1 </td>
+<td> 0.651 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.036 </td>
+<td> 0.284</td>
+</tr>
+<tr>
+<td><code>car_all_e7_188_e7_743.lus</code> </td>
+<td> 0.486 </td>
+<td> 0.144 </td>
+<td> 2 </td>
+<td> 2 </td>
+<td> 0.032 </td>
+<td> 0.148 </td>
+<td> 1.121 </td>
+<td> 43 </td>
+<td> 0.260 </td>
+<td> 2 </td>
+<td> 0.207 </td>
+<td> 2 </td>
+<td> 9 </td>
+<td> 0.056 </td>
+<td> 0.148</td>
+</tr>
+<tr>
+<td><code>ticket3i_7_e8_2126_e7_78.lus</code> </td>
+<td> 0.503 </td>
+<td> 0.093 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.096 </td>
+<td> 0.980 </td>
+<td> 127 </td>
+<td> 0.199 </td>
+<td> 1 </td>
+<td> 0.514 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.040 </td>
+<td> 0.236</td>
+</tr>
+<tr>
+<td><code>ticket3i_7_e7_3176_e1_2924.lus</code> </td>
+<td> 0.589 </td>
+<td> 0.089 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.020 </td>
+<td> 0.092 </td>
+<td> 0.980 </td>
+<td> 127 </td>
+<td> 0.203 </td>
+<td> 1 </td>
+<td> 0.275 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.044 </td>
+<td> 0.296</td>
+</tr>
+<tr>
+<td><code>steam_boiler_no_arr1.lus</code> </td>
+<td> 0.604 </td>
+<td> 0.379 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.080 </td>
+<td> 0.500 </td>
+<td> 1.258 </td>
+<td> 425 </td>
+<td> 7.059 </td>
+<td> 1 </td>
+<td> 0.740 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.140 </td>
+<td> 0.860</td>
+</tr>
+<tr>
+<td><code>cruise_controller_24.lus</code> </td>
+<td> 0.609 </td>
+<td> 0.129 </td>
+<td> 1 </td>
+<td> 4 </td>
+<td> 0.036 </td>
+<td> 0.204 </td>
+<td> 1.057 </td>
+<td> 187 </td>
+<td> 0.458 </td>
+<td> 1 </td>
+<td> 0.603 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.188 </td>
+<td> 1.116</td>
+</tr>
+<tr>
+<td><code>ticket3i_all_e8_505_e7_2450.lus</code> </td>
+<td> 0.615 </td>
+<td> 0.098 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.104 </td>
+<td> 0.960 </td>
+<td> 131 </td>
+<td> 0.234 </td>
+<td> 1 </td>
+<td> 0.279 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.044 </td>
+<td> 0.320</td>
+</tr>
+<tr>
+<td><code>tramway_e7_1834_e8_3192.lus</code> </td>
+<td> 0.626 </td>
+<td> 0.110 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.012 </td>
+<td> 0.044 </td>
+<td> 0.954 </td>
+<td> 147 </td>
+<td> 0.216 </td>
+<td> 1 </td>
+<td> 0.354 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.020 </td>
+<td> 0.104</td>
+</tr>
+<tr>
+<td><code>steam_boiler_no_arr1_e4_23904_e4_2384.lus</code> </td>
+<td> 0.633 </td>
+<td> 0.370 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.072 </td>
+<td> 0.492 </td>
+<td> 1.248 </td>
+<td> 425 </td>
+<td> 8.992 </td>
+<td> 1 </td>
+<td> 0.756 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0.132 </td>
+<td> 0.868</td>
+</tr>
+<tr>
+<td><code>tramway.lus</code> </td>
+<td> 0.658 </td>
+<td> 0.102 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.012 </td>
+<td> 0.052 </td>
+<td> 0.979 </td>
+<td> 147 </td>
+<td> 0.190 </td>
+<td> 1 </td>
+<td> 0.279 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.028 </td>
+<td> 0.108</td>
+</tr>
+<tr>
+<td><code>FIREFLY_11.lus</code> </td>
+<td> 0.733 </td>
+<td> 0.083 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.076 </td>
+<td> 1.090 </td>
+<td> 97 </td>
+<td> 0.328 </td>
+<td> 1 </td>
+<td> 0.269 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.104 </td>
+<td> 0.336</td>
+</tr>
+<tr>
+<td><code>FIREFLY_11_e1_3457.lus</code> </td>
+<td> 0.757 </td>
+<td> 0.075 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.196 </td>
+<td> 0.962 </td>
+<td> 97 </td>
+<td> 0.401 </td>
+<td> 1 </td>
+<td> 0.364 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.628</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1a.lus</code> </td>
+<td> 0.825 </td>
+<td> 0.084 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.016 </td>
+<td> 0.072 </td>
+<td> 0.962 </td>
+<td> 97 </td>
+<td> 0.197 </td>
+<td> 1 </td>
+<td> 0.207 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.032 </td>
+<td> 0.236</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1a_e2_284_e1_2924.lus</code> </td>
+<td> 0.854 </td>
+<td> 0.084 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.076 </td>
+<td> 0.961 </td>
+<td> 97 </td>
+<td> 0.391 </td>
+<td> 1 </td>
+<td> 0.214 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.252</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_4_e2_325.lus</code> </td>
+<td> 0.877 </td>
+<td> 0.074 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.020 </td>
+<td> 0.072 </td>
+<td> 0.955 </td>
+<td> 97 </td>
+<td> 0.185 </td>
+<td> 1 </td>
+<td> 0.286 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.104 </td>
+<td> 0.220</td>
+</tr>
+<tr>
+<td><code>FIREFLY_u1.lus</code> </td>
+<td> 0.898 </td>
+<td> 0.090 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.020 </td>
+<td> 0.080 </td>
+<td> 0.924 </td>
+<td> 103 </td>
+<td> 0.197 </td>
+<td> 1 </td>
+<td> 0.260 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.052 </td>
+<td> 0.352</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_4.lus</code> </td>
+<td> 0.983 </td>
+<td> 0.086 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.080 </td>
+<td> 0.956 </td>
+<td> 97 </td>
+<td> 0.188 </td>
+<td> 1 </td>
+<td> 0.204 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.264</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_a1.lus</code> </td>
+<td> 1.004 </td>
+<td> 0.102 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.028 </td>
+<td> 0.140 </td>
+<td> 0.954 </td>
+<td> 111 </td>
+<td> 0.181 </td>
+<td> 1 </td>
+<td> 0.215 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.328</td>
+</tr>
+<tr>
+<td><code>DRAGON_8_e3_786_e7_4541.lus</code> </td>
+<td> 1.033 </td>
+<td> 0.077 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.024 </td>
+<td> 0.080 </td>
+<td> 1.002 </td>
+<td> 133 </td>
+<td> 0.416 </td>
+<td> 1 </td>
+<td> 0.363 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.064 </td>
+<td> 0.472</td>
+</tr>
+<tr>
+<td><code>FIREFLY_6.lus</code> </td>
+<td> 1.065 </td>
+<td> 0.081 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.076 </td>
+<td> 0.943 </td>
+<td> 97 </td>
+<td> 0.171 </td>
+<td> 1 </td>
+<td> 0.186 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.244</td>
+</tr>
+<tr>
+<td><code>DRAGON_8_e7_3752.lus</code> </td>
+<td> 1.083 </td>
+<td> 0.078 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.024 </td>
+<td> 0.088 </td>
+<td> 0.984 </td>
+<td> 133 </td>
+<td> 0.263 </td>
+<td> 1 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.080 </td>
+<td> 0.592</td>
+</tr>
+<tr>
+<td><code>DRAGON_8_e2_3896_e3_3125.lus</code> </td>
+<td> 1.121 </td>
+<td> 0.079 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.024 </td>
+<td> 0.084 </td>
+<td> 0.985 </td>
+<td> 133 </td>
+<td> 0.593 </td>
+<td> 1 </td>
+<td> 0.722 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.512</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_2_e2_1375_e1_418.lus</code> </td>
+<td> 1.177 </td>
+<td> 0.079 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.076 </td>
+<td> 0.971 </td>
+<td> 97 </td>
+<td> 0.205 </td>
+<td> 1 </td>
+<td> 0.201 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.032 </td>
+<td> 0.268</td>
+</tr>
+<tr>
+<td><code>DRAGON_8.lus</code> </td>
+<td> 1.206 </td>
+<td> 0.080 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.024 </td>
+<td> 0.084 </td>
+<td> 0.960 </td>
+<td> 133 </td>
+<td> 0.288 </td>
+<td> 1 </td>
+<td> 0.271 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.060 </td>
+<td> 0.476</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_5.lus</code> </td>
+<td> 1.213 </td>
+<td> 0.093 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.064 </td>
+<td> 0.200 </td>
+<td> 1.158 </td>
+<td> 113 </td>
+<td> 0.187 </td>
+<td> 1 </td>
+<td> 0.214 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.108 </td>
+<td> 0.716</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_2_e7_1826_e8_126.lus</code> </td>
+<td> 1.216 </td>
+<td> 0.083 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.076 </td>
+<td> 0.932 </td>
+<td> 97 </td>
+<td> 0.176 </td>
+<td> 1 </td>
+<td> 0.208 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.220</td>
+</tr>
+<tr>
+<td><code>FIREFLY_6_e2_3302.lus</code> </td>
+<td> 1.245 </td>
+<td> 0.088 </td>
+<td> 1 </td>
+<td> 9 </td>
+<td> 0.020 </td>
+<td> 0.092 </td>
+<td> 0.910 </td>
+<td> 97 </td>
+<td> 0.176 </td>
+<td> 1 </td>
+<td> 0.194 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.256</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1a_e2_284_e3_3091.lus</code> </td>
+<td> 1.259 </td>
+<td> 0.095 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.020 </td>
+<td> 0.068 </td>
+<td> 1.105 </td>
+<td> 97 </td>
+<td> 0.203 </td>
+<td> 1 </td>
+<td> 0.225 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.048 </td>
+<td> 0.272</td>
+</tr>
+<tr>
+<td><code>DRAGON_5.lus</code> </td>
+<td> 1.277 </td>
+<td> 0.094 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.020 </td>
+<td> 0.088 </td>
+<td> 0.940 </td>
+<td> 135 </td>
+<td> 0.267 </td>
+<td> 1 </td>
+<td> 0.285 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.052 </td>
+<td> 0.468</td>
+</tr>
+<tr>
+<td><code>FIREFLY_rt_e3_1770_e2_637.lus</code> </td>
+<td> 1.347 </td>
+<td> 0.104 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.016 </td>
+<td> 0.100 </td>
+<td> 1.014 </td>
+<td> 105 </td>
+<td> 0.222 </td>
+<td> 1 </td>
+<td> 0.236 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.036 </td>
+<td> 0.292</td>
+</tr>
+<tr>
+<td><code>FIREFLY_rt.lus</code> </td>
+<td> 1.360 </td>
+<td> 0.091 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.024 </td>
+<td> 0.108 </td>
+<td> 0.900 </td>
+<td> 105 </td>
+<td> 0.217 </td>
+<td> 1 </td>
+<td> 0.226 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.248</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1a_e2_284_e2_2755.lus</code> </td>
+<td> 1.389 </td>
+<td> 0.079 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.032 </td>
+<td> 0.072 </td>
+<td> 1.129 </td>
+<td> 97 </td>
+<td> 0.178 </td>
+<td> 1 </td>
+<td> 0.215 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.032 </td>
+<td> 0.200</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_3.lus</code> </td>
+<td> 1.407 </td>
+<td> 0.089 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.020 </td>
+<td> 0.092 </td>
+<td> 0.939 </td>
+<td> 99 </td>
+<td> 0.180 </td>
+<td> 1 </td>
+<td> 0.205 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.276</td>
+</tr>
+<tr>
+<td><code>DRAGON_5_e1_1835.lus</code> </td>
+<td> 1.421 </td>
+<td> 0.094 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.024 </td>
+<td> 0.080 </td>
+<td> 0.968 </td>
+<td> 135 </td>
+<td> 0.284 </td>
+<td> 1 </td>
+<td> 0.295 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.080 </td>
+<td> 0.716</td>
+</tr>
+<tr>
+<td><code>MESI_i4_e6_2175.lus</code> </td>
+<td> 1.486 </td>
+<td> 0.208 </td>
+<td> 2 </td>
+<td> 12 </td>
+<td> 0.020 </td>
+<td> 0.180 </td>
+<td> 0.919 </td>
+<td> 57 </td>
+<td> 0.149 </td>
+<td> 1 </td>
+<td> 0.110 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.024 </td>
+<td> 0.132</td>
+</tr>
+<tr>
+<td><code>ticket3i_7_e1_2192_e1_1852.lus</code> </td>
+<td> 1.503 </td>
+<td> 0.099 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.096 </td>
+<td> 0.981 </td>
+<td> 127 </td>
+<td> 0.223 </td>
+<td> 1 </td>
+<td> 0.251 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.040 </td>
+<td> 0.252</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_2.lus</code> </td>
+<td> 1.609 </td>
+<td> 0.085 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.016 </td>
+<td> 0.076 </td>
+<td> 0.949 </td>
+<td> 97 </td>
+<td> 0.265 </td>
+<td> 1 </td>
+<td> 0.202 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.032 </td>
+<td> 0.244</td>
+</tr>
+<tr>
+<td><code>DRAGON_5_e2_3018_e2_936.lus</code> </td>
+<td> 1.756 </td>
+<td> 0.097 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.044 </td>
+<td> 0.228 </td>
+<td> 0.985 </td>
+<td> 135 </td>
+<td> 0.457 </td>
+<td> 1 </td>
+<td> 0.393 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.076 </td>
+<td> 0.620</td>
+</tr>
+<tr>
+<td><code>ILLINOIS_r4a.lus</code> </td>
+<td> 1.799 </td>
+<td> 0.096 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.020 </td>
+<td> 0.080 </td>
+<td> 0.882 </td>
+<td> 105 </td>
+<td> 0.236 </td>
+<td> 1 </td>
+<td> 0.216 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.048 </td>
+<td> 0.304</td>
+</tr>
+<tr>
+<td><code>rtp_all_e7_2500.lus</code> </td>
+<td> 1.883 </td>
+<td> 1.576 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.032 </td>
+<td> 0.180 </td>
+<td> 0.938 </td>
+<td> 163 </td>
+<td> 0.256 </td>
+<td> 1 </td>
+<td> 0.448 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.072 </td>
+<td> 0.620</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_3_e1_2217_e3_1200.lus</code> </td>
+<td> 2.188 </td>
+<td> 0.103 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.024 </td>
+<td> 0.116 </td>
+<td> 0.924 </td>
+<td> 99 </td>
+<td> 0.198 </td>
+<td> 1 </td>
+<td> 0.226 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.324</td>
+</tr>
+<tr>
+<td><code>DRAGON_4_e3_1540_e1_5048.lus</code> </td>
+<td> 2.229 </td>
+<td> 0.196 </td>
+<td> 1 </td>
+<td> 9 </td>
+<td> 0.068 </td>
+<td> 0.256 </td>
+<td> 0.944 </td>
+<td> 133 </td>
+<td> 0.333 </td>
+<td> 1 </td>
+<td> 0.372 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.072 </td>
+<td> 0.520</td>
+</tr>
+<tr>
+<td><code>FIREFLY_luke_1a_e7_3042_e3_1213.lus</code> </td>
+<td> 2.252 </td>
+<td> 1.298 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.024 </td>
+<td> 0.148 </td>
+<td> 0.947 </td>
+<td> 97 </td>
+<td> 0.190 </td>
+<td> 1 </td>
+<td> 0.209 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.040 </td>
+<td> 0.304</td>
+</tr>
+<tr>
+<td><code>DRAGON_4_e1_4312.lus</code> </td>
+<td> 2.395 </td>
+<td> 0.147 </td>
+<td> 1 </td>
+<td> 13 </td>
+<td> 0.036 </td>
+<td> 0.220 </td>
+<td> 0.950 </td>
+<td> 133 </td>
+<td> 0.343 </td>
+<td> 1 </td>
+<td> 0.413 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.200 </td>
+<td> 0.904</td>
+</tr>
+<tr>
+<td><code>DRAGON_8_e3_786.lus</code> </td>
+<td> 2.437 </td>
+<td> 1.154 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.020 </td>
+<td> 0.148 </td>
+<td> 1.164 </td>
+<td> 133 </td>
+<td> 0.953 </td>
+<td> 1 </td>
+<td> 0.339 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.572</td>
+</tr>
+<tr>
+<td><code>car_6_e1_152_e1_391.lus</code> </td>
+<td> 2.699 </td>
+<td> 0.234 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.016 </td>
+<td> 0.040 </td>
+<td> 1.012 </td>
+<td> 29 </td>
+<td> 0.189 </td>
+<td> 2 </td>
+<td> 0.103 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.044 </td>
+<td> 0.136</td>
+</tr>
+<tr>
+<td><code>MESI_i4_e7_1017_e6_1132.lus</code> </td>
+<td> 3.004 </td>
+<td> 0.389 </td>
+<td> 2 </td>
+<td> 15 </td>
+<td> 0.028 </td>
+<td> 0.152 </td>
+<td> 0.864 </td>
+<td> 57 </td>
+<td> 0.112 </td>
+<td> 1 </td>
+<td> 0.114 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.024 </td>
+<td> 0.124</td>
+</tr>
+<tr>
+<td><code>FIREFLY_u1_e2_3403_e2_957.lus</code> </td>
+<td> 3.034 </td>
+<td> 0.160 </td>
+<td> 2 </td>
+<td> 11 </td>
+<td> 0.032 </td>
+<td> 0.236 </td>
+<td> 0.924 </td>
+<td> 103 </td>
+<td> 0.190 </td>
+<td> 1 </td>
+<td> 0.233 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.048 </td>
+<td> 0.304</td>
+</tr>
+<tr>
+<td><code>DRAGON_4_e2_2799.lus</code> </td>
+<td> 3.639 </td>
+<td> 0.350 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.040 </td>
+<td> 0.212 </td>
+<td> 0.973 </td>
+<td> 133 </td>
+<td> 0.288 </td>
+<td> 1 </td>
+<td> 0.295 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.076 </td>
+<td> 0.560</td>
+</tr>
+<tr>
+<td><code>FIREFLY_11_e3_2076_e1_1270.lus</code> </td>
+<td> 3.919 </td>
+<td> 0.164 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.028 </td>
+<td> 0.168 </td>
+<td> 1.552 </td>
+<td> 97 </td>
+<td> 0.364 </td>
+<td> 1 </td>
+<td> 0.217 </td>
+<td> 1 </td>
+<td> 6 </td>
+<td> 0.088 </td>
+<td> 0.448</td>
+</tr>
+<tr>
+<td><code>cruise_controller_14.lus</code> </td>
+<td> 3.928 </td>
+<td> 1.479 </td>
+<td> 1 </td>
+<td> 5 </td>
+<td> 0.056 </td>
+<td> 0.272 </td>
+<td> 1.120 </td>
+<td> 189 </td>
+<td> 0.527 </td>
+<td> 1 </td>
+<td> 0.694 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.240 </td>
+<td> 1.324</td>
+</tr>
+<tr>
+<td><code>DRAGON_12_e2_1618.lus</code> </td>
+<td> 4.051 </td>
+<td> 0.136 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.036 </td>
+<td> 0.200 </td>
+<td> 1.032 </td>
+<td> 137 </td>
+<td> 0.268 </td>
+<td> 1 </td>
+<td> 0.330 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.072 </td>
+<td> 0.464</td>
+</tr>
+<tr>
+<td><code>DRAGON_13.lus</code> </td>
+<td> 4.051 </td>
+<td> 0.169 </td>
+<td> 1 </td>
+<td> 15 </td>
+<td> 0.028 </td>
+<td> 0.236 </td>
+<td> 1.005 </td>
+<td> 137 </td>
+<td> 0.312 </td>
+<td> 1 </td>
+<td> 0.328 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.072 </td>
+<td> 0.636</td>
+</tr>
+<tr>
+<td><code>twisted_counters.lus</code> </td>
+<td> 4.668 </td>
+<td> 0.185 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.012 </td>
+<td> 0.024 </td>
+<td> 0.867 </td>
+<td> 23 </td>
+<td> 0.170 </td>
+<td> 1 </td>
+<td> 0.073 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.004 </td>
+<td> 0.032</td>
+</tr>
+<tr>
+<td><code>DRAGON_4.lus</code> </td>
+<td> 5.119 </td>
+<td> 0.149 </td>
+<td> 1 </td>
+<td> 12 </td>
+<td> 0.028 </td>
+<td> 0.196 </td>
+<td> 1.050 </td>
+<td> 133 </td>
+<td> 0.263 </td>
+<td> 1 </td>
+<td> 0.303 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.068 </td>
+<td> 0.516</td>
+</tr>
+<tr>
+<td><code>DRAGON_4_e2_2799_e3_1915.lus</code> </td>
+<td> 5.182 </td>
+<td> 0.140 </td>
+<td> 1 </td>
+<td> 11 </td>
+<td> 0.092 </td>
+<td> 0.184 </td>
+<td> 1.065 </td>
+<td> 133 </td>
+<td> 0.458 </td>
+<td> 1 </td>
+<td> 0.288 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.072 </td>
+<td> 0.504</td>
+</tr>
+<tr>
+<td><code>DRAGON_13_e3_1418_e3_2761.lus</code> </td>
+<td> 5.222 </td>
+<td> 0.163 </td>
+<td> 1 </td>
+<td> 15 </td>
+<td> 0.040 </td>
+<td> 0.240 </td>
+<td> 0.971 </td>
+<td> 137 </td>
+<td> 0.253 </td>
+<td> 1 </td>
+<td> 0.282 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.072 </td>
+<td> 0.712</td>
+</tr>
+<tr>
+<td><code>DRAGON_4_e2_2799_e1_1303.lus</code> </td>
+<td> 5.300 </td>
+<td> 0.169 </td>
+<td> 1 </td>
+<td> 12 </td>
+<td> 0.032 </td>
+<td> 0.192 </td>
+<td> 1.503 </td>
+<td> 133 </td>
+<td> 0.367 </td>
+<td> 1 </td>
+<td> 0.398 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.064 </td>
+<td> 0.520</td>
+</tr>
+<tr>
+<td><code>DRAGON_4_e2_2799_e2_2251.lus</code> </td>
+<td> 5.439 </td>
+<td> 0.163 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.036 </td>
+<td> 0.180 </td>
+<td> 0.929 </td>
+<td> 133 </td>
+<td> 0.274 </td>
+<td> 1 </td>
+<td> 0.306 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.064 </td>
+<td> 0.556</td>
+</tr>
+<tr>
+<td><code>DRAGON_all2.lus</code> </td>
+<td> 6.329 </td>
+<td> 0.229 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.056 </td>
+<td> 0.520 </td>
+<td> 1.131 </td>
+<td> 177 </td>
+<td> 0.619 </td>
+<td> 2 </td>
+<td> 1.557 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.192 </td>
+<td> 3.548</td>
+</tr>
+<tr>
+<td><code>DRAGON_all2_e3_4612_e3_1543.lus</code> </td>
+<td> 6.391 </td>
+<td> 0.230 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.056 </td>
+<td> 0.448 </td>
+<td> 1.040 </td>
+<td> 177 </td>
+<td> 0.661 </td>
+<td> 2 </td>
+<td> 0.770 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.160 </td>
+<td> 4.412</td>
+</tr>
+<tr>
+<td><code>DRAGON_4_e3_4133.lus</code> </td>
+<td> 6.805 </td>
+<td> 0.292 </td>
+<td> 1 </td>
+<td> 12 </td>
+<td> 0.036 </td>
+<td> 0.164 </td>
+<td> 1.129 </td>
+<td> 133 </td>
+<td> 0.275 </td>
+<td> 1 </td>
+<td> 0.323 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.088 </td>
+<td> 0.580</td>
+</tr>
+<tr>
+<td><code>DRAGON_12_e2_1618_e2_138.lus</code> </td>
+<td> 7.143 </td>
+<td> 0.178 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.044 </td>
+<td> 0.220 </td>
+<td> 0.974 </td>
+<td> 137 </td>
+<td> 0.293 </td>
+<td> 1 </td>
+<td> 0.383 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.072 </td>
+<td> 0.604</td>
+</tr>
+<tr>
+<td><code>DRAGON_12.lus</code> </td>
+<td> 7.819 </td>
+<td> 0.193 </td>
+<td> 1 </td>
+<td> 15 </td>
+<td> 0.048 </td>
+<td> 0.232 </td>
+<td> 1.024 </td>
+<td> 137 </td>
+<td> 0.293 </td>
+<td> 1 </td>
+<td> 0.356 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.068 </td>
+<td> 0.552</td>
+</tr>
+<tr>
+<td><code>DRAGON_all2_e3_4612_e2_5774.lus</code> </td>
+<td> 7.942 </td>
+<td> 5.694 </td>
+<td> 1 </td>
+<td> 15 </td>
+<td> 0.048 </td>
+<td> 0.520 </td>
+<td> 1.067 </td>
+<td> 177 </td>
+<td> 0.456 </td>
+<td> 2 </td>
+<td> 0.739 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.160 </td>
+<td> 3.876</td>
+</tr>
+<tr>
+<td><code>DRAGON_all2_e3_4612_e5_3642.lus</code> </td>
+<td> 7.966 </td>
+<td> 5.461 </td>
+<td> 1 </td>
+<td> 17 </td>
+<td> 0.048 </td>
+<td> 0.544 </td>
+<td> 1.013 </td>
+<td> 177 </td>
+<td> 0.689 </td>
+<td> 2 </td>
+<td> 0.744 </td>
+<td> 2 </td>
+<td> 9 </td>
+<td> 0.156 </td>
+<td> 3.676</td>
+</tr>
+<tr>
+<td><code>microwave22.lus</code> </td>
+<td> 8.618 </td>
+<td> 2.062 </td>
+<td> 3 </td>
+<td> 7 </td>
+<td> 0.336 </td>
+<td> 1.800 </td>
+<td> 1.281 </td>
+<td> 163 </td>
+<td> 0.366 </td>
+<td> 1 </td>
+<td> 0.966 </td>
+<td> 1 </td>
+<td> 35 </td>
+<td> 0.188 </td>
+<td> 1.780</td>
+</tr>
+<tr>
+<td><code>DRAGON_all2_e3_4612_e1_6463.lus</code> </td>
+<td> 8.955 </td>
+<td> 0.314 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.052 </td>
+<td> 0.544 </td>
+<td> 1.057 </td>
+<td> 177 </td>
+<td> 0.533 </td>
+<td> 2 </td>
+<td> 0.817 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.152 </td>
+<td> 4.168</td>
+</tr>
+<tr>
+<td><code>DRAGON_all2_e3_4612_e4_3719.lus</code> </td>
+<td> 9.651 </td>
+<td> 0.333 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.056 </td>
+<td> 0.576 </td>
+<td> 1.006 </td>
+<td> 177 </td>
+<td> 0.564 </td>
+<td> 2 </td>
+<td> 0.921 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.184 </td>
+<td> 6.080</td>
+</tr>
+<tr>
+<td><code>DRAGON_12_e2_1618_e1_6030.lus</code> </td>
+<td> 9.731 </td>
+<td> 0.267 </td>
+<td> 1 </td>
+<td> 20 </td>
+<td> 0.048 </td>
+<td> 0.312 </td>
+<td> 1.013 </td>
+<td> 137 </td>
+<td> 0.242 </td>
+<td> 1 </td>
+<td> 0.803 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.068 </td>
+<td> 0.596</td>
+</tr>
+<tr>
+<td><code>cruise_controller_12.lus</code> </td>
+<td> 11.081 </td>
+<td> 5.865 </td>
+<td> 2 </td>
+<td> 14 </td>
+<td> 0.140 </td>
+<td> 1.396 </td>
+<td> 1.003 </td>
+<td> 187 </td>
+<td> 0.470 </td>
+<td> 1 </td>
+<td> 0.553 </td>
+<td> 1 </td>
+<td> 10 </td>
+<td> 0.144 </td>
+<td> 1.072</td>
+</tr>
+<tr>
+<td><code>DRAGON_12_e2_1618_e3_2012.lus</code> </td>
+<td> 11.942 </td>
+<td> 0.402 </td>
+<td> 1 </td>
+<td> 19 </td>
+<td> 0.044 </td>
+<td> 0.268 </td>
+<td> 1.324 </td>
+<td> 137 </td>
+<td> 0.283 </td>
+<td> 1 </td>
+<td> 0.340 </td>
+<td> 1 </td>
+<td> 8 </td>
+<td> 0.068 </td>
+<td> 0.532</td>
+</tr>
+<tr>
+<td><code>microwave26.lus</code> </td>
+<td> 12.216 </td>
+<td> 496.532 </td>
+<td> 3 </td>
+<td> 13 </td>
+<td> 0.284 </td>
+<td> 4.788 </td>
+<td> 1.152 </td>
+<td> 163 </td>
+<td> 0.476 </td>
+<td> 1 </td>
+<td> 1.070 </td>
+<td> 1 </td>
+<td> 34 </td>
+<td> 0.176 </td>
+<td> 2.512</td>
+</tr>
+<tr>
+<td><code>cruise_controller_19.lus</code> </td>
+<td> 13.194 </td>
+<td> 3.797 </td>
+<td> 2 </td>
+<td> 10 </td>
+<td> 0.160 </td>
+<td> 1.316 </td>
+<td> 1.095 </td>
+<td> 207 </td>
+<td> 0.552 </td>
+<td> 1 </td>
+<td> 1.082 </td>
+<td> 1 </td>
+<td> 20 </td>
+<td> 0.304 </td>
+<td> 2.152</td>
+</tr>
+<tr>
+<td><code>cruise_controller_18.lus</code> </td>
+<td> 13.851 </td>
+<td> 4.149 </td>
+<td> 2 </td>
+<td> 11 </td>
+<td> 0.180 </td>
+<td> 1.628 </td>
+<td> 1.168 </td>
+<td> 207 </td>
+<td> 0.672 </td>
+<td> 1 </td>
+<td> 1.103 </td>
+<td> 1 </td>
+<td> 20 </td>
+<td> 0.304 </td>
+<td> 2.228</td>
+</tr>
+<tr>
+<td><code>microwave19.lus</code> </td>
+<td> 14.397 </td>
+<td> 2.799 </td>
+<td> 3 </td>
+<td> 13 </td>
+<td> 0.200 </td>
+<td> 2.140 </td>
+<td> 1.075 </td>
+<td> 163 </td>
+<td> 0.362 </td>
+<td> 1 </td>
+<td> 0.740 </td>
+<td> 1 </td>
+<td> 24 </td>
+<td> 0.148 </td>
+<td> 1.616</td>
+</tr>
+<tr>
+<td><code>relatedCounters_small.lus</code> </td>
+<td> 15.301 </td>
+<td> 0.909 </td>
+<td> 2 </td>
+<td> 12 </td>
+<td> 0.032 </td>
+<td> 0.116 </td>
+<td> 0.811 </td>
+<td> 19 </td>
+<td> 0.089 </td>
+<td> 1 </td>
+<td> 0.047 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.008 </td>
+<td> 0.040</td>
+</tr>
+<tr>
+<td><code>car_5_e7_244_e1_823.lus</code> </td>
+<td> 18.366 </td>
+<td> 0.544 </td>
+<td> 2 </td>
+<td> 15 </td>
+<td> 0.040 </td>
+<td> 0.180 </td>
+<td> 0.910 </td>
+<td> 45 </td>
+<td> 0.243 </td>
+<td> 2 </td>
+<td> 0.162 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.220</td>
+</tr>
+<tr>
+<td><code>relatedCounters_small_bounds.lus</code> </td>
+<td> 19.444 </td>
+<td> 0.799 </td>
+<td> 2 </td>
+<td> 10 </td>
+<td> 0.020 </td>
+<td> 0.112 </td>
+<td> 0.810 </td>
+<td> 19 </td>
+<td> 0.079 </td>
+<td> 1 </td>
+<td> 0.047 </td>
+<td> 1 </td>
+<td> 3 </td>
+<td> 0.012 </td>
+<td> 0.048</td>
+</tr>
+<tr>
+<td><code>FIREFLY_7.lus</code> </td>
+<td> 19.517 </td>
+<td> 0.381 </td>
+<td> 2 </td>
+<td> 19 </td>
+<td> 0.056 </td>
+<td> 0.396 </td>
+<td> 0.891 </td>
+<td> 103 </td>
+<td> 0.214 </td>
+<td> 1 </td>
+<td> 0.239 </td>
+<td> 1 </td>
+<td> 7 </td>
+<td> 0.040 </td>
+<td> 0.252</td>
+</tr>
+<tr>
+<td><code>cruise_controller_10.lus</code> </td>
+<td> 20.083 </td>
+<td> 6.197 </td>
+<td> 2 </td>
+<td> 14 </td>
+<td> 0.140 </td>
+<td> 1.664 </td>
+<td> 1.079 </td>
+<td> 209 </td>
+<td> 0.899 </td>
+<td> 1 </td>
+<td> 1.150 </td>
+<td> 1 </td>
+<td> 14 </td>
+<td> 0.380 </td>
+<td> 3.624</td>
+</tr>
+<tr>
+<td><code>microwave30.lus</code> </td>
+<td> 25.756 </td>
+<td> 3.537 </td>
+<td> 3 </td>
+<td> 20 </td>
+<td> 0.392 </td>
+<td> 17.388 </td>
+<td> 0.957 </td>
+<td> 163 </td>
+<td> 0.342 </td>
+<td> 1 </td>
+<td> 1.217 </td>
+<td> 1 </td>
+<td> 25 </td>
+<td> 0.160 </td>
+<td> 1.528</td>
+</tr>
+<tr>
+<td><code>car_6_e1_152.lus</code> </td>
+<td> 34.495 </td>
+<td> 0.314 </td>
+<td> 2 </td>
+<td> 13 </td>
+<td> 0.020 </td>
+<td> 0.040 </td>
+<td> 0.909 </td>
+<td> 29 </td>
+<td> 0.115 </td>
+<td> 2 </td>
+<td> 0.095 </td>
+<td> 2 </td>
+<td> 6 </td>
+<td> 0.020 </td>
+<td> 0.060</td>
+</tr>
+<tr>
+<td><code>metros_2_e1_190.lus</code> </td>
+<td> 38.439 </td>
+<td> 0.910 </td>
+<td> 2 </td>
+<td> 10 </td>
+<td> 0.024 </td>
+<td> 0.124 </td>
+<td> 0.962 </td>
+<td> 87 </td>
+<td> 0.197 </td>
+<td> 1 </td>
+<td> 0.261 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.028 </td>
+<td> 0.108</td>
+</tr>
+<tr>
+<td><code>microwave27.lus</code> </td>
+<td> 49.129 </td>
+<td> 1.210 </td>
+<td> 3 </td>
+<td> 5 </td>
+<td> 0.324 </td>
+<td> 3,472 </td>
+<td> 1.053 </td>
+<td> 163 </td>
+<td> 0.362 </td>
+<td> 1 </td>
+<td> 0.890 </td>
+<td> 1 </td>
+<td> 35 </td>
+<td> 0.192 </td>
+<td> 1.472</td>
+</tr>
+<tr>
+<td><code>microwave21.lus</code> </td>
+<td> 50.910 </td>
+<td> 4.762 </td>
+<td> 3 </td>
+<td> 18 </td>
+<td> 0.324 </td>
+<td> 3.008 </td>
+<td> 1.129 </td>
+<td> 163 </td>
+<td> 0.383 </td>
+<td> 1 </td>
+<td> 0.844 </td>
+<td> 1 </td>
+<td> 34 </td>
+<td> 0.176 </td>
+<td> 2.184</td>
+</tr>
+<tr>
+<td><code>microwave17.lus</code> </td>
+<td> 56.046 </td>
+<td> 9.096 </td>
+<td> 3 </td>
+<td> 8 </td>
+<td> 0.112 </td>
+<td> 1.140 </td>
+<td> 1.078 </td>
+<td> 171 </td>
+<td> 0.383 </td>
+<td> 1 </td>
+<td> 0.789 </td>
+<td> 1 </td>
+<td> 24 </td>
+<td> 0.164 </td>
+<td> 2.172</td>
+</tr>
+<tr>
+<td><code>metros_2_e1_1116.lus</code> </td>
+<td> 64.693 </td>
+<td> 2.640 </td>
+<td> 2 </td>
+<td> 13 </td>
+<td> 0.024 </td>
+<td> 0.128 </td>
+<td> 0.903 </td>
+<td> 87 </td>
+<td> 0.206 </td>
+<td> 1 </td>
+<td> 0.235 </td>
+<td> 1 </td>
+<td> 16 </td>
+<td> 0.032 </td>
+<td> 0.104</td>
+</tr>
+<tr>
+<td><code>car_5_e7_244.lus</code> </td>
+<td> 160.644 </td>
+<td> 1.812 </td>
+<td> 2 </td>
+<td> 21 </td>
+<td> 0.016 </td>
+<td> 0.080 </td>
+<td> 0.977 </td>
+<td> 45 </td>
+<td> 0.131 </td>
+<td> 2 </td>
+<td> 0.128 </td>
+<td> 2 </td>
+<td> 7 </td>
+<td> 0.016 </td>
+<td> 0.092</td>
+</tr>
+<tr>
+<td><code>car_5.lus</code> </td>
+<td> 231.761 </td>
+<td> 1.012 </td>
+<td> 2 </td>
+<td> 17 </td>
+<td> 0.024 </td>
+<td> 0.080 </td>
+<td> 0.979 </td>
+<td> 45 </td>
+<td> 0.241 </td>
+<td> 2 </td>
+<td> 0.126 </td>
+<td> 2 </td>
+<td> 8 </td>
+<td> 0.012 </td>
+<td> 0.084</td>
+</tr>
+</tbody>
+</table>
+
+
+<script>(function(factory){if(typeof define==="function"&&define.amd){define("bidi_helpers",[],factory)}else{window.bidi_helpers=factory()}})(function(){var module={};module.Dir={RTL:-1,UNKNOWN:0,LTR:1};module.Format={LRE:"\u202A",RLE:"\u202B",PDF:"\u202C",LRM:"\u200E",RLM:"\u200F"};module.ltrChars_="A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02B8\u0300-\u0590\u0800-\u1FFF\u2C00-\uFB1C\uFE00-\uFE6F\uFEFD-\uFFFF";module.rtlChars_="\u0591-\u07FF\uFB1D-\uFDFF\uFE70-\uFEFC";module.ltrDirCheckRe_=new RegExp("^[^"+module.rtlChars_+"]*["+module.ltrChars_+"]");module.ltrCharReg_=new RegExp("["+module.ltrChars_+"]");module.hasAnyLtr=function(text){return module.ltrCharReg_.test(text)};module.rtlDirCheckRe_=new RegExp("^[^"+module.ltrChars_+"]*["+module.rtlChars_+"]");module.rtlRe=module.rtlDirCheckRe_;module.isRtlText=function(text){return module.rtlDirCheckRe_.test(text)};module.isLtrText=function(text){return module.ltrDirCheckRe_.test(text)};module.isRequiredLtrRe_=/^http:\/\/.*/;module.hasNumeralsRe_=/\d/;module.estimateDirection=function(text,detectionThreshold){var rtlCount=0;var totalCount=0;var hasWeaklyLtr=false;var tokens=text.split(/\s+/);for(var i=0;i<tokens.length;i++){var token=tokens[i];if(module.isRtlText(token)){rtlCount++;totalCount++}else{if(module.isRequiredLtrRe_.test(token)){hasWeaklyLtr=true}else{if(module.hasAnyLtr(token)){totalCount++}else{if(module.hasNumeralsRe_.test(token)){hasWeaklyLtr=true}}}}}return totalCount==0?(hasWeaklyLtr?module.Dir.LTR:module.Dir.UNKNOWN):(rtlCount/totalCount>detectionThreshold?module.Dir.RTL:module.Dir.LTR)};return module});(function(factory){if(typeof define==="function"&&define.amd){define("bidiweb",["bidi_helpers"],factory)}else{window.bidiweb=factory(bidi_helpers)}})(function(bidi_helpers){var module={};var IProcessor={makeRtl:function(element){},makeLtr:function(element){}};var css_processor=function(classes){return{makeRtl:function(element){element.classList.add(classes.rtl)},makeLtr:function(element){element.classList.add(classes.ltr)}}};var style_processor=function(falign){return{makeRtl:function(element){element.style.direction="rtl";if(falign){element.style.textAlign="right"}},makeLtr:function(element){element.style.direction="ltr";if(falign){element.style.textAlign="left"}}}};module.processors={css:css_processor,style:style_processor};var nodeListMock=function(node){var list=[node];list.item=function(i){return list[i]};return list};module.process=function(query,processor){var elements;if(query instanceof NodeList){elements=query}else{if(query instanceof Node){elements=nodeListMock(query)}else{elements=document.querySelectorAll(query)}}module.process_elements(elements,processor);return elements};module.process_elements=function(elements,processor){for(var index=0;index<elements.length;index++){var element=elements.item(index);var text=element.textContent||element.value||element.placeholder||"";var dir=bidi_helpers.estimateDirection(text,0.4);if(dir==bidi_helpers.Dir.RTL){processor.makeRtl(element)}else{if(dir==bidi_helpers.Dir.LTR){processor.makeLtr(element)}}}};module.process_css=function(query,classes){var proc=module.processors.css(classes);return module.process(query,proc)};module.process_style=function(query,falign){var proc=module.processors.style(falign);return module.process(query,proc)};module.style=function(query){return module.process_style(query,true)};module.css=function(query){return module.process_css(query,{rtl:"rtl",ltr:"ltr"})};module.htmlToElement=function(html){var container=document.createElement("div");container.innerHTML=html;return container};module.html_css=function(html){var container=module.htmlToElement(html);var nodes=container.querySelectorAll("*");module.css(nodes);return container.innerHTML};module.html_style=function(html){var container=module.htmlToElement(html);var nodes=container.querySelectorAll("*");module.style(nodes);return container.innerHTML};return module});</script>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>

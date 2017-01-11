@@ -1,0 +1,124 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport"
+    content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no"/>
+    <link title="new" rel="stylesheet" href="style.css" type="text/css">
+    <title>Software - Alain Mebsout</title>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34455508-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+
+  <body>
+
+<!--------------------------- TOP MENU --------------------------------->
+    <div id="menu-banner">
+      <div id="menu_box">
+
+	<div id="name">Alain Mebsout</div>
+
+	<div class="menu-item">
+
+	<ul id="nav">
+	  <li>
+	    <a href=".">About</a>
+	  </li>
+
+	  <li>
+	    <a class="current_tab" href="software.html">Software</a>
+
+	    <ul id="subnav">
+	      <li><a href="software.html#cubicle">Cubicle</a></li>
+	      <li><a href="software.html#alt-ergo">Alt-Ergo</a></li>
+	      <li><a href="software.html#altgr-ergo">AltGr-Ergo</a></li>
+	      <li><a href="software.html#proof-manager">Proof-Manager</a></li>
+	    </ul>
+
+	  </li>
+
+
+	  <li>
+	    <a href="publications.html">Publications</a>
+	  </li>
+
+	</ul>
+
+	</div>
+      </div>
+    </div>
+<!--------------------------------------------------------------->
+
+    <div id="content">
+
+      
+<h2>Command line interface</h2>
+<p>
+<pre>
+
+usage: proofmgr &lt;action&gt; [options]
+
+Actions:
+  -add-prover             &lt;name&gt; &lt;path&gt; &lt;options&gt; &lt;version&gt; adds a prover to the database
+  -add-bench -c           &lt;cat&gt; [-n &lt;name&gt;] &lt;path&gt; adds a benchmark to the database
+  -remove-prover          &lt;id&gt; removes a prover from the database
+  -remove-bench           &lt;id&gt; removes a benchmark from the database
+  -remove-result          &lt;idprover&gt; &lt;idbench&gt; removes a result from the database
+  -remove-results         &lt;idprover&gt; removes all results for one prover from the database
+  -show-provers           shows the provers in the database
+  -show-benchs            shows the benchmarks in the database
+  -show-categories        shows existing benchmark categories
+  -show-result            &lt;idprover&gt; &lt;idbench&gt; show one result
+  -show-results           show the results that are in the database
+  -compare                &lt;id1&gt; &lt;id2&gt; compare the results of prover with id &lt;id1&gt; and with id &lt;id2&gt;
+  -export-all file.csv    export all results for all provers in file.csv
+  -export-html file.html  export all results for all provers in HTML format for later viewing
+  -report name            file.html generate a report for prover &lt;name&gt; in HTML format for
+                          later viewing
+  -run                    (-i &lt;id&gt; |-n &lt;name&gt;) ... runs the prover on the selected benchmarks 
+                          (on all of them if none is selected)
+
+Options:
+  -c &lt;cat&gt;                sets the category of benchmaks to use to &lt;cat&gt;
+  -category &lt;cat&gt;         sets the category of benchmaks to use to &lt;cat&gt;
+  -i &lt;id&gt;                 sets the id to use
+  -e                      show errors on results
+  -local &lt;dir&gt;            set working directory on local machine or nfs system
+  -remote &lt;user@host:dir&gt; set working directory on remote machine
+  -distributed            perform computations on a set of machines
+  -cores &lt;n&gt;              set number of cores to be used for local computations (default = number of cores on the machine)
+  -port &lt;port&gt;            port to use for distributed computations 
+                                (default 51001)
+  -n &lt;name&gt;               the name argument of the action to be taken
+  -name &lt;name&gt;            the name argument of the action to be taken
+  -nocolor                do not use ANSI colors
+  -t &lt;seconds&gt;            the timeout in seconds
+  -timeout &lt;seconds&gt;      the timeout in seconds
+  -verbose                makes proofmgr be verbose
+  -help                   Display this list of options
+  --help                  Display this list of options
+</pre>
+<!--#include virtual="proof-manager.html" --> 
+
+</p>
+
+
+</div>
+<!-- End Bottom Bar (Sub-Footer) -->
+
+</body>
+
+</html>

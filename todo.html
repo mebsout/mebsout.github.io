@@ -1,0 +1,2598 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tool Qualification for Kind 2 at TQL-4</title>
+<!-- 2015-07-08 Wed 15:46 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Alain Mebsout">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<style type="text/css"> body{max-width:900px; margin:auto;padding:2em; font-size:1.1em; font-family:sans-serif; line-height:1.5; } code, pre, .todo, .done, .tag {font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace; font-size:85%} code{padding: 2px 4px;color: #c7254e; background-color: #f9f2f4; border-radius: 4px;} pre {word-break:break-word; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 4px; box-shadow:none; margin:0} pre.src {padding:10px 15px} a { color: #4183c4; text-decoration: none; } a:hover { text-decoration: underline; } h2 {border-bottom: 1px solid #eee;} table {border-width:2px 2px; border-color:#ddd} tbody>tr:nth-child(odd) {background-color: #f8f8f8;} blockquote {padding: 0 15px;  color: #555; border-left: 4px solid #ddd;} .checkbox {font-size:140%;color: #337ab7;}  .done {background-color:#5cb85c } .todo {background-color:#d9534f; } .tag {background-color:#fff; border:1px solid #999} .todo, .done, .tag {float:right; display: inline; padding: .2em .6em .3em; font-weight: bold; line-height: 1; color: #fff; text-align: center; vertical-align: baseline; border-radius: .25em; margin-left: 2px; }  .check {font-size:85%; background-color: #337ab7; color: #fff; text-align: center;  border-radius: .25em; padding: 0 3px; margin:0 2px 0 1px; } </style>
+<style type="text/css"> .user {color:#cd4423} .dev {color:#efc831} .TQL5 {color:#2da001} .TQL4 {color:#2da0ff} .review{color:black} .test{color:purple} .proof{color:magenta} </style>
+<script type="text/javascript" src="http://orgmode.org/org-info.js">
+/**
+ *
+ * @source: http://orgmode.org/org-info.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in http://orgmode.org/org-info.js.
+ *
+ * Copyright (C) 2012-2013 Free Software Foundation, Inc.
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in http://orgmode.org/org-info.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "0");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "#f5f5f5");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "showall");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Tool Qualification for Kind 2 at TQL-4</h1>
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. <span class="todo TODO">TODO</span> Tool Operational Process (T0) <code>[0/18]</code></a>
+<ul>
+<li><a href="#sec-1-1">1.1. <span class="todo TODO">TODO</span> The tool qualification need is established <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span>&#xa0;<span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#TQN-obj">1.1.1. <span class="todo TODO">TODO</span> Objectives <code>[1/6]</code></a></li>
+<li><a href="#sec-1-1-2">1.1.2. Activities</a></li>
+<li><a href="#sec-1-1-3">1.1.3. <span class="todo TODO">TODO</span> Outputs <code>[0/1]</code></a></li>
+</ul>
+</li>
+<li><a href="#sec-1-2">1.2. <span class="todo TODO">TODO</span> Tool Operational Requirements are defined <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1. <span class="todo TODO">TODO</span> Activities <code>[0/3]</code></a></li>
+<li><a href="#sec-1-2-2">1.2.2. Outputs</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-3">1.3. <span class="todo TODO">TODO</span> Tool Executable Object Code is installed in the tool operational environment <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span>&#xa0;<span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1. <span class="todo TODO">TODO</span> Activities <code>[0/3]</code></a></li>
+<li><a href="#sec-1-3-2">1.3.2. Outputs</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-4">1.4. <span class="todo TODO">TODO</span> Tool Operational Verification and Validation Process <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span></a>
+<ul>
+<li><a href="#sec-1-4-1">1.4.1. Activities</a></li>
+<li><a href="#sec-1-4-2">1.4.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-2">2. <span class="todo TODO">TODO</span> Tool Planning Process (T1) <code>[0/7]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span>&#xa0;<span class="TQL4">TQL4</span></span></a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-2-0-1">2.0.1. Activities</a></li>
+<li><a href="#sec-2-0-2">2.0.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-3">3. <span class="todo TODO">TODO</span> Tool Development Process (T2) <code>[0/16]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></a>
+<ul>
+<li><a href="#sec-3-1">3.1. <span class="todo TODO">TODO</span> Tool Requirements are developed <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span>&#xa0;<span class="test">test</span></span></a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1. <span class="todo TODO">TODO</span> Activities <code>[0/12]</code></a></li>
+<li><a href="#sec-3-1-2">3.1.2. Outputs</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2. <span class="todo TODO">TODO</span> Derived tool requirements are defined <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#sec-3-2-1">3.2.1. <span class="todo TODO">TODO</span> Activities <code>[0/1]</code></a></li>
+<li><a href="#sec-3-2-2">3.2.2. Outputs</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-3">3.3. <span class="todo TODO">TODO</span> Tool architecture is developed <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#sec-3-3-1">3.3.1. <span class="todo TODO">TODO</span> Activities <code>[0/5]</code></a></li>
+<li><a href="#sec-3-3-2">3.3.2. Outputs</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-4">3.4. <span class="todo TODO">TODO</span> Tool Executable Object Code is produced <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#sec-3-4-1">3.4.1. <span class="todo TODO">TODO</span> Activities <code>[0/2]</code></a></li>
+<li><a href="#sec-3-4-2">3.4.2. Outputs</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-5">3.5. <span class="todo TODO">TODO</span> Tool is installed on the tool verification environment(s) <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#sec-3-5-1">3.5.1. <span class="todo TODO">TODO</span> Activities</a></li>
+<li><a href="#sec-3-5-2">3.5.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. <span class="todo TODO">TODO</span> Verification of Outputs of Tool Requirements (T3) <code>[0/11]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-4-0-1">4.0.1. <span class="todo TODO">TODO</span> Activities <code>[0/9]</code></a></li>
+<li><a href="#sec-4-0-2">4.0.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-5">5. <span class="todo TODO">TODO</span> Verification of Outputs of Tool Design Process (T4) <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-5-0-1">5.0.1. <span class="todo TODO">TODO</span> Activities&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span>&#xa0;<span class="test">test</span></span></a></li>
+<li><a href="#sec-5-0-2">5.0.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-6">6. <span class="todo TODO">TODO</span> Testing of Outputs of Integration Process (T6) <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-6-0-1">6.0.1. Activities</a></li>
+<li><a href="#sec-6-0-2">6.0.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-7">7. <span class="todo TODO">TODO</span> Verification of Outputs of Tool Testing (T7) <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-7-0-1">7.0.1. Activities</a></li>
+<li><a href="#sec-7-0-2">7.0.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-8">8. <span class="todo TODO">TODO</span> Tool Configuration Management Process (T8) <code>[0/8]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span></span></a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-8-0-1">8.0.1. Activities&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span></span></a></li>
+<li><a href="#sec-8-0-2">8.0.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-9">9. <span class="todo TODO">TODO</span> Tool Quality Assurance Process (T9) <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span>&#xa0;<span class="TQL5">TQL5</span></span></a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-9-0-1">9.0.1. Activities</a></li>
+<li><a href="#sec-9-0-2">9.0.2. Outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-10">10. <span class="todo TODO">TODO</span> Tool Qualification Lisaison Process (T10) <code>[0/8]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span>&#xa0;<span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span></a>
+<ul>
+<li><a href="#sec-10-1">10.1. <span class="todo TODO">TODO</span> Communication and understanding between the applicant and the certification authority is established <code>[0/6]</code></a></li>
+<li><a href="#sec-10-2">10.2. <span class="todo TODO">TODO</span> The means of compliance is proposed and agreement is obtained</a></li>
+<li><a href="#sec-10-3">10.3. <span class="todo TODO">TODO</span> Compliance substantiation is provided <code>[0/4]</code></a>
+<ul>
+<li><a href="#sec-10-3-1">10.3.1. <span class="todo TODO">TODO</span> Activities <code>[0/2]</code></a></li>
+<li><a href="#sec-10-3-2">10.3.2. Outputs</a></li>
+</ul>
+</li>
+<li><a href="#sec-10-4">10.4. <span class="todo TODO">TODO</span> Impact of known problems on the Tool Operational Requirements is identified and analyzed</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> <span class="todo TODO">TODO</span> Tool Operational Process (T0) <code>[0/18]</code></h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> <span class="todo TODO">TODO</span> The tool qualification need is established <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span>&#xa0;<span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span></h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-TQN-obj" class="outline-4">
+<h4 id="TQN-obj"><a id="sec-1-1-1" name="sec-1-1-1"></a><span class="section-number-4">1.1.1</span> <span class="todo TODO">TODO</span> Objectives <code>[1/6]</code></h4>
+<div class="outline-text-4" id="text-TQN-obj">
+
+<p>
+During the software planning process:
+</p>
+
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> the tools used in the scope of the software life cycle process are
+identified;
+</li>
+<li><span class="checkbox">&#x2610;</span> each tool’s intended use is described;
+</li>
+<li><span class="checkbox">&#x2610;</span> the need for tool qualification is defined;
+</li>
+<li><span class="check">&#x2713;</span> the TQLs are determined;
+</li>
+<li><span class="checkbox">&#x2610;</span> the tool qualification stakeholders and their assigned roles and
+responsibilities are identified; and
+</li>
+<li><span class="checkbox">&#x2610;</span> the tool operational environment is described.
+</li>
+</ul>
+
+<p>
+If there are multiple tool operational environments, then all such environments
+are described. All these items should be discussed in the additional
+considerations section of the PSAC. The PSAC explains the use of tools in the
+software life cycle processes and the need for tool qualification. See section
+10.1.1 of this document for the tool aspects that should be addressed in the
+PSAC<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> Activities</h4>
+</div>
+
+<div id="outline-container-sec-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3"><span class="section-number-4">1.1.3</span> <span class="todo TODO">TODO</span> Outputs <code>[0/1]</code></h4>
+<div class="outline-text-4" id="text-1-1-3">
+</div><ol class="org-ol"><li><a id="sec-1-1-3-1" name="sec-1-1-3-1"></a><span class="todo TODO">TODO</span> Tool-specific information in the PSAC <code>[0/10]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span></span><br ><div class="outline-text-5" id="text-1-1-3-1">
+<p>
+The PSAC should include the following information about the need for tool qualification:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Identification of the tool and its intended use, including its impact in
+the software life cycle process.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Details of the certification credit sought through tool use for
+eliminating, reducing, or automating the process(es).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Substantiation of the maturity and technical background of any technology
+or theory (for example, mathematical theory) implemented in the tool to show
+its applicability.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The TQL proposed for the tool and supporting justification.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool source (for example, in-house, COTS, third party).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The stakeholders involved in the tool qualification and their specific
+roles and responsibilities, including who is responsible for satisfying
+specific objectives.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of the Tool Operational Requirements definition process (see
+5.1), tool operation integration process (see 5.3), and tool operational V&amp;V
+process (see 6.2) (or a reference to where these processes will be
+described).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of the tool operational environment in which the tool will be
+used.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> If the tool qualification data is reused, identify previous applications
+of the tool, the strategy and justification for reuse, and any applicable
+re-qualification activities. In the case of a third party tool or a COTS
+tool, information about previous application can be provided by the supplier
+since it may not be available from the users of the tool. See sections 11.2
+and 11.3 for reuse of previously qualified tools and COTS tools.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Reference to the TQP, or if no TQP is generated (for TQL-5), reference
+the data to support tool qualification.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> <span class="todo TODO">TODO</span> Tool Operational Requirements are defined <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span></h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> <span class="todo TODO">TODO</span> Activities <code>[0/3]</code></h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Tool Operational Requirements should be developed in order to include, as
+a minimum, all items defined in <a href="#TOR">section 10.3.1</a>.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool Operational Requirements should be verifiable and consistent. They
+should include enough detail to demonstrate that the functionality and the
+outputs of the tool correspond to the identified software life cycle
+activities to be performed by the tool.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool Operational Requirements should provide enough detail to support the
+verification of the tool’s capability to justify taking credit for satisfying
+the process(es) automated, eliminated, or reduced.
+</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div><ol class="org-ol"><li><a id="TOR" name="TOR"></a><a id="sec-1-2-2-1" name="sec-1-2-2-1"></a><span class="todo TODO">TODO</span> TOR<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> <code>[0/9]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span><br ><div class="outline-text-5" id="text-TOR">
+
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Description of the context of the tool use, including interfaces with
+other tools and integration of the tool output files into the resultant
+software.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of the tool operational environment(s) (where the tool will
+be installed).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of input files, including format, language definition, etc.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of output files, including format and contents.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Requirements for all the tool functions and technical features used to
+satisfy the identified software life cycle process(es).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Requirements to address the abnormal activation modes or inconsistency
+inputs that should be detected by the tool. These requirements should
+consider the impact of those modes on the functionality and outputs of the
+tool. (This item is not applicable to TQL-5.)
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The applicable user information, such as a user manual and installation
+guide or a reference to it, if not provided as part of the Tool
+Requirements data.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of the operational use of the tool (including selected
+options, parameters values, command line, etc.).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Performance requirements specifying the behavior of the tool output.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> <span class="todo TODO">TODO</span> Tool Executable Object Code is installed in the tool operational environment <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span>&#xa0;<span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span></h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> <span class="todo TODO">TODO</span> Activities <code>[0/3]</code></h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> The Tool Executable Object Code (including all associated files, such as,
+configuration files) should be installed into the tool operational
+environment.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Inadequate or incorrect inputs detected during the tool operational
+integration process should be provided to the process(es) that produced the
+inadequate or incorrect input(s).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A Tool Installation Report should be generated <a href="#TIR">(see 10.3.2)</a>.
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div><ol class="org-ol"><li><a id="sec-1-3-2-1" name="sec-1-3-2-1"></a><span class="todo TODO">TODO</span> Tool Executable Object Code<br ><div class="outline-text-5" id="text-1-3-2-1">
+<p>
+The Tool Executable Object Code consists of a form of the tool that is directly
+usable by the processing unit of the tool operational environment. It should be
+noted that depending on the selected source code language, compiling and linking
+may not be necessary. One example is a tool implemented in a script language. In
+this case, the Tool Executable Object Code should be understood to be the tool
+in its executable format.
+</p>
+
+<p>
+Associated files, such as parameter and configuration files required to execute
+the tool, are considered to be included in the Tool Executable Object Code. The
+Tool Executable Object Code is generated in the tool development
+environment. Several Tool Executable Object Code configurations may be generated
+if a tool is intended to be used in multiple tool operational environments.
+</p>
+</div>
+</li>
+
+<li><a id="TIR" name="TIR"></a><a id="sec-1-3-2-2" name="sec-1-3-2-2"></a><span class="todo TODO">TODO</span> Tool Installation Report <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span></span><br ><div class="outline-text-5" id="text-TIR">
+
+
+<p>
+The Tool Executable Object Code is installed into the tool operational
+environment. A report of this installation should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Identification of the tool operational environment (hardware configuration,
+operating system configuration, installed options, etc.).
+</li>
+<li><span class="checkbox">&#x2610;</span> Identification of the version of the Tool Executable Object Code, including
+all configuration and parameters files.
+</li>
+<li><span class="checkbox">&#x2610;</span> Identification, if necessary, of the external components.
+</li>
+<li><span class="checkbox">&#x2610;</span> Identification of the means to execute the tool (command line, scripts files,
+etc.); this could include a reference to the user manual.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> <span class="todo TODO">TODO</span> Tool Operational Verification and Validation Process <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span></h3>
+<div class="outline-text-3" id="text-1-4">
+</div><div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> Activities</h4>
+<div class="outline-text-4" id="text-1-4-1">
+</div><ol class="org-ol"><li><a id="sec-1-4-1-1" name="sec-1-4-1-1"></a><span class="todo TODO">TODO</span> Tool Operational Requirements are complete, accurate, verifiable, and consistent <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL4">TQL4</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-1-4-1-1">
+<p>
+Reviews and analyses should be performed on the Tool Operational Requirements
+to ensure that:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Each requirement is accurate, unambiguous, complete, and consistent.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool operational environment compatibility requirements are identified.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The expected responses of the tool under abnormal operating conditions are
+defined, such as abnormal activation modes and inconsistent inputs.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-1-4-1-2" name="sec-1-4-1-2"></a><span class="todo TODO">TODO</span> Tool operation complies with the Tool Operational Requirements <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span>&#xa0;<span class="test">test</span></span><br ><div class="outline-text-5" id="text-1-4-1-2">
+<p>
+Functionality and the outputs of the tool installed in the tool operational
+environment comply with the Tool Operational Requirements.
+</p>
+
+<p>
+The tool installed in the tool operational environment complies with the need
+of the software life cycle processes. This activity is both the verification of
+the compliance of the Tool Executable Object Code to the Tool Operational
+Requirements and the validation of the Tool Operational Requirements. The
+activities are:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Test cases and procedures should be developed to ensure that the tool
+satisfies the Tool Operational Requirements. These test cases and procedures
+should be requirements-based.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test procedures should be executed after the installation of the Tool
+Executable Object Code in the tool operational environment.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test results should be reviewed to ensure that test results are correct
+and that discrepancies between actual and expected results are explained.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> In order to validate the Tool Operational Requirements the tool should
+be exercised. The set of inputs selected should represent the actual tool
+use and its interfaces in the tool operational environment. This validation
+should confirm that the Tool Operational Requirements are correct and
+complete.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-1-4-1-3" name="sec-1-4-1-3"></a><span class="todo TODO">TODO</span> Tool Operational Requirements are sufficient and correct&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-1-4-1-3">
+<p>
+Ensure that the Tool Operational Requirements are sufficient and correct to
+eliminate, reduce, or automate the process(es) identified in the PSAC.
+</p>
+
+<p>
+Identification and demonstration of relevant process(es): The Tool Operational
+Requirements should demonstrate the coverage of the process(es) intended to be
+eliminated, reduced, or automated by the use of the tool.
+</p>
+</div>
+</li>
+
+
+<li><a id="sec-1-4-1-4" name="sec-1-4-1-4"></a><span class="todo TODO">TODO</span> Software life cycle process needs are met by the tool <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-1-4-1-4">
+<p>
+Ensure that the tool meets the needs of the software life cycle process in the
+tool operational environment.
+</p>
+
+<p>
+Verification and validation in tool operational environment: The tool installed
+in the tool operational environment complies with the need of the software life
+cycle processes. This activity is both the verification of the compliance of
+the Tool Executable Object Code to the Tool Operational Requirements and the
+validation of the Tool Operational Requirements. The activities are:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Test cases and procedures should be developed to ensure that the tool
+satisfies the Tool Operational Requirements. These test cases and procedures
+should be requirements-based.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test procedures should be executed after the installation of the Tool
+Executable Object Code in the tool operational environment.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test results should be reviewed to ensure that test results are correct
+and that discrepancies between actual and expected results are explained.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> In order to validate the Tool Operational Requirements the tool should
+be exercised. The set of inputs selected should represent the actual tool
+use and its interfaces in the tool operational environment. This validation
+should confirm that the Tool Operational Requirements are correct and
+complete.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+
+
+
+<div id="outline-container-sec-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2"><span class="section-number-4">1.4.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-1-4-2">
+</div><ol class="org-ol"><li><a id="sec-1-4-2-1" name="sec-1-4-2-1"></a><span class="todo TODO">TODO</span> Tool Operational Verification and Validation Cases and Procedures <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL5">TQL5</span></span><br ><div class="outline-text-5" id="text-1-4-2-1">
+<p>
+The Tool Operational Verification and Validation Cases and Procedures detail
+how the tool operational verification and validation process activities are
+performed. This data should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Review and analysis procedures: The scope and depth of the review or
+analysis methods to be used, in addition to the description in the Tool
+Verification Plan.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test cases: The purpose of each test case, set of inputs, conditions,
+and expected results to achieve the pass/fail criteria.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test procedures: The step-by-step instructions for how each test case is
+to be set up and executed, selected inputs, how the test results are
+evaluated, and the test environment to be used.
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-4-2-2" name="sec-1-4-2-2"></a><span class="todo TODO">TODO</span> Tool Operational Verification and Validation Results <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL5">TQL5</span></span><br ><div class="outline-text-5" id="text-1-4-2-2">
+<p>
+The tool operational verification and validation process produces the Tool
+Operational Verification and Validation Results, which should:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> For each review, analysis, and test, indicate each procedure that passed
+or failed during the activities and the final pass/fail results.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Identify the configuration item or tool version reviewed, analyzed, or
+tested.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Include the results of tests, reviews, and analyses.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Record and track any discrepancies found using the problem reporting
+process.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> <span class="todo TODO">TODO</span> Tool Planning Process (T1) <code>[0/7]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span>&#xa0;<span class="TQL4">TQL4</span></span></h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-0-1" class="outline-4">
+<h4 id="sec-2-0-1"><span class="section-number-4">2.0.1</span> Activities</h4>
+<div class="outline-text-4" id="text-2-0-1">
+</div><ol class="org-ol"><li><a id="sec-2-0-1-1" name="sec-2-0-1-1"></a><span class="todo TODO">TODO</span> Tool development and integral processes are defined <code>[0/5]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span></span><br ><div class="outline-text-5" id="text-2-0-1-1">
+<p>
+Define the tool life cycle process(es) in compliance with its intended use as
+defined in the PSAC, including the items specified in <a href="#TQN-obj">section 4.1 above</a>.
+</p>
+
+<p>
+A TQP, Tool Development Plan, Tool Verification Plan, Tool Quality Assurance
+Plan, and Tool Configuration Management Plan that cover the complete tool life
+cycle should be developed. These plans may be separate or combined, as
+appropriate for the specific project needs. As an example, a tool supplier may
+propose a qualifiable tool and develop plans that cover only the tool
+development process (see section 11.3 for commercial-off-the-shelf (COTS) tool
+qualification), but the description of the Tool Operational Requirements
+definition and tool operational integration processes may be addressed in a
+separate set of tool plans. Each plan and the supporting standards are briefly
+described below and detailed in section 10.
+</p>
+
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> The TQP (see 10.1.2) serves as the primary means for communicating the
+proposed tool life cycle and development methods to the certification
+authority for agreement. The TQP defines the means of compliance with this
+document and any other applicable guidance (for example, a domain or
+project-specific document).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Development Plan (see 10.1.3) defines the tool life cycle, tool
+development environment and processes, and the means by which the tool
+development process objectives will be satisfied.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Verification Plan (see 10.1.4) defines the means by which the
+tool verification process objectives will be satisfied.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Configuration Management Plan (see 10.1.5) defines the means by
+which the tool configuration management process objectives will be
+satisfied.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Quality Assurance Plan (see 10.1.6) defines the means by which
+the tool quality assurance process objectives will be satisfied.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-2-0-1-2" name="sec-2-0-1-2"></a><span class="todo TODO">TODO</span> Additional considerations are addressed&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span></span><br ><div class="outline-text-5" id="text-2-0-1-2">
+<p>
+If necessary, address additional considerations, such as those discussed in
+section 11 of this document and the need to qualify any tool(s) used in the
+framework of the tool life cycle processes.
+</p>
+
+<p>
+An assessment on all the tools used in the framework of the tool life cycle
+processes should be conducted in order to identify the need for qualification
+of these tools. Qualification of these tools is needed when processes of this
+document are eliminated, reduced, or automated by the use of a tool without its
+output verified as specified in section 6. For a tool that can introduce an
+error in the outputs of a tool, the applicable TQL is the same as the tool
+being developed. For a tool that cannot introduce an error in the output of the
+tool, but may fail to detect an error in the tool life cycle data, the
+applicable TQL is TQL-5.
+</p>
+</div>
+</li></ol>
+</div>
+
+
+<div id="outline-container-sec-2-0-2" class="outline-4">
+<h4 id="sec-2-0-2"><span class="section-number-4">2.0.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-2-0-2">
+</div><ol class="org-ol"><li><a id="sec-2-0-2-1" name="sec-2-0-2-1"></a><span class="todo TODO">TODO</span> Tool Qualification Plan <code>[0/10]</code><br ><div class="outline-text-5" id="text-2-0-2-1">
+<p>
+For a tool to be qualified at TQL 1, 2, 3 or 4, the TQP should describe the
+tool qualification process. This plan should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Identification of the tool, and, if applicable, user configuration.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Qualification considerations, including the proposed TQL and means of
+compliance with the objectives of this document.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A functional overview of the tool, its interfaces, and its
+architecture. Additionally, any external components should be identified.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of the tool operational environment(s), and if different,
+the tool verification environment(s).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of the means the applicant will use to provide the
+certification authority with visibility of the activities of the tool life
+cycle processes so tool reviews can be planned.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool life cycle description and the qualification activities to be
+performed.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool qualification data to be produced.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Any additional considerations that may affect the qualification process,
+for example, deactivated code, COTS tools, reuse, tool qualification (of
+other tools used to develop or verify the tool), alternate means of
+qualification, tool service history, and means to ensure the determinism of
+the tool per the last paragraph of section 2.0 of this document.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Organizational responsibilities within the tool life cycle processes.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> If suppliers are used, a means of ensuring that supplier processes and
+outputs will comply with approved tool plans and standards.
+</li>
+</ol>
+</div>
+</li>
+
+
+
+<li><a id="sec-2-0-2-2" name="sec-2-0-2-2"></a><span class="todo TODO">TODO</span> Tool Development Plan <code>[0/3]</code><br ><div class="outline-text-5" id="text-2-0-2-2">
+<p>
+The Tool Development Plan includes the objectives, standards, and tool life
+cycle(s) to be used in the tool development processes. This plan should
+include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Standards: Identification of the Tool Requirements Standards, Tool
+Design Standards, and Tool Code Standards for the project.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool life cycle: A description of the tool life cycle processes to be
+used to form the specific tool life cycle(s) to be used on the project,
+including the transition criteria for the tool development processes. This
+description is distinct from the summary provided in the TQP, in that it
+provides the development activity description with enough detail necessary
+to ensure proper implementation of the tool life cycle processes.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <code>[0/5]</code> Tool development environment: A statement of the chosen tool development
+environment in terms of hardware and software, including:
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> The chosen requirements development method(s) and tools to be used.
+</li>
+<li><span class="checkbox">&#x2610;</span> The chosen design method(s) and tools to be used.
+</li>
+<li><span class="checkbox">&#x2610;</span> The chosen coding method(s), programming language(s), and coding tool(s) to be used.
+</li>
+<li><span class="checkbox">&#x2610;</span> The compilers and linkage editors to be used.
+</li>
+<li><span class="checkbox">&#x2610;</span> The selected workstation and operating system identification.
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</li>
+
+
+
+<li><a id="sec-2-0-2-3" name="sec-2-0-2-3"></a><span class="todo TODO">TODO</span> Tool Verification Plan <code>[0/6]</code><br ><div class="outline-text-5" id="text-2-0-2-3">
+<p>
+The Tool Verification Plan is a description of the verification activities to
+satisfy the tool verification process objectives. These procedures may vary by
+TQL as defined in Annex A tables. This plan should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Independence: A description of the methods for establishing verification
+independence, when required.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <code>[0/3]</code> Verification methods: A description of the verification methods to
+be used for each activity of the tool verification process, including the
+following:
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Review methods, including checklists or other aids.
+</li>
+<li><span class="checkbox">&#x2610;</span> Analysis methods, including traceability and coverage analysis.
+</li>
+<li><span class="checkbox">&#x2610;</span> Testing methods, including the method for selecting test cases, the
+test procedures to be used, and the test data to be produced.
+</li>
+</ol>
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Transition criteria: The transition criteria for entering the tool
+verification process defined in the plan.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Protection considerations: If protection is used, the methods used to
+verify the integrity of the protection.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Reverification method: For modification, a description of the methods
+for identifying, analyzing, and verifying the affected areas of the tool.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Previously developed components in the tool product: For these
+components, if the initial compliance baseline for the verification process
+does not comply with this document, a description of the methods to satisfy
+the objectives of this document.
+</li>
+</ol>
+</div>
+</li>
+
+
+
+<li><a id="sec-2-0-2-4" name="sec-2-0-2-4"></a><span class="todo TODO">TODO</span> Tool Configuration Management Plan <code>[0/5]</code><br ><div class="outline-text-5" id="text-2-0-2-4">
+<p>
+The Tool Configuration Management Plan establishes the methods to be used to
+satisfy the objectives of the TCM process throughout the tool life cycle. This
+plan should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Environment: A description of the TCM environment to be used, including
+procedures, tools, methods, standards, organizational responsibilities, and
+interfaces.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <code>[0/9]</code> Activities: A description of the TCM process activities in the tool life
+cycle, including:
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Configuration identification: Items to be identified, when they will be
+identified, and identification methods for tool life cycle data.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Baselines and traceability: The means of establishing baselines, what
+baselines will be established, when these baselines will be established,
+the software library controls, and the configuration item and baseline
+traceability.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Problem reporting: The content and identification of Tool Problem Reports
+for the tool and tool life cycle processes, when they will be written,
+the method of closing Tool Problem Reports, and the relationship to the
+change control activity.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Change control: Configuration items and baselines to be controlled, when
+they will be controlled, the problem/change control activities that
+control them, pre- qualification controls, post-qualification controls,
+and the means of preserving the integrity of baselines and configuration
+items.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Change review: The method of handling feedback to and from the tool life
+cycle processes; the methods of assessing and prioritizing problems,
+approving changes, and handling their resolution or change
+implementation; and the relationship of these methods to the problem
+reporting and change control activities.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Configuration status accounting: The data to be recorded to enable reporting
+configuration management status, definition of where that data will be
+kept, how it will be retrieved for reporting, and when it will be
+available.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Archive, retrieval, and release: The integrity controls, the release method
+and authority, and data retention.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool life cycle environment controls: Controls for the tools used to
+develop, build, verify, and load the tool addressing items 1 through 7
+above.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool life cycle data controls: Controls associated with CC1 and CC2 data.
+</li>
+</ol>
+</li>
+</ol>
+
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Transition criteria: The transition criteria for entering the TCM
+process.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> TCM data: A definition of the tool life cycle data produced by the TCM
+process, including TCM Records, the Tool Configuration Index, and the Tool
+Life Cycle Environment Configuration Index.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Supplier control: The means of applying TCM process requirements to
+suppliers.
+</li>
+</ol>
+</div>
+</li>
+
+
+
+<li><a id="sec-2-0-2-5" name="sec-2-0-2-5"></a><span class="todo TODO">TODO</span> Tool Quality Assurance Plan <code>[0/7]</code><br ><div class="outline-text-5" id="text-2-0-2-5">
+<p>
+The TQA Plan establishes the methods to be used to satisfy the objectives of
+the TQA process. The TQA Plan may include descriptions of process improvement,
+metrics, and progressive management methods. This plan should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Environment: A description of the TQA environment, including scope,
+organizational responsibilities and interfaces, standards, procedures,
+tools, and methods.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Authority: A statement of the TQA authority, responsibility, and independence.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <code>[0/3]</code> Activities: The TQA activities that are to be performed for each tool
+life cycle process and throughout the tool life cycle including:
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> TQA methods, for example, reviews, audits, reporting, inspections,
+and monitoring of the tool life cycle processes.
+</li>
+<li><span class="checkbox">&#x2610;</span> Activities related to the problem reporting, tracking, and corrective
+action system.
+</li>
+<li><span class="checkbox">&#x2610;</span> A description of the tool conformity review activity.
+</li>
+</ol>
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Transition criteria: The transition criteria for entering the TQA
+process.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Timing: The timing of the TQA process activities in relation to the
+activities of the tool life cycle processes.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> TQA Records: A definition of the records to be produced by the TQA
+process.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Supplier oversight: A description of the means of ensuring that
+supplier’s processes and outputs will comply with the approved tool plans
+and standards.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> <span class="todo TODO">TODO</span> Tool Development Process (T2) <code>[0/16]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> <span class="todo TODO">TODO</span> Tool Requirements are developed <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span>&#xa0;<span class="test">test</span></span></h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> <span class="todo TODO">TODO</span> Activities <code>[0/12]</code></h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should be developed and documented in a manner
+that provides a determination if the tool satisfies the Tool Operational
+Requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should include all functional and
+interface-related requirements that will be implemented in the tool.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should be developed following the processes
+described in the Tool Development Plan.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should be developed using the Tool Requirements
+Standards.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should be verifiable and consistent.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should be defined such that abnormal behavior is
+detected and that invalid output is prevented. For example, it is better for
+the tool to produce no output than to produce wrong results. Therefore, the
+Tool Requirements should address failure modes and describe responses to
+failure conditions.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Each Tool Requirement should trace to one or more Tool Operational
+Requirements, with the exception of derived tool requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Derived tool requirements are those not traceable to Tool Operational
+Requirements. The existence of derived tool requirements should be
+justified, and they should be evaluated to ensure that they do not
+negatively impact the expected functionality and outputs defined in the Tool
+Operational Requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should provide user instructions, list of error
+messages, and constraints.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should identify requirements related to unused
+tool functions that do not trace to Tool Operational Requirements. See
+section 11.1 for guidance on multi-function tools.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Requirements should be defined to a level of detail
+appropriate to ensure proper implementation and to assess correctness of
+the tool (for example, defining underlying models or mathematical
+theories).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Trace Data, showing the bi-directional association between Tool
+Operational Requirements and Tool Requirements, is developed to:
+
+<ul class="org-ul">
+<li>Enable verification of the complete implementation of the Tool
+Operational Requirements.
+</li>
+
+<li>Give visibility to those derived requirements that are not directly
+traceable to Tool Operational Requirements.
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div><ol class="org-ol"><li><a id="sec-3-1-2-1" name="sec-3-1-2-1"></a><span class="todo TODO">TODO</span> Tool Requirements <code>[0/8]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span><br ><div class="outline-text-5" id="text-3-1-2-1">
+<p>
+The Tool Requirements describe all the tool functionality. This data should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> A description of the tool functions and technical features, including
+modes of operation.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> User instructions, installation instructions, list of error messages,
+and constraints. This is often packaged as a user manual. The user manual
+may be part of the Tool Requirements or it may be packaged in one or more
+documents.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Requirements to describe the user’s ability to customize the tool.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Functional requirements, with the appropriate level of detail (see
+5.2.1.2.k).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Specific requirements, if necessary, for compliance with tool
+operational environment.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Specific requirements to address the failure modes and response to
+inconsistent inputs.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The expected responses of the tool under abnormal operating conditions.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> For a collection of tools, interface requirements between the tools
+within the collection.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-3-1-2-2" name="sec-3-1-2-2"></a><span class="todo TODO">TODO</span> Trace Data <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span><br ><div class="outline-text-5" id="text-3-1-2-2">
+<p>
+Trace Data establishes the associations between life cycle data items
+contents. Trace Data should be provided that demonstrates bi-directional
+associations between:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Tool Operational Requirements and Tool Requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool Requirements and low-level tool requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Low-level tool requirements and Tool Source Code.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool Requirements and low-level tool requirements, and their associated
+test cases.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test cases and test procedures.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test procedures and test results.
+</li>
+</ol>
+
+<p>
+[Note1:: The Trace Data between test procedures and test results may be part of
+the Tool Verification Results (see 10.2.6.c).]
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> <span class="todo TODO">TODO</span> Derived tool requirements are defined <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span></h3>
+<div class="outline-text-3" id="text-3-2">
+</div><div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> <span class="todo TODO">TODO</span> Activities <code>[0/1]</code></h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> Derived tool requirements are those not traceable to Tool Operational
+Requirements. The existence of derived tool requirements should be justified,
+and they should be evaluated to ensure that they do not negatively impact the
+expected functionality and outputs defined in the Tool Operational
+Requirements.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-3-2-2">
+</div><ol class="org-ol"><li><a id="sec-3-2-2-1" name="sec-3-2-2-1"></a><span class="todo TODO">TODO</span> Tool Requirements<br ></li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> <span class="todo TODO">TODO</span> Tool architecture is developed <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span></h3>
+<div class="outline-text-3" id="text-3-3">
+</div><div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> <span class="todo TODO">TODO</span> Activities <code>[0/5]</code></h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> The tool design process should define the tool architecture.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The tool design should address all tool architecture features, such as
+protection, if applicable. Protection may be used in order to isolate parts
+of the tool or the collection of tools in order to apply a different
+approach or different level of qualification. See section 11.1 for
+multi-function tools.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Design Description, including tool architecture and low-level
+tool requirements, should conform to the Tool Design Standards.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The tool design should be verifiable and consistent.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Where external components are utilized by the tool, which are not under
+control of the developer of the tool (such as operating system functions or
+an external software library), the interfaces to these external components
+utilized by the tool should be identified in the Tool Design
+Description. The description of the interface should identify all the
+external components, such as file management routines, primitives, memory
+allocation calls, and routines supporting the user interface management (for
+example, command line or display message).
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div><ol class="org-ol"><li><a id="sec-3-3-2-1" name="sec-3-3-2-1"></a><span class="todo TODO">TODO</span> Tool Design Description <code>[0/9]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span><br ><div class="outline-text-5" id="text-3-3-2-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> The description of the tool architecture defining the tool structure to
+implement the requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A detailed description of how the Tool Requirements are all allocated
+into the tool architecture.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The input/output description (for example, a data dictionary) both
+internally and externally throughout the software architecture.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The data flow and control flow of the design.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Scheduling procedures.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Protection, if used.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Descriptions of the software components, whether they are new or
+previously developed, and, if previously developed, reference to the
+baseline from which they were taken.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The low-level tool requirements which implement and are traceable to the
+Tool Requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The derived low-level tool requirements resulting from the tool design
+process.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> <span class="todo TODO">TODO</span> Tool Executable Object Code is produced <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span></h3>
+<div class="outline-text-3" id="text-3-4">
+</div><div id="outline-container-sec-3-4-1" class="outline-4">
+<h4 id="sec-3-4-1"><span class="section-number-4">3.4.1</span> <span class="todo TODO">TODO</span> Activities <code>[0/2]</code></h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> The Tool Executable Object Code should be generated from the Tool Source
+Code and the compiler and linking instructions. It should be noted that the
+Tool Executable Object Code sometimes includes other files, such as
+configuration files.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Inadequate or incorrect inputs detected during the tool integration
+process should be provided to the process(es) that produced the inadequate
+or incorrect input(s).
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4-2" class="outline-4">
+<h4 id="sec-3-4-2"><span class="section-number-4">3.4.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-3-4-2">
+</div><ol class="org-ol"><li><a id="sec-3-4-2-1" name="sec-3-4-2-1"></a><span class="todo TODO">TODO</span> Tool Executable Object Code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span></span><br ><div class="outline-text-5" id="text-3-4-2-1">
+<p>
+The Tool Executable Object Code consists of a form of the tool that is directly
+usable by the processing unit of the tool operational environment. It should be
+noted that depending on the selected source code language, compiling and
+linking may not be necessary. One example is a tool implemented in a script
+language. In this case, the Tool Executable Object Code should be understood to
+be the tool in its executable format.
+</p>
+
+<p>
+Associated files, such as parameter and configuration files required to execute
+the tool, are considered to be included in the Tool Executable Object Code. The
+Tool Executable Object Code is generated in the tool development
+environment. Several Tool Executable Object Code configurations may be
+generated if a tool is intended to be used in multiple tool operational
+environments.
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> <span class="todo TODO">TODO</span> Tool is installed on the tool verification environment(s) <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span></h3>
+<div class="outline-text-3" id="text-3-5">
+</div><div id="outline-container-sec-3-5-1" class="outline-4">
+<h4 id="sec-3-5-1"><span class="section-number-4">3.5.1</span> <span class="todo TODO">TODO</span> Activities</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+If the tool verification environment is different than the tool development
+environment, or if there are multiple tool verification environments, then the
+Tool Executable Object Code should be installed in the tool verification
+environment(s).
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-5-2" class="outline-4">
+<h4 id="sec-3-5-2"><span class="section-number-4">3.5.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-3-5-2">
+</div><ol class="org-ol"><li><a id="sec-3-5-2-1" name="sec-3-5-2-1"></a><span class="todo TODO">TODO</span> Tool Executable Object Code<br ></li></ol>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> <span class="todo TODO">TODO</span> Verification of Outputs of Tool Requirements (T3) <code>[0/11]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-0-1" class="outline-4">
+<h4 id="sec-4-0-1"><span class="section-number-4">4.0.1</span> <span class="todo TODO">TODO</span> Activities <code>[0/9]</code></h4>
+<div class="outline-text-4" id="text-4-0-1">
+</div><ol class="org-ol"><li><a id="sec-4-0-1-1" name="sec-4-0-1-1"></a><span class="todo TODO">TODO</span> Tool Requirements comply with Tool Operational Requirements&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="test">test</span></span><br ><div class="outline-text-5" id="text-4-0-1-1">
+<p>
+The objective is to ensure that all the Tool Operational Requirements are
+implemented into the Tool Requirements and that derived tool requirements, and
+the reason for their existence, are correctly defined.
+</p>
+</div>
+</li>
+
+
+<li><a id="sec-4-0-1-2" name="sec-4-0-1-2"></a><span class="todo TODO">TODO</span> Tool Requirements are accurate and consistent&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-4-0-1-2">
+<p>
+The objective is to ensure that each Tool Requirement is accurate, unambiguous,
+and sufficiently detailed and that the requirements do not conflict with each
+other. This objective includes verification that the level of detail of the
+Tool Requirements is appropriate to ensure proper implementation and to assess
+correctness of the tool (see 5.2.1.2.k).
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-0-1-3" name="sec-4-0-1-3"></a><span class="todo TODO">TODO</span> Requirements for compatibility with the tool operational environment are defined&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-4-0-1-3">
+<p>
+The objective is to ensure that if constraints exist to address the
+compatibility with the tool operational environment, then compatibility
+requirements are defined.
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-0-1-4" name="sec-4-0-1-4"></a><span class="todo TODO">TODO</span> Tool Requirements define the behavior of the tool in response to error conditions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-4-0-1-4">
+<p>
+The objective is to ensure that the Tool Requirements define the behavior of
+the tool in response to error conditions and specific requirements addressing
+failure modes and incorrect inputs are identified.
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-0-1-5" name="sec-4-0-1-5"></a><span class="todo TODO">TODO</span> Tool Requirements define user instruction and error messages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-4-0-1-5">
+<p>
+The objective is to ensure that the Tool Requirements provide user
+instructions, list of error messages, and constraints.
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-0-1-6" name="sec-4-0-1-6"></a><span class="todo TODO">TODO</span> Tool Requirements are verifiable&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-4-0-1-6">
+<p>
+The objective is to ensure that the Tool Requirements can be verified.
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-0-1-7" name="sec-4-0-1-7"></a><span class="todo TODO">TODO</span> Tool Requirements are traceable to Tool Operational Requirements&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="test">test</span></span><br ><div class="outline-text-5" id="text-4-0-1-7">
+<p>
+The objective is to ensure that the Tool Operational Requirements were
+developed into the Tool Requirements.
+</p>
+</div>
+</li>
+
+<li><a id="sec-4-0-1-8" name="sec-4-0-1-8"></a><span class="todo TODO">TODO</span> Algorithm are accurate&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="review">review</span>&#xa0;<span class="proof">proof</span></span><br ><div class="outline-text-5" id="text-4-0-1-8">
+<p>
+The objective is to ensure the accuracy and behavior of the proposed
+algorithms, especially in the area of discontinuities.
+</p>
+</div>
+</li></ol>
+</div>
+
+
+<div id="outline-container-sec-4-0-2" class="outline-4">
+<h4 id="sec-4-0-2"><span class="section-number-4">4.0.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-4-0-2">
+</div><ol class="org-ol"><li><a id="sec-4-0-2-1" name="sec-4-0-2-1"></a><span class="todo TODO">TODO</span> Tool Verification Results <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span><br ><div class="outline-text-5" id="text-4-0-2-1">
+<p>
+The Tool Verification Results are produced by the tool verification process
+activities, and should:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> For each review, analysis, and test, indicate each procedure that passed
+or failed during the activities and the final pass/fail results.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Identify the configuration item or software version reviewed, analyzed,
+or tested.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Include the results of tests, reviews, and analyses, including coverage
+analyses and traceability analyses.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Record and track any discrepancies found using the problem reporting
+process.
+</li>
+</ol>
+
+<p>
+[Note2:: This data does not include the data produced by the tool operational
+verification and validation process (these are addressed in sections 10.3.3 and
+10.3.4 of this document).]
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> <span class="todo TODO">TODO</span> Verification of Outputs of Tool Design Process (T4) <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-0-1" class="outline-4">
+<h4 id="sec-5-0-1"><span class="section-number-4">5.0.1</span> <span class="todo TODO">TODO</span> Activities&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span>&#xa0;<span class="test">test</span></span></h4>
+<div class="outline-text-4" id="text-5-0-1">
+<p>
+The objective is to ensure that if a protection mechanism is used inside the
+tool architecture, protection breaches are prevented or isolated. See section
+11.1 for multi-function tools.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-0-2" class="outline-4">
+<h4 id="sec-5-0-2"><span class="section-number-4">5.0.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-5-0-2">
+</div><ol class="org-ol"><li><a id="sec-5-0-2-1" name="sec-5-0-2-1"></a><span class="todo TODO">TODO</span> Tool Verification Results<br ></li></ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> <span class="todo TODO">TODO</span> Testing of Outputs of Integration Process (T6) <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-0-1" class="outline-4">
+<h4 id="sec-6-0-1"><span class="section-number-4">6.0.1</span> Activities</h4>
+<div class="outline-text-4" id="text-6-0-1">
+</div><ol class="org-ol"><li><a id="sec-6-0-1-1" name="sec-6-0-1-1"></a><span class="todo TODO">TODO</span> Tool Executable Object Code complies with Tool Requirements <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="test">test</span>&#xa0;<span class="proof">proof</span></span><br ><div class="outline-text-5" id="text-6-0-1-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> <code>[0/3]</code> Test cases and procedures should be developed to demonstrate that the
+tool satisfies its requirements.
+
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> Each test case is developed from the requirements (either Tool
+Requirements or low-level tool requirements) and identifies the set of
+inputs, the conditions, the expected results, and the pass/fail criteria.
+</li>
+<li><span class="checkbox">&#x2610;</span> Test procedures are generated from the test cases.
+</li>
+<li><span class="checkbox">&#x2610;</span> Trace Data is generated between the test cases and the test
+procedures.
+</li>
+</ul>
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <code>[0/3]</code> Normal range tests should be performed, including the following:
+
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> Real and integer input data should be exercised using valid
+equivalence classes and boundaries values.
+</li>
+<li><span class="checkbox">&#x2610;</span> For state transitions, tests cases should be developed to exercise the
+transitions possible during normal operation.
+</li>
+<li><span class="checkbox">&#x2610;</span> For requirements expressed by logic equations or for requirements that
+include input logic combination, the normal test cases should verify the
+variable usage and the Boolean operators. In particular, for TQL-1, the
+tests cases should show that each requirement condition independently
+affects the required outcome by varying just that requirement condition
+while holding fixed all other possible requirement conditions.
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-6-0-1-2" name="sec-6-0-1-2"></a><span class="todo TODO">TODO</span> The Tool Executable Object Code is robust with the Tool Requirements. <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="test">test</span></span><br ><div class="outline-text-5" id="text-6-0-1-2">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Robustness tests should be performed to address all failure modes (for
+example, abnormal activation modes, inconsistency inputs, etc.) identified
+in Tool Requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <code>[0/3]</code> If necessary, additional robustness tests should also be developed
+to complete the demonstration of the following:
+
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> The ability of the tool to respond to abnormal inputs or conditions.
+</li>
+<li><span class="checkbox">&#x2610;</span> The detection of abnormal behavior.
+</li>
+<li><span class="checkbox">&#x2610;</span> The prevention of invalid output.
+</li>
+</ul>
+</li>
+</ol>
+
+<p>
+[Note3:: Robustness test cases are requirements-based. The robustness testing
+criteria cannot be fully satisfied if the tool requirements do not specify the
+correct response to abnormal conditions and inputs. The test cases may reveal
+inadequacies in the tool requirements, in which case the tool requirements
+should be modified. Conversely, if a complete set of requirements exists that
+covers all abnormal conditions and inputs, the robustness test cases will
+follow from those tool requirements.]
+</p>
+</div>
+</li>
+
+
+<li><a id="sec-6-0-1-3" name="sec-6-0-1-3"></a><span class="todo TODO">TODO</span> Tool Verification Process Traceability <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span>&#xa0;<span class="test">test</span></span><br ><div class="outline-text-5" id="text-6-0-1-3">
+<p>
+Tool verification process traceability activities include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Trace Data is developed to show the bi-directional association between
+Tool Requirements and their associated test cases, as well as between
+low-level tool requirements and their associated test cases. The purpose of
+this Trace Data is to support the requirements-based test coverage analysis.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Trace Data is developed to show the bi-directional association between
+test cases and test procedures. The purpose of this Trace Data is to enable
+verification that the complete set of test cases has been developed into
+test procedures.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Trace Data is developed to show the bi-directional association between
+test procedures and test results. The purpose of this Trace Data is to
+enable verification that the complete set of test procedures has been
+executed.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+
+
+<div id="outline-container-sec-6-0-2" class="outline-4">
+<h4 id="sec-6-0-2"><span class="section-number-4">6.0.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-6-0-2">
+</div><ol class="org-ol"><li><a id="sec-6-0-2-1" name="sec-6-0-2-1"></a><span class="todo TODO">TODO</span> Tool Verification Cases and Procedures <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span><br ><div class="outline-text-5" id="text-6-0-2-1">
+<p>
+The Tool Verification Cases and Procedures detail how the tool verification
+process activities are implemented. This data should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Review and analysis procedures: The scope and depth of the review or
+analysis methods to be used, in addition to the description in the Tool
+Verification Plan.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test cases: The purpose of each test case, set of inputs, conditions,
+expected results to achieve the required coverage criteria, and the
+pass/fail criteria.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Test procedures: The step-by-step instructions for how each test case is
+to be set up and executed, how the test results are evaluated, and the test
+environment to be used.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-6-0-2-2" name="sec-6-0-2-2"></a><span class="todo TODO">TODO</span> Tool Verification Results<br ></li>
+
+<li><a id="sec-6-0-2-3" name="sec-6-0-2-3"></a><span class="todo TODO">TODO</span> Trace Data<br ></li></ol>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> <span class="todo TODO">TODO</span> Verification of Outputs of Tool Testing (T7) <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="TQL4">TQL4</span></span></h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-0-1" class="outline-4">
+<h4 id="sec-7-0-1"><span class="section-number-4">7.0.1</span> Activities</h4>
+<div class="outline-text-4" id="text-7-0-1">
+</div><ol class="org-ol"><li><a id="sec-7-0-1-1" name="sec-7-0-1-1"></a><span class="todo TODO">TODO</span> Test results are correct and discrepancies explained&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-7-0-1-1">
+<p>
+The objective is to ensure that the test results are correct and that
+discrepancies between actual and expected results are explained.
+</p>
+</div>
+</li>
+
+<li><a id="sec-7-0-1-2" name="sec-7-0-1-2"></a><span class="todo TODO">TODO</span> Test coverage of Tool Requirements is achieved&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span>&#xa0;<span class="review">review</span></span><br ><div class="outline-text-5" id="text-7-0-1-2">
+<p>
+The objective is to ensure that test coverage of all requirements is achieved
+(see 6.1.4.2.e for associated activities).
+</p>
+</div>
+</li></ol>
+</div>
+
+
+<div id="outline-container-sec-7-0-2" class="outline-4">
+<h4 id="sec-7-0-2"><span class="section-number-4">7.0.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-7-0-2">
+</div><ol class="org-ol"><li><a id="sec-7-0-2-1" name="sec-7-0-2-1"></a><span class="todo TODO">TODO</span> Tool Verification Results<br ></li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> <span class="todo TODO">TODO</span> Tool Configuration Management Process (T8) <code>[0/8]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span></span></h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-sec-8-0-1" class="outline-4">
+<h4 id="sec-8-0-1"><span class="section-number-4">8.0.1</span> Activities&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span></span></h4>
+<div class="outline-text-4" id="text-8-0-1">
+</div><ol class="org-ol"><li><a id="sec-8-0-1-1" name="sec-8-0-1-1"></a><span class="todo TODO">TODO</span> Configuration items are identified <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL5">TQL5</span></span><br ><div class="outline-text-5" id="text-8-0-1-1">
+<p>
+Each configuration item and its successive versions are labeled unambiguously
+so that a basis is established for the control and reference of configuration
+items.
+</p>
+
+<p>
+Configuration Identification
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Configuration identification should be established for the tool life
+cycle data.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Configuration identification should be established for each
+configuration item, for each separately controlled component of a
+configuration item, and for combinations of configuration items that
+comprise a tool product.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Configuration items should be configuration identified prior to the
+implementation of change control and traceability analysis.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A configuration item should be configuration identified before that item
+is used by other tool life cycle processes or referenced by other life cycle
+data.
+</li>
+</ol>
+</div>
+</li>
+
+
+
+
+<li><a id="sec-8-0-1-2" name="sec-8-0-1-2"></a><span class="todo TODO">TODO</span> Baseline and traceability are established <code>[0/7]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL4">TQL4</span></span><br ><div class="outline-text-5" id="text-8-0-1-2">
+<p>
+Baselines are defined for further tool life cycle process activity and allow
+reference to, control of, and traceability between configuration items.
+</p>
+
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Baselines should be established for configuration items used for
+certification credit. (Intermediate baselines may be established to aid in
+controlling tool life cycle process activities.)
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A tool product baseline should be established for the tool product and
+defined in the Tool Configuration Index (see 10.1.11).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Baselines should be established in controlled software libraries
+(physical, electronic, or other) to ensure their integrity. Once a baseline
+is established, it should be protected from change.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Change control activities should be followed to develop a derivative
+baseline from an established baseline.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A baseline should be traceable to the baseline from which it was
+derived, if a credit is sought for tool life cycle process activities or
+data associated with the development of the previous baseline.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A configuration item should be traceable to the configuration item from
+which it was derived, if a credit is sought for tool life cycle process
+activities or data associated with the development of the previous
+configuration item.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A baseline or configuration item should be traceable either to the
+output it identifies or to the process with which it is associated.
+</li>
+</ol>
+</div>
+</li>
+
+
+
+<li><a id="sec-8-0-1-3" name="sec-8-0-1-3"></a><span class="todo TODO">TODO</span> Problem reporting, change control, change review, and configuration status accounting are established <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL4">TQL4</span></span><br ><div class="outline-text-5" id="text-8-0-1-3">
+<ul class="org-ul">
+<li>The problem reporting process records process non-compliance with tool plans
+and standards, records deficiencies of outputs of tool life cycle processes,
+records anomalous behavior of tool products, and ensures resolution of these
+problems.
+</li>
+
+<li>Change control provides for recording, evaluation, resolution, and approval
+of changes throughout the tool life cycle.
+</li>
+
+<li>Change review ensures problems and changes are assessed, problems and changes
+are approved or disapproved, approved changes are implemented, and feedback
+is provided to affected processes through problem reporting and change
+control methods defined during the tool planning process.
+</li>
+
+<li>Status accounting provides data for the configuration management of tool life
+cycle processes with respect to configuration identification, baselines,
+problem reports, and change control.
+</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> Problem Reporting, Tracking, and Corrective Action <code>[0/3]</code>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> A Tool Problem Report should be prepared that describes the process non-
+compliance with plans, output deficiency, or tool anomalous behavior, and
+the corrective action taken, as defined in section 10.1.12.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Problem reporting should provide for configuration identification of
+affected configuration item(s) or definition of affected process activities,
+status reporting of Tool Problem Reports, and approval and closure of Tool
+Problem Reports.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool Problem Reports that require corrective action of the tool product
+or outputs of tool life cycle processes should invoke the change control
+activity.
+</li>
+</ol>
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Change Control <code>[0/5]</code>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Change control should preserve the integrity of the configuration items
+and baselines by providing protection against their change.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Change control should ensure that any change to a configuration item
+requires a change to its configuration identification.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Changes to baselines and to configuration items under change control
+to produce derivative baselines should be recorded, approved, and
+tracked. Problem reporting is related to change control, since resolution
+of a reported problem may result in changes to configuration items or
+baselines.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool changes should be traced to their origin and the tool life cycle
+processes repeated from the point at which the change affects their
+outputs. For example, an error that is shown to result from an incorrect
+design should result in design correction, code correction, and repetition
+of the associated integral process activities.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Throughout the change activity, tool life cycle data affected by the
+change should be updated and records should be maintained for the change
+control activity.
+</li>
+</ol>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> Change Review <code>[0/5]</code>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Confirming that all affected configuration items are identified.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Assessing the impact of the change on Tool Operational Requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Assessing the problem or change, with decisions for action to be taken.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Providing feedback of Tool Problem Report or change impact and decisions
+to affected processes.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Assessing the software process feedback on tool problems and proposed
+changes identified by the tool process.
+</li>
+</ol>
+</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> Configuration Status Accounting <code>[0/2]</code>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Defining the data to be maintained and the means to record and report
+the data’s status.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Reporting on configuration item identification, baseline
+identification, Tool Problem Report status, change history, and release
+status.
+</li>
+</ol>
+</li>
+</ul>
+</div>
+</li>
+
+
+
+<li><a id="sec-8-0-1-4" name="sec-8-0-1-4"></a><span class="todo TODO">TODO</span> Archive, retrieval, and release are established <code>[0/5]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL5">TQL5</span></span><br ><div class="outline-text-5" id="text-8-0-1-4">
+<p>
+Archival and retrieval ensures that the tool life cycle data associated with
+the tool product can be retrieved in case of a need to duplicate, regenerate,
+retest, or modify the tool product. The objective of the release activity is to
+ensure that only the authorized tool is used in the software life cycle
+processes, in addition to being archived and retrievable.
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Tool life cycle data associated with the tool product should be
+retrievable from the approved source (for example, an archive at the
+developing organization or company).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <code>[0/4]</code> Procedures should be established to ensure the integrity of the
+stored data (regardless of medium of storage) by:
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Ensuring that no unauthorized changes can be made.
+</li>
+<li><span class="checkbox">&#x2610;</span> Selecting storage media that minimize regeneration errors or
+deterioration.
+</li>
+<li><span class="checkbox">&#x2610;</span> Preventing loss or corruption of data over time. Depending on the
+storage media used, this may include periodically exercising the media
+or refreshing the archived data.
+</li>
+<li><span class="checkbox">&#x2610;</span> Storing duplicate copies in physically separate archives that
+minimize the risk of loss in the event of a disaster.
+</li>
+</ol>
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The duplication process should be verified to produce accurate copies,
+and procedures should exist that ensure error-free copying of the Tool
+Executable Object Code.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Configuration items should be identified and released prior to use in
+the scope of the software life cycle processes.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Data retention procedures should be established to enable tool
+modifications.
+</li>
+</ol>
+</div>
+</li>
+
+
+
+<li><a id="sec-8-0-1-5" name="sec-8-0-1-5"></a><span class="todo TODO">TODO</span> Tool life cycle environment control is established <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TQL4">TQL4</span></span><br ><div class="outline-text-5" id="text-8-0-1-5">
+<p>
+The tool life cycle environment is defined by the tool planning process and
+identified in the Tool Life Cycle Environment Configuration Index (see
+10.1.10). Activities include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Configuration identification should be established for the Executable
+Object Code (or equivalent) of the tools used to develop, control, build,
+and to verify the tool product and its data.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The TCM process for controlling the tools used to produce the Tool
+Executable Object Code (or equivalent) (for example, compilers, assemblers,
+linkage editors) should comply with the objectives associated with CC2 data,
+as a minimum.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+
+
+
+
+<div id="outline-container-sec-8-0-2" class="outline-4">
+<h4 id="sec-8-0-2"><span class="section-number-4">8.0.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-8-0-2">
+</div><ol class="org-ol"><li><a id="sec-8-0-2-1" name="sec-8-0-2-1"></a><span class="todo TODO">TODO</span> Tool Configuration Index <code>[0/8]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span></span><br ><div class="outline-text-5" id="text-8-0-2-1">
+<p>
+The Tool Configuration Index identifies the configuration of the tool
+product. Specific configuration identifiers and version identifiers should be
+provided.
+</p>
+
+<p>
+The Tool Configuration Index should identify:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> The tool product.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool Executable Object Code, including all associated files.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Each Tool Source Code component.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Previously developed components in the tool product, if used.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool life cycle data.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Reference to the Tool Life Cycle Environment Configuration Index (see
+10.1.10), if it is packaged separately.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Archive and release media.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Instructions for building the Tool Executable Object Code (including
+items such as instructions and data for compiling and linking) and the
+procedures used to recover the tool for regeneration, testing, or
+modification.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-8-0-2-2" name="sec-8-0-2-2"></a><span class="todo TODO">TODO</span> Tool Problem Reports <code>[0/4]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span></span><br ><div class="outline-text-5" id="text-8-0-2-2">
+<p>
+Tool Problem Reports are a means to identify and record the resolution to tool
+product anomalous behavior, process non-compliance with tool plans and
+standards, and deficiencies in tool life cycle data. Tool Problem Reports
+should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Identification of the configuration item and/or the tool life cycle
+process activity in which the problem was observed.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Identification of the configuration item(s) to be modified or a
+description of the process to be changed.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A problem description that enables the problem to be understood and
+resolved.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> A description of the corrective action taken to resolve the reported
+problem.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-8-0-2-3" name="sec-8-0-2-3"></a><span class="todo TODO">TODO</span> Tool Configuration Management Records&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span></span><br ><div class="outline-text-5" id="text-8-0-2-3">
+<p>
+The results of the TCM process activities are recorded in TCM Records. Examples
+include configuration identification lists, baseline, change history reports,
+archive records, and release records. These examples do not imply the need to
+produce records of these specific types.
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> <span class="todo TODO">TODO</span> Tool Quality Assurance Process (T9) <code>[0/3]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span>&#xa0;<span class="TQL5">TQL5</span></span></h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-sec-9-0-1" class="outline-4">
+<h4 id="sec-9-0-1"><span class="section-number-4">9.0.1</span> Activities</h4>
+<div class="outline-text-4" id="text-9-0-1">
+</div><ol class="org-ol"><li><a id="sec-9-0-1-1" name="sec-9-0-1-1"></a><span class="todo TODO">TODO</span> Assurance is obtained that tool processes comply with approved plans <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span></span><br ><div class="outline-text-5" id="text-9-0-1-1">
+<p>
+Obtain assurance that tool development processes and integral processes,
+including those of suppliers, comply with approved tool plans and standards.
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Those performing the TQA process should take an active role in the
+activities of the tool life cycle processes, and have the authority,
+responsibility, and independence to ensure that the TQA process objectives
+are satisfied.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The TQA process should provide assurance that the tool life cycle
+processes comply with the approved tool plans and standards.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <code>[0/5]</code> The TQA process should include audits of the tool development and
+integral processes during the tool life cycle to obtain assurance that:
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Tool plans are available as specified in section 4.
+</li>
+<li><span class="checkbox">&#x2610;</span> Deviations from the tool plans and standards are detected, recorded,
+evaluated, tracked, and resolved.
+</li>
+<li><span class="checkbox">&#x2610;</span> Approved deviations are recorded.
+</li>
+<li><span class="checkbox">&#x2610;</span> The tool development environment has been provided as specified in
+the tool plans.
+</li>
+<li><span class="checkbox">&#x2610;</span> The problem reporting, tracking, and corrective action process
+complies with the Tool Configuration Management Plan.
+</li>
+</ol>
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The TQA process should provide assurance that tool life cycle data is
+controlled in accordance with the control categories as defined in section
+7.3 and the tables of Annex A.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The TQA process should produce records of the TQA process activities
+(section 10.1.14), including audit results and evidence of completion of the
+tool conformity review for each tool product.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The TQA process should provide assurance that any supplier processes and
+outputs comply with approved tool plans and standards.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-9-0-1-2" name="sec-9-0-1-2"></a><span class="todo TODO">TODO</span> Tool conformity review is conducted <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="review">review</span></span><br ><div class="outline-text-5" id="text-9-0-1-2">
+<p>
+Conduct a conformity review of the tool product.
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> A tool conformity review should be conducted prior to the delivery of
+the tool product which is intended to be used by resultant software
+submitted as part of a certification application.
+</li>
+</ol>
+
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Tool Conformity Review <code>[0/7]</code>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Planned tool life cycle process activities, including the generation
+of tool life cycle data, have been completed and records of their
+completion are retained.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Evidence exists that tool life cycle data have been produced in
+accordance with tool plans and standards, and is controlled in accordance
+with the TCM Plan.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Evidence exists that Tool Problem Reports have been evaluated and
+have their status recorded.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool requirement deviations are recorded and approved.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Tool Executable Object Code can be regenerated from the archived
+Tool Source Code.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Tool Problem Reports deferred from a previous tool conformity review
+are re- evaluated to determine their status.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> If certification credit is sought for the use of previously developed
+tools, the current tool product baseline is traceable to the previous
+baseline and the approved changes to that baseline.
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+
+
+
+<div id="outline-container-sec-9-0-2" class="outline-4">
+<h4 id="sec-9-0-2"><span class="section-number-4">9.0.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-9-0-2">
+</div><ol class="org-ol"><li><a id="sec-9-0-2-1" name="sec-9-0-2-1"></a><span class="todo TODO">TODO</span> Tool Quality Assurance Records&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span>&#xa0;<span class="user">user</span></span><br ><div class="outline-text-5" id="text-9-0-2-1">
+<p>
+The results of the TQA process activities are recorded in TQA Records. These
+may include TQA review or audit reports, meeting minutes, records of authorized
+process deviations, and tool conformity review records.
+</p>
+
+<p>
+In addition to the TQA Records which address the development of the tool, there
+will be Software Quality Assurance Records which address its use.
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> <span class="todo TODO">TODO</span> Tool Qualification Lisaison Process (T10) <code>[0/8]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span>&#xa0;<span class="TQL5">TQL5</span>&#xa0;<span class="review">review</span></span></h2>
+<div class="outline-text-2" id="text-10">
+</div><div id="outline-container-sec-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> <span class="todo TODO">TODO</span> Communication and understanding between the applicant and the certification authority is established <code>[0/6]</code></h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+The primary input submitted to the certification authority is the PSAC
+containing the tool qualification identification. The minimum data that should
+be submitted to the certification authority is:
+</p>
+
+<ul class="org-ul">
+<li><span class="checkbox">&#x2610;</span> Plan for Software Aspects of Certification (PSAC)
+</li>
+<li><span class="checkbox">&#x2610;</span> Tool Qualification Plan (TQP)
+</li>
+<li><span class="checkbox">&#x2610;</span> Tool Configuration Index (TCI)
+</li>
+<li><span class="checkbox">&#x2610;</span> Tool Accomplishment Summary (TAS)
+</li>
+<li><span class="checkbox">&#x2610;</span> Software Life Cycle Environment Configuration Index (SECI)
+</li>
+<li><span class="checkbox">&#x2610;</span> Software Accomplishment Summary (SAS)
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-10-2" class="outline-3">
+<h3 id="sec-10-2"><span class="section-number-3">10.2</span> <span class="todo TODO">TODO</span> The means of compliance is proposed and agreement is obtained</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+Both the PSAC and TQP should be submitted to the certification authority in
+order to obtain agreement on the means of compliance.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-10-3" class="outline-3">
+<h3 id="sec-10-3"><span class="section-number-3">10.3</span> <span class="todo TODO">TODO</span> Compliance substantiation is provided <code>[0/4]</code></h3>
+<div class="outline-text-3" id="text-10-3">
+</div><div id="outline-container-sec-10-3-1" class="outline-4">
+<h4 id="sec-10-3-1"><span class="section-number-4">10.3.1</span> <span class="todo TODO">TODO</span> Activities <code>[0/2]</code></h4>
+<div class="outline-text-4" id="text-10-3-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> As evidence that the tool life cycle processes satisfy the plans, the
+tool life cycle data should be available to the certification authority for
+review.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> The Software Life Cycle Environment Configuration Index should provide
+the identification of all the tools used in the scope of the applicable
+software release. For TQL-5, it should also include references to the tool
+qualification data (Tool Operational Requirements and tool operational
+verification and validation data). For other TQLs, the Software Life Cycle
+Environment Configuration Index should reference the TCI.
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-10-3-2" class="outline-4">
+<h4 id="sec-10-3-2"><span class="section-number-4">10.3.2</span> Outputs</h4>
+<div class="outline-text-4" id="text-10-3-2">
+</div><ol class="org-ol"><li><a id="sec-10-3-2-1" name="sec-10-3-2-1"></a><span class="todo TODO">TODO</span> Tool-Specific Information in Software Accomplishment Summary <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span><br ><div class="outline-text-5" id="text-10-3-2-1">
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Identification of the tool.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Details of the certification credit sought through tool use, that is,
+the software process(es) to be eliminated, reduced, or automated.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Reference to the Tool Accomplishment Summary.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Compliance statement of the tool development, verification, and integral
+processes to the tool plans, including tool user activities.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Analysis of open Tool Problem Reports to ensure that the behavior of the
+tool still complies with the Tool Operational Requirements.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Description of any tool use differences as identified in the PSAC.
+</li>
+</ol>
+</div>
+</li>
+
+
+
+<li><a id="sec-10-3-2-2" name="sec-10-3-2-2"></a><span class="todo TODO">TODO</span> Tool Accomplishment Summary <code>[0/10]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dev">dev</span></span><br ><div class="outline-text-5" id="text-10-3-2-2">
+<p>
+For a tool to be qualified at TQL 1, 2, 3, or 4, the Tool Accomplishment
+Summary is the primary data item for showing compliance with the TQP.
+</p>
+
+<p>
+The Tool Accomplishment Summary should include:
+</p>
+
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> <b>Tool overview</b>: This section briefly describes the tool’s main functions,
+its inputs and output, and any differences from the tool overview proposed
+in the TQP.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Qualification considerations</b>: This section restates the TQL proposed for
+the tool described in the TQP. It also identifies the operational
+environment(s).
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Tool life cycle</b>: This section summarizes the actual tool life cycle(s)
+and explains differences from the tool qualification activities identified
+in the TQP.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Tool life cycle data</b>: This section describes any differences from the
+proposals made in the TQP for the tool life cycle data produced, the
+relationship of the data to each other and to other data defining the tool,
+and the means by which the data was made available to the certification
+authority. This section explicitly references, by configuration identifiers
+and version, the applicable Tool Configuration Index and Tool Life Cycle
+Environment Configuration Index. Detailed information regarding
+configuration identifiers and specific versions of tool life cycle data is
+provided in the Tool Configuration Index.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Additional considerations</b>: This section summarizes qualification issues
+that may warrant the attention of the certification authority. It explains
+any differences from the proposals contained in the TQP regarding such
+considerations. References should be made to the data items applicable, such
+as special conditions or interpretive material.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Supplier Oversight</b>: This section describes how supplier processes and
+outputs comply with approved tool plans and standards.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Tool identification</b>: This section identifies the tool configuration by
+part number and version.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Change history</b>: If applicable, this section includes a summary of
+changes affecting tool functionality and identifies any changes from or
+improvements to the tool life cycle process since the previous
+qualification.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Tool status</b>: This section contains a summary of Tool Problem Reports
+unresolved at the time of approval and an assessment of the problem’s impact
+on tool functionality. Additionally, it should include any functional
+limitations of the tool.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> <b>Compliance statement</b>: This section includes a statement of compliance
+with this document and a summary of the methods used to demonstrate
+compliance with criteria specified in the tool plans. This section also
+addresses additional rulings made by the certification authority and any
+deviations from the tool plans, standards, and this document not covered
+elsewhere in the Tool Accomplishment Summary.
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-10-3-2-3" name="sec-10-3-2-3"></a><span class="todo TODO">TODO</span> Tool-Specific Information in Software Life Cycle Environment Configuration Index (SECI) <code>[0/2]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="user">user</span></span><br ><div class="outline-text-5" id="text-10-3-2-3">
+<p>
+The SECI should include:
+</p>
+
+<ol class="org-ol">
+<li><span class="checkbox">&#x2610;</span> Identification of the tool.
+</li>
+
+<li><span class="checkbox">&#x2610;</span> Reference to the Tool Configuration Index and TAS.
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-10-4" class="outline-3">
+<h3 id="sec-10-4"><span class="section-number-3">10.4</span> <span class="todo TODO">TODO</span> Impact of known problems on the Tool Operational Requirements is identified and analyzed</h3>
+<div class="outline-text-3" id="text-10-4">
+<p>
+All the known problems and functional limitations should be analyzed from the
+software life cycle process perspective, and a report should be provided in the
+Software Accomplishment Summary. The impact of known problems and functional
+limitations of the tool should be identified and analyzed to ensure that the
+functionality and the outputs of the tool comply with the Tool Operational
+Requirements.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>Plan for Software Aspect of certification</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p>Tool Operational Requirements</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Alain Mebsout</p>
+<p class="date">Created: 2015-07-08 Wed 15:46</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

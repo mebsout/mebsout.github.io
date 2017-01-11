@@ -1,0 +1,29 @@
+@inproceedings{mebsoutFMCAD2016,
+  author = {Alain Mebsout and Cesare Tinelli},
+  title = {Proof Certificates for {SMT}-based Model Checkers for Infinite State Systems},
+  booktitle = {FMCAD},
+  year = {2016},
+  month = {October},
+  address = {Mountain View, California, USA},
+  location = {Mountain View, California, USA},
+  url = {http://cs.uiowa.edu/~amebsout/papers/fmcad2016.pdf},
+  abstract = {We present a dual technique for generating and verifying proof
+                  certificates in SMT-based model checkers, focusing on
+                  proofs of invariant properties. Certificates for two major
+                  model checking algorithms are extracted as k-inductive
+                  invariants, minimized and then reduced to a formal proof term
+                  with the help of an independent proof-producing SMT
+                  solver. SMT-based model checkers typically translate input
+                  problems into an internal first-order logic
+                  representation. In our approach, the correctness of
+                  translation from the model checker's input to the internal
+                  representation is verified in a lightweight manner by proving
+                  the observational equivalence between the results of two
+                  independent translations. This second proof is done by the
+                  model checker itself and generates in turn its own proof
+                  certificate. Our experimental evaluation show that, at the
+                  price of minimal instrumentation in the model checker, the
+                  approach allows one to efficiently generate and verify proof
+                  certificates for non-trivial transition systems and
+                  invariance queries.}
+}

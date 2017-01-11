@@ -1,0 +1,9 @@
+node main (a : real; b : real) returns (c : real);
+var
+   p1 : bool;
+let
+   c = a + b;
+   p1 = ((a > 0.0) and (b > 0.0)) => (c > 0.0);
+   
+   --%PROPERTY p1;
+tel;

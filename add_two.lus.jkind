@@ -1,0 +1,7 @@
+(set-option :produce-models true)
+(define-fun T ((%init Bool) ($a$0 Real) ($b$0 Real) ($c$0 Real) ($p1$0 Bool) ($a$1 Real) ($b$1 Real) ($c$1 Real) ($p1$1 Bool)) Bool (and (= $c$1 (+ $a$1 $b$1)) (= $p1$1 (=> (and (> $a$1 (/ 0 10)) (> $b$1 (/ 0 10))) (> $c$1 (/ 0 10))))))
+(declare-fun %init () Bool)
+(declare-fun $a$~1 () Real)
+(declare-fun $b$~1 () Real)
+(declare-fun $c$~1 () Real)
+(declare-fun $p1$~1 () Bool)

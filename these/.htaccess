@@ -1,0 +1,6 @@
+AuthUserFile /users/vals/mebsout/WWW/these/.htpasswd
+AuthType Basic
+AuthName "Acces au manuscrit de these"
+<Files "main.pdf">
+  Require valid-user
+</Files>
