@@ -642,8 +642,8 @@ th {
 
 #content span.picture:active {
     background-image: url("images/cray-1.png");
-    width:500px;
-    height:600px;
+    width:400px;
+    height:480px;
 
     /* -ms-transition: width 0.5s 3s ease-in-out, height 0.5s 3s ease-in-out, background-image 0.1s 3s ease; */
     /* -webkit-transition: width 0.5s 3s ease-in-out, height 0.5s 3s ease-in-out, background-image 0.1s 3s ease; */
@@ -826,5 +826,7 @@ a[href$='.bib'].icon {
 	margin-right:5%;
 	margin-left:5%;
     }
-
+    #content span.picture:active {
+	width:90%;
+    }
 }
