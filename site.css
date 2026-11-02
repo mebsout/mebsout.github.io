@@ -1,0 +1,266 @@
+/* Site stylesheet: boxed cards (thick ink border, small radius, hard offset
+   shadow), Inter + Martian Mono, navy with BeOS blue, BeOS-yellow highlights,
+   light and dark via prefers-color-scheme. No JavaScript. */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400&family=Martian+Mono:wdth,wght@100,500;100,700;112.5,700&display=swap");
+
+:root {
+  --bg: #e8ecef;
+  --dots: rgba(26, 32, 34, .13);
+  --card: #ffffff;
+  --ink: #1a2022;
+  --text: #1d2326;
+  --muted: #5c666b;
+  --accent: #e67e22;      /* headings, current tab, numbers */
+  --accent-ink: #1a2022;  /* text on an accent fill */
+  --link: #2f6fb0;
+  --line: 3px solid var(--ink);
+  --radius: 4px;
+  --shadow: 4px 4px 0 var(--ink);
+  --shadow-lg: 7px 7px 0 var(--ink);
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --name-font: var(--mono);
+  --name-size: 1.7rem;
+  --name-weight: 400;
+  --name-tracking: .02em;
+  --head-font: var(--mono);
+  --ui-font: var(--mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14191b;
+    --dots: rgba(232, 236, 239, .09);
+    --card: #1e2528;
+    --ink: #cfd6da;
+    --text: #e4e8ea;
+    --muted: #9aa6ab;
+    --link: #7fb2e8;
+    --accent-ink: #14191b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg) radial-gradient(var(--dots) 1px, transparent 1.4px) 0 0 / 22px 22px; color: var(--text); }
+
+body { margin: 0; padding: 1.25rem clamp(.75rem, 3vw, 2rem) 4rem; font: 1rem/1.55 var(--sans); }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- Navbar: one sticky box, name on the left, boxed tabs on the right ---------- */
+.site-header {
+  position: sticky;
+  top: 1rem;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 2.25rem;
+  padding: .7rem .9rem .7rem 1.25rem;
+  background: var(--card);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.site-name {
+  color: var(--text);
+  font: var(--name-weight) var(--name-size)/1 var(--name-font);
+  letter-spacing: var(--name-tracking);
+}
+.site-name:hover { text-decoration: none; color: var(--accent); }
+
+.nav, .subnav { margin: 0; padding: 0; list-style: none; }
+.nav { display: flex; flex-wrap: wrap; gap: .7rem; }
+.nav > li { position: relative; }
+.nav > li > a {
+  display: block;
+  padding: .45rem .9rem .4rem;
+  color: var(--text);
+  background: var(--card);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font: 600 .9rem/1.4 var(--ui-font);
+  transition: transform .08s, box-shadow .08s;
+}
+.nav > li > a:hover { text-decoration: none; transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+.nav > li > a[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
+.has-sub > a::after { content: " \25BE"; content: " \25BE" / ""; font-size: .8em; }
+
+/* Software dropdown: a boxed list, shown on hover or keyboard focus. */
+.subnav {
+  position: absolute;
+  top: calc(100% + .6rem);
+  right: 0;
+  min-width: 11rem;
+  padding: .35rem 0;
+  background: var(--card);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .12s, visibility .12s;
+}
+.has-sub:hover .subnav, .has-sub:focus-within .subnav { visibility: visible; opacity: 1; }
+.has-sub::before { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: .7rem; }
+.subnav a { display: block; padding: .3rem 1rem; color: var(--text); font: .875rem/1.6 var(--ui-font); white-space: nowrap; }
+.subnav a:hover { background: var(--accent); color: var(--accent-ink); text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav > li > a, .subnav { transition: none; }
+}
+
+/* ---------- Cards ---------- */
+#content { max-width: 1000px; margin: 0 auto; }
+#content .card {
+  margin: 0 7px 2.25rem 0;
+  padding: 1.25rem 1.75rem 1.5rem;
+  background: var(--card);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+#content .card::after { content: ""; display: block; clear: both; }
+#content .card > :last-child { margin-bottom: 0; }
+/* Leftover of the old markup: empty paragraphs. */
+#content p:empty { display: none; }
+
+#content h2, #content h3 { color: var(--heading, var(--accent)); font-family: var(--head-font); font-weight: 700; letter-spacing: -.01em; }
+#content h2 { margin: .25rem 0 1rem; font-size: 1.5rem; line-height: 1.25; }
+#content h3 { clear: none; margin: 1.5rem 0 .5rem; font-size: 1.05rem; }
+#content p { margin: 0 0 1rem; }
+#content ul, #content ol { margin: 0 0 1rem; padding-left: 1.75rem; }
+
+/* Anchors sit above their card so the sticky navbar does not cover the title. */
+#content .anchor { display: block; position: relative; top: -6.5rem; visibility: hidden; }
+
+/* ---------- Home: photo, contact table, thesis ---------- */
+#content span.picture {
+  float: right;
+  width: 400px;
+  max-width: 100%;
+  height: 300px;
+  margin: .25rem 0 1rem 1.5rem;
+  background: #000 url("images/moi.png") center / cover no-repeat;
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  cursor: sw-resize;
+}
+#content span.picture:active { background-image: url("images/cray-1.png"); height: 480px; }
+
+#content table { border-collapse: collapse; }
+#content th, #content td { padding: .45rem .6rem; vertical-align: top; text-align: left; }
+#content th:first-child { padding-left: 0; font: 600 .875rem/1.9 var(--ui-font); text-align: right; white-space: nowrap; }
+#content th img { display: block; width: 32px; height: auto; }
+
+/* PDF / BibTeX / thesis links: plain links with their icons, as on the live site. */
+#content a.icon {
+  display: inline-block;
+  margin-right: 1.5em;
+  padding-left: 38px;
+  line-height: 32px;
+  background: url("images/pdf.png") left center no-repeat;
+}
+#content a.icon[href$=".bib"] { background-image: url("images/bibtex.png"); }
+
+/* ---------- Software ---------- */
+#content img.logo { float: right; height: 72px; width: auto; margin: .25rem 0 1rem 1.5rem; }
+#content img.screenshot {
+  float: right;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 0 1rem 1.5rem;
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Publications ---------- */
+.pub { margin: 0; padding-left: 2.25rem; }
+.pub_item { padding: 1rem 0 1.1rem; border-top: 2px solid var(--bg); }
+.pub_item:first-child { border-top: 0; padding-top: .25rem; }
+.pub_item::marker { color: var(--accent); font: 700 .95rem var(--ui-font); }
+.pub_title { font-weight: 700; }
+#content .pud_details p, #content #pud_details p { margin: .3rem 0 .6rem; color: var(--muted); }
+.french {
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  margin: 0 4px;
+  background: url("images/fr.png") center left no-repeat;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 640px) {
+  .site-header { position: static; padding: .75rem; }
+  .nav { gap: .45rem; }
+  .nav > li > a { padding: .35rem .55rem .3rem; font-size: .8rem; }
+  .subnav { display: none; }
+  .has-sub > a::after { content: none; }
+  #content .card { padding: 1rem 1.1rem 1.25rem; }
+  #content span.picture { float: none; display: block; width: 100%; height: 240px; margin: 0 0 1.25rem; }
+  #content img.logo { height: 52px; margin-left: 1rem; }
+  #content img.screenshot { float: none; display: block; width: 100%; margin: 0 0 1rem; }
+  #content .anchor { top: -1rem; }
+  /* Contact rows: icon on the left, label then value stacked beside it. */
+  #content table, #content tbody { display: block; }
+  #content tr { display: grid; grid-template-columns: 40px 1fr; column-gap: .6rem; margin-bottom: .9rem; }
+  #content th, #content td { padding: 0; }
+  #content th:first-child { grid-column: 2; grid-row: 1; text-align: left; }
+  #content th:nth-child(2) { grid-column: 1; grid-row: 1 / span 2; }
+  #content td { grid-column: 2; grid-row: 2; }
+  .pub { padding-left: 1.75rem; }
+}
+
+/* ---------- Theme: Inter + Martian Mono, BeOS blue and yellow ---------- */
+:root {
+  --sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --mono: "Martian Mono", ui-monospace, Menlo, monospace;
+  --name-font: var(--mono);
+  --name-size: 1.3rem;
+  --name-weight: 700;
+  --name-tracking: -.01em;
+  --beos-yellow: #ffcb00;
+  --on-yellow: #13263d;
+  --bg: #e4ebf2;
+  --dots: rgba(19, 38, 61, .14);
+  --card: #ffffff;
+  --ink: #13263d;
+  --text: #17263a;
+  --muted: #556579;
+  --accent: #336698;
+  --accent-ink: #ffffff;
+  --link: #336698;
+  --heading: #13263d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1722;
+    --dots: rgba(200, 215, 235, .08);
+    --card: #13202f;
+    --ink: #c6d5e6;
+    --text: #e2e9f2;
+    --muted: #93a4b8;
+    --accent: #79a6d6;
+    --accent-ink: #0d1722;
+    --link: #8db6e0;
+    --heading: #e2e9f2;
+  }
+}
+
+.site-name { font-variation-settings: "wdth" 112.5; }
+
+/* Same navbar behaviour as the other versions; BeOS yellow marks the current
+   page and the hovered Software entry. */
+.nav > li > a[aria-current="page"] { background: var(--beos-yellow); color: var(--on-yellow); }
+.subnav a:hover { background: var(--beos-yellow); color: var(--on-yellow); }
