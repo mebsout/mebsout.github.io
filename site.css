@@ -168,9 +168,9 @@ a:hover { text-decoration: underline; }
   margin-right: 1.5em;
   padding-left: 38px;
   line-height: 32px;
-  background: url("images/pdf.png") left center no-repeat;
+  background: url("images/pdf.svg") left center / 32px 32px no-repeat;
 }
-#content a.icon[href$=".bib"] { background-image: url("images/bibtex.png"); }
+#content a.icon[href$=".bib"] { background-image: url("images/bibtex.svg"); }
 
 /* ---------- Software ---------- */
 #content img.logo { float: right; height: 72px; width: auto; margin: .25rem 0 1rem 1.5rem; }
@@ -193,10 +193,11 @@ a:hover { text-decoration: underline; }
 #content .pud_details p, #content #pud_details p { margin: .3rem 0 .6rem; color: var(--muted); }
 .french {
   display: inline-block;
-  width: 16px;
-  height: 11px;
+  width: 19px;
+  height: 22px;
   margin: 0 4px;
-  background: url("images/fr.png") center left no-repeat;
+  vertical-align: -5px;
+  background: url("images/fr.svg") center / contain no-repeat;
 }
 
 /* ---------- Small screens ---------- */
